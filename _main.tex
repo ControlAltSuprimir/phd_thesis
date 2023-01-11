@@ -256,7 +256,7 @@ See Figure \ref{fig:nice-fig}.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{_main_files/figure-latex/nice-fig-1} 
+{\centering \includegraphics[width=0.8\linewidth]{_main_files/figure-latex/nice-fig-1}
 
 }
 
@@ -334,7 +334,7 @@ The RStudio Visual Markdown Editor can also make it easier to insert citations: 
 
 Here is an equation.
 
-\begin{equation} 
+\begin{equation}
   f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
   \label{eq:binom}
 \end{equation}
@@ -395,5 +395,110 @@ Or use:
 
 
   \bibliography{book.bib,packages.bib}
+
+
+%Misceláneo
+
+%% Miscelaneos
+%\newcommand{\A}{\mathcal{A}}
+%\newcommand{\C}{\mathbb{C}}
+%\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\G}{\mathcal{G}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\K}{\mathcal{K}}
+\renewcommand{\L}{\mathcal{L}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\M}{\mathcal{M}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\S}{\mathcal{S}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\1}{\mathbf{1}}
+\let\epsilon\varepsilon
+
+\usepackage[backend=biber,style=alphabetic,]{biblatex}
+\usepackage{mathrsfs}
+
+\addbibresource{bibfile.bib}
+
+%% Mis comandos
+
+\newcommand\cf{{\em cf.}~}
+\newcommand\etc{{\em etc.}}
+
+\newcommand{\A}{\mathcal{A}}
+\def\a{\mathbf{A}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\C}{\mathcal{C}}
+\def\b{\mathbf{B}}
+\def\c{\mathbf{C}}
+\newcommand{\h}{\mathcal{H}}
+\newcommand{\eL}{\mathcal{L}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\I}{\mathcal{I}}
+\newcommand{\J}{\mathcal{J}}
+%Spaces
+\newcommand{\elB}{\ell^1(\G,\B)}
+\newcommand{\elthB}{\ell_\theta^1(\G,\B)}
+\newcommand{\elthoB}{\ell_{\theta}^1(\G,\B)}
+\newcommand{\elA}{\ell^1(\G,\A)}
+\newcommand{\elthA}{\ell_\theta^1(\G,\A)}
+\newcommand{\elthoA}{\ell^1_{\theta}(\G,\A)}
+\newcommand{\ELthA}{\EL_\te(\G,\A)}
+\newcommand{\ELthoA}{\EL_{\te}(\G,\A)}
+\newcommand{\rtt}{\rightthreetimes}
+
+\def\o{\omega}
+\def\O{\Omega}
+\def\te{\theta}
+\def\Te{\Theta}
+\def\T{\mathbb{T}}
+\def\E{{\mathscr E}}
+\def\F{\mathscr F}
+\def\h{\mathcal H}
+\def\K{\mathcal K}
+\def\Z{\mathbb Z}
+\def\pe{\textsf{P}}
+\def\n{\textsf{N}}
+
+\def\S{\mathcal S}
+\def\e{{\textsf e}}
+\def\m{{\textsf m}}
+\def\la{\langle}
+\def\ra{\rangle}
+\def\x{\mathsf{x}}
+\def\y{\mathsf{y}}
+\def\z{\mathsf{z}}
+
+\def\r{{\rm r}}
+\def\d{{\rm d}}
+\def\bu{\bullet}
+\newcommand{\twist}{\diamond_{\te,\omega}}
+
+\def\({\left(}
+\def\[{\left[}
+\def\){\right)}
+\def\]{\right]}
+
+\def\si{\sigma}
+\def\Si{\Sigma}
+\def\G{{\textsf G}}
+\def\wG{\widehat{\G}}
+\def\p{\parallel}
+\def\<{\langle}
+\def\>{\rangle}
+\def\Ce{{\textsf C}}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+
+\def\d{\textrm{d}}
+\def\r{\textrm{r}}
+\def\s{\textrm{s}}
+
+
 
 \end{document}

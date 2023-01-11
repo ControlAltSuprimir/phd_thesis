@@ -1,13 +1,11 @@
+def:symmetric
+def:groupsymmetric
+thm:principala
 fig:nice-fig
 tab:nice-tab
 eq:binom
 thm:tri
-about
-usage
-render-book
-preview-book
-hello-bookdown
-a-section
+introduction
 cross
 chapters-and-sub-chapters
 captioned-figures-and-tables

@@ -1,11 +1,64 @@
-# Hello bookdown 
+# Introduction
 
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (`#`) per .Rmd file.
+Spectral invariance and symmetry of normed algebras have been important concepts, starting with the classical article [@Wie]. Some general references which are related with the point of view of this thesis include [@FL; @FGL; @GL1; @GL2; @LP; @Pa2; @Po]. We also refer to [@{Gr}] for a very readable general presentation, making connections with related mathematical topics.
 
-## A section
+\smallskip
+The basic definition is the following:
 
-All chapter sections start with a second-level (`##`) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
+::: {.definition #symmetric}
+(i) The $^*$-subalgebra $\mathfrak B$ of the C$^*$-algebra $\mathfrak C$ is called *inverse closed* (or *spectrally invariant*) if for each $\Phi\in\mathfrak B$ which is invertible in $\mathfrak C$ , one actually has $\Phi^{-1}\!\in\mathfrak B$ . 
+(ii) A Banach $^*$-algebra $\mathfrak B$ is called *symmetric* if the spectrum of $b^*b$ is positive for every $b\in\mathfrak B$ (this happens if and only if the spectrum of any self-adjoint element is real).
+ 
+:::
 
-### An unnumbered section {-}
+The two notions are related, but in this Introduction we only discuss symmetry.
+A great interest lies in algebras connected somehow to a discrete group. The following notions will be relevant in this thesis; the first two are classical:
 
-Chapters and sections are numbered by default. To un-number a heading, add a `{.unnumbered}` or the shorter `{-}` at the end of the heading, like in this section.
+::: {.definition #groupsymmetric}
+(i) The discrete group $\textsf{G}$ is called  *symmetric* if the convolution Banach $^*$-algebra $\ell^1(\textsf{G})$ is symmetric.
+(ii) The discrete group $\textsf{G}$ is called *rigidly symmetric* if given any $C^*$-algebra $\mathcal{A}$ , the projective tensor product $\ell^1(\textsf{G})\otimes\mathcal{A}$ is symmetric.
+(iii) The discrete group $\textsf{G}$ is called *hypersymmetric* if given any topologically graded $C^*$-algebra $\mathfrak C$ , the Banach $^*$-algebra $\ell^1(\mathfrak C)$ (to be defined below) is symmetric.
+:::
+
+The class of topologically graded $C^*$-algebras, described for example in [@{Ex2}] and reviewed briefly in Subsection \ref{flocinor},  is much larger than the one appearing in (ii). Simplifying, the main result of Section 2
+
+::: {.theorem #principala}
+If a discrete group is rigidly symmetric, then it is hypersymmetric.
+:::
+
+::: {.remark #lacantors}
+Clearly, a rigidly symmetric group is symmetric. It is still not known if the two notions are really different. However, as a consequence of [@{Kug}, Thm. 1], if ${\textsf{G}}$ is supposed only symmetric, but the $C^*$-algebra $\mathcal{A}$ is type $I$, the projective tensor product $\ell^1({\textsf{G}})\otimes\mathcal{A}$ is symmetric. Classes of rigidly symmetric discrete groups are (cf. @{LP}): (a) Abelian, (b) finite, (c) finite extensions of discrete nilpotent. This last class includes all the finitely generated groups with polynomial growth. A central extension of a rigidly symmetric group is rigidly symmetric, by [@LP, Thm. 7]. In [@Ma, Cor. 2.16] it is shown that the quotient of a discrete rigidly symmetric group by a normal subgroup is rigidly symmetric. 
+:::
+
+There are intermediary notions between rigid symmetry and hypersymmetry. It has already been proved {@FGL;@BB;@Ma} that if a discrete group is rigidly symmetric, it is also symmetric in the sense of global crossed products: For an action $\beta$ of $\textsf{G}$ is a $C^*$-algebra $\mathcal{A}$ , one canonically constructs a crossed product $C^*$-algebra $\mathcal{A}\!\rtimes_\beta\!\textsf{G}$ , which is the enveloping algebra of a Banach $^*$-algebra $\ell^1_\beta(\textsf{G};\mathcal{A})$ . If for every such global action $(\textsf{G},\beta,\mathcal{A})$ the algebra $\ell^1_\beta(\textsf{G};\mathcal{A})$ is symmetric, $\textsf{G}$ may be called *symmetric in the sense of global crossed products*. For a trivial action $\beta$ one gets the projective tensor product $\ell^1(\textsf{G})\otimes\mathcal{A}\cong\ell^1(\textsf{G};\mathcal{A})$ and plenty of interesting $C^*$-algebras proved to be global crossed products for some non-trivial action, so [@{FGL}] supplied a lot of new examples of symmetric algebras. 
+
+\smallskip
+Our initial aim was to extend this further to  *partial actions* $\theta$ of discrete groups $\textsf{G}$ on $C^*$-algebras $\mathcal{A}$ . The class of $C^*$-algebras that may be realized as partial crossed products $\mathcal{A}\!\rightthreetimes_\theta\!\textsf{G}$ , but which are not accessible to global actions, is quite impressive. We soon understood that topologically graded algebras over the discrete group $\textsf{G}$ provide an even larger setting, which is also simpler and more natural in a certain sense. So Theorem \ref{teoremix} and a consequence on covariant convolution kernels are stated in this framework. 
+
+\smallskip
+Until very recently, the largest class for which general results have been found was that of crossed products attached to a global action of the group over a $C^*$-algebra. A cohomological twist has also been permitted. The simplest case of a trivial action leads to the projective tensor product between $L^1(\textsf{G})$ and a $C^*$-algebra. Some references are: [{@LP; @Bas; @Kur; @Po; @Pa2; @GL1; @GL2; @Ba; @FGL; @Gr; @BB; @Ma; @FL}]. Groupoid algebras are much less studied in the setup of symmetry and spectral invariance; a project on this topic started in  [@AO].
+
+\smallskip
+Since the subcase of partial crossed products  is very important, and many $C^*$-algebras are proved to be of such a type (a non-trivial task, very often), in Subsection \ref{cerculix} the results are made explicit for this situation. In the same Subsection \ref{cerculix}, we indicated the connection between topologically $\textsf{G}$-graded $C^*$-algebras $\mathfrak C$ and "dual actions" of $\textsf{G}$. The right concept is that of a coaction of $\textsf{G}$ on $\mathfrak C$ , but for simplicity and having in mind the examples we want to treat by this tool, we only made discussed the case of Abelian groups. In this case one works with a (global) action of the compact Abelian Pontryagin dual $ \widehat{\G}$ and the spaces of the grading are defined to be the spectral subspaces of this dual action. 
+%Some of our examples are presented via dual actions.
+
+\begin{remark}\label{lantors}
+In [@sW, Cor. 4.8] it is shown that a symmetric group is amenable. Since the results below require ${\textsf{G}}$ to be rigidly symmetric, *whenever relevant, we will assume* ${\textsf{G}}$ *to be (at least) amenable*. This will simplify the grading theory. In particular, the (universal) partial crossed product $\mathcal{A}\rightthreetimes_\theta\!{\textsf{G}}$ defined in Subsection \ref{cerculix} coincides with the reduced one [@MC, Sect. 3].
+\end{remark}
+
+In Subsection \ref{idealuri} we treat inverse closednes with respect to a suitable ideal. The most important application is to Fredholm properties of operators, the ideal being (isomorphic to) the ideal of all the compact operators in a Hilbert space. 
+
+\smallskip
+In Subsection \ref{decay} we explore others types of decay, using weighted $\ell^1$-algebras. It is possible to implement the result in all the examples, but we will not do it explicitly.
+
+\smallskip
+Very often one encounters $C^*$-algebras that are not obviously involving a grading or a partial action of a group. Showing that such a structure can be put into evidence is a valuable tool to study various properties, in particular the existence of inverse closed subalgebras. In Section 3, using various references to the literature, we present such examples and find out what the $\ell^1$-algebra is composed of in each case. The treatment is not meant to be exhaustive, but it will be clear that many new interesting cases are covered. In addition, some examples belong to different classes or can be treated from several points of view; we stick to the one that seems to be simpler. When the group is Abelian, we mostly use dual actions. In other cases partial actions or a direct presentation of the topological grading is the tool.
+
+\smallskip
+In connection with a topologically graded C$^*$-algebra over a discrete group, in Chapter \ref{sec:fourth} we introduce the concept of Fell Bundles  over discrete groups (see [@Kum]). In this case, even the concept of rigid symmetry must be suitably adapted. Unfortunately, the symmetry issue in a groupoid setting is in a very incipient form (see [@{AO}], however), so classes of rigidly symmetric groupoids still have to be found, which will then insure the natural and general hypersymmetry, by Theorem \ref{principala}.
+As far as we know, the idea to embed more complicated algebras attached to discrete groups into simpler ones (projective tensor products of the usual $L^1$ group algebra with $C^*$-algebras) originated in [{@FGL}], and it has been used in other papers. Here we adapt it to the framework of Fell bundles over discrete groupoids, which seems to be the most general object for which such technique is viable.
+
+\smallskip
+Some conventions and notations: $C^*$-algebraic morphisms and representations are assumed to be involutive, the ideals are self-adjoint, bi-sided and closed. $\mathbb B(\mathcal{H})$ will denote the $C^*$-algebra of linear bounded operators in a Hilbert space; $\mathbb K(\mathcal{H})$ is the ideal of compact operators. 
+\bigskip
+\smallskip

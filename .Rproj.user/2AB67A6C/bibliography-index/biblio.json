@@ -24,6 +24,923 @@
             "type": "book"
         },
         {
+            "author": [
+                {
+                    "family": "Abadie",
+                    "given": "F."
+                }
+            ],
+            "container-title": "J. Funct. Anal.",
+            "id": "Ab",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "page": "14-67",
+            "title": "Envelopping actions and takai duality for partial actions",
+            "type": "article-journal",
+            "volume": "197"
+        },
+        {
+            "author": [
+                {
+                    "family": "Beltita",
+                    "given": "I."
+                },
+                {
+                    "family": "Beltita",
+                    "given": "D."
+                }
+            ],
+            "container-title": "Ann. H. Poincaré",
+            "id": "BB",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "page": "1283-1306",
+            "title": "Inverse-closed algebras of integral operators on locally compact groups",
+            "type": "article-journal",
+            "volume": "16"
+        },
+        {
+            "author": [
+                {
+                    "family": "Brown",
+                    "given": "N. P."
+                },
+                {
+                    "family": "Ozawa",
+                    "given": "N."
+                }
+            ],
+            "id": "BO",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "page": "1-509",
+            "publisher": "American Mathematical Society, Providence, Rhode Island",
+            "title": "C*-algebras and finite-dimensional approximations, graduate studies in mathematics",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Exel",
+                    "given": "R."
+                }
+            ],
+            "container-title": "J. Funct. Anal",
+            "id": "Exs",
+            "issued": {
+                "date-parts": [
+                    [
+                        1994
+                    ]
+                ]
+            },
+            "page": "361-401",
+            "title": "Circle actions on c*-algebras, partial automorphisms, and a generalized pimsner-voiculescu exact squence",
+            "type": "article-journal",
+            "volume": "122"
+        },
+        {
+            "author": [
+                {
+                    "family": "Exel",
+                    "given": "R."
+                }
+            ],
+            "container-title": "Bull. Braz. Math. Soc. (N.S.)",
+            "id": "Exs1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1994
+                    ]
+                ]
+            },
+            "page": "173-179",
+            "title": "The bunce-deddens algebras as crossed products by partial automorphisms",
+            "type": "article-journal",
+            "volume": "25"
+        },
+        {
+            "author": [
+                {
+                    "family": "Exel",
+                    "given": "R."
+                }
+            ],
+            "container-title": "Math. Scand.",
+            "id": "Exs2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1995
+                    ]
+                ]
+            },
+            "page": "281-288",
+            "title": "Approximately finite C^*-algebras and partial automorphisms",
+            "type": "article-journal",
+            "volume": "77"
+        },
+        {
+            "author": [
+                {
+                    "family": "Exel",
+                    "given": "R."
+                }
+            ],
+            "container-title": "Proc. London Math. Soc.",
+            "id": "Ex1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1997
+                    ]
+                ]
+            },
+            "page": "471-443",
+            "title": "Twisted partial actions: A classification of regular C^*-algebraic bundles",
+            "title-short": "Twisted partial actions",
+            "type": "article-journal",
+            "volume": "74(3)"
+        },
+        {
+            "author": [
+                {
+                    "family": "Exel",
+                    "given": "R."
+                }
+            ],
+            "container-title": "J. Reine Angew. Math.",
+            "id": "Ex3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1997
+                    ]
+                ]
+            },
+            "page": "41-73",
+            "title": "Amenability for fell bundles",
+            "type": "article-journal",
+            "volume": "492"
+        },
+        {
+            "author": [
+                {
+                    "family": "Exel",
+                    "given": "R."
+                }
+            ],
+            "container-title": "Mathematical Surveys and Monographs",
+            "id": "Ex2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "page": "",
+            "title": "Partial dynamical systems, fell bundles and applications",
+            "type": "article-journal",
+            "volume": "224"
+        },
+        {
+            "author": [
+                {
+                    "family": "Exel",
+                    "given": "R."
+                },
+                {
+                    "family": "Laca",
+                    "given": "M."
+                },
+                {
+                    "family": "Quigg",
+                    "given": "J."
+                }
+            ],
+            "container-title": "J. Oper. Th.",
+            "id": "ELQ",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "page": "169-186",
+            "title": "Partial dynamical systems and c*-algebras generated by partial isometries",
+            "type": "article-journal",
+            "volume": "47(1)"
+        },
+        {
+            "author": [
+                {
+                    "family": "Fell",
+                    "given": "J. M. G."
+                },
+                {
+                    "family": "Doran",
+                    "given": "R. S."
+                }
+            ],
+            "id": "FD2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1988
+                    ]
+                ]
+            },
+            "page": "1-746",
+            "publisher": "Elsevier",
+            "title": "Representations of ^*-algebras, locally compact groups, and banach ^*-algebraic bundles, 6th. edn",
+            "type": "book",
+            "volume": "1"
+        },
+        {
+            "author": [
+                {
+                    "family": "Fendler",
+                    "given": "G."
+                },
+                {
+                    "family": "Leinert",
+                    "given": "M."
+                }
+            ],
+            "container-title": "Integral Equations Operator Theory",
+            "id": "FL",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "page": "209-230",
+            "title": "On convolution dominated operators",
+            "type": "article-journal",
+            "volume": "86(2)"
+        },
+        {
+            "author": [
+                {
+                    "family": "Fendler",
+                    "given": "G."
+                },
+                {
+                    "family": "Gröchenig",
+                    "given": "K."
+                },
+                {
+                    "family": "Leinert",
+                    "given": "M."
+                }
+            ],
+            "container-title": "Bull. London Math. Soc.",
+            "id": "FGL0",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "page": "625-635",
+            "title": "Symmetry of weighted L^1-algebras and the GRS-condition",
+            "type": "article-journal",
+            "volume": "38"
+        },
+        {
+            "author": [
+                {
+                    "family": "Fendler",
+                    "given": "G."
+                },
+                {
+                    "family": "Gröchenig",
+                    "given": "K."
+                },
+                {
+                    "family": "Leinert",
+                    "given": "M."
+                }
+            ],
+            "container-title": "Integral Equations Operator Theory",
+            "id": "FGL",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "page": "49-509",
+            "title": "Convolution-dominated operators on discrete groups",
+            "type": "article-journal",
+            "volume": "61(4)"
+        },
+        {
+            "author": [
+                {
+                    "family": "Renault",
+                    "given": "J."
+                }
+            ],
+            "id": "Re1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1980
+                    ]
+                ]
+            },
+            "page": "1-793",
+            "publisher": "Springer Lecture Notes in Mathematics",
+            "title": "A groupoid approach to c*-algebras",
+            "type": "book",
+            "volume": "1"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kumjian",
+                    "given": "A."
+                }
+            ],
+            "container-title": "Proc. Amer. Math. Soc.",
+            "id": "Kum",
+            "issued": {
+                "date-parts": [
+                    [
+                        1998
+                    ]
+                ]
+            },
+            "page": "115-125",
+            "title": "Fell bundles over groupoids",
+            "type": "article-journal",
+            "volume": "126(4)"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kugler",
+                    "given": "W."
+                }
+            ],
+            "container-title": "Math. Z.",
+            "id": "Kug",
+            "issued": {
+                "date-parts": [
+                    [
+                        1979
+                    ]
+                ]
+            },
+            "page": "241-262",
+            "title": "On the symmetry of generalized L1-algebras",
+            "type": "article-journal",
+            "volume": "168(3)"
+        },
+        {
+            "author": [
+                {
+                    "family": "Williams",
+                    "given": "D."
+                }
+            ],
+            "container-title": "Mathematical Surveys and Monographs, AMS",
+            "id": "Will",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "page": "",
+            "title": "A tool kit for groupoid c*-algebras",
+            "type": "article-journal",
+            "volume": "2"
+        },
+        {
+            "author": [
+                {
+                    "family": "Raeburn",
+                    "given": "I."
+                }
+            ],
+            "container-title": "Math. Proc. Cambridge Philos. Soc.",
+            "id": "Ra",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "page": "535-558",
+            "title": "Deformations of fell bundles and twisted graph algebras",
+            "type": "article-journal",
+            "volume": "161"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kumjian",
+                    "given": "A."
+                },
+                {
+                    "family": "Pask",
+                    "given": "D."
+                }
+            ],
+            "container-title": "New York J. Math.",
+            "id": "KP",
+            "issued": {
+                "date-parts": [
+                    [
+                        2000
+                    ]
+                ]
+            },
+            "page": "1-20",
+            "title": "Higher rank graph c^*-algebras",
+            "type": "article-journal",
+            "volume": "6"
+        },
+        {
+            "author": [
+                {
+                    "family": "Yamagami",
+                    "given": "S."
+                }
+            ],
+            "container-title": "Mappings of Operator Algebras (Philadelphia, PA, 1988), in: Progress in Math., 84, Birkhäuser Boston, Boston, MA",
+            "id": "Yam",
+            "issued": {
+                "date-parts": [
+                    [
+                        1990
+                    ]
+                ]
+            },
+            "page": "199-204",
+            "title": "On the ideal structure of c*-algebras over locally compact groupoids",
+            "type": "article-journal",
+            "volume": "6"
+        },
+        {
+            "author": [
+                {
+                    "family": "Muhly",
+                    "given": "P."
+                },
+                {
+                    "family": "Williams",
+                    "given": "D."
+                }
+            ],
+            "container-title": "Dissertationes Math. (Rozprawy Mat.)",
+            "id": "MW",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "page": "1-57",
+            "title": "Equivalence and disintegration theorems for fell bundles and their C^*-algebras",
+            "type": "article-journal",
+            "volume": "456"
+        },
+        {
+            "author": [
+                {
+                    "family": "Jauré",
+                    "given": "D."
+                },
+                {
+                    "family": "Măntoiu",
+                    "given": "M."
+                }
+            ],
+            "container-title": "arXiv:2108.09587 and to appear in <i>Bull. London Math. Soc.</i>",
+            "id": "JM",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "page": "",
+            "title": "Symmetry and spectral invariance for topologically graded C^*-algebras and partial action systems",
+            "type": "article-journal",
+            "volume": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Poguntke",
+                    "given": "D."
+                }
+            ],
+            "container-title": "Seminar Sophus Lie",
+            "id": "Po",
+            "issued": {
+                "date-parts": [
+                    [
+                        1992
+                    ]
+                ]
+            },
+            "page": "189-197",
+            "title": "Rigidly symmetric L^1-group algebras",
+            "type": "article-journal",
+            "volume": "2"
+        },
+        {
+            "author": [
+                {
+                    "family": "Wiener",
+                    "given": "N."
+                }
+            ],
+            "container-title": "Ann. of Math.",
+            "id": "Wie",
+            "issued": {
+                "date-parts": [
+                    [
+                        1932
+                    ]
+                ]
+            },
+            "page": "1-100",
+            "title": "Tauberian theorems",
+            "type": "article-journal",
+            "volume": "33(1)"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gröchenig",
+                    "given": "K."
+                },
+                {
+                    "family": "Leinert",
+                    "given": "M."
+                }
+            ],
+            "container-title": "J. Amer. Math. Soc.",
+            "id": "GL1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "page": "1-18",
+            "title": "Wiener’s lemma for twisted convolution and gabor frames",
+            "type": "article-journal",
+            "volume": "17"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gröchenig",
+                    "given": "K."
+                },
+                {
+                    "family": "Leinert",
+                    "given": "M."
+                }
+            ],
+            "container-title": "Trans. of the A.M.S.",
+            "id": "GL2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "page": "2695-2711",
+            "title": "Symmetry and inverse-closedness of matrix algebras and functional calculus for infinite matrices",
+            "type": "article-journal",
+            "volume": "358(6)"
+        },
+        {
+            "author": [
+                {
+                    "family": "Leptin",
+                    "given": "H."
+                },
+                {
+                    "family": "Poguntke",
+                    "given": "D."
+                }
+            ],
+            "container-title": "J. Funct. Anal.",
+            "id": "LP",
+            "issued": {
+                "date-parts": [
+                    [
+                        1979
+                    ]
+                ]
+            },
+            "page": "119-134",
+            "title": "Symmetry and nonsymmetry for locally compact groups",
+            "type": "article-journal",
+            "volume": "33(2)"
+        },
+        {
+            "author": [
+                {
+                    "family": "Palmer",
+                    "given": "T. W."
+                }
+            ],
+            "id": "Pa2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2001
+                    ]
+                ]
+            },
+            "page": "69",
+            "publisher": "Encyclopedia of Mathematics; its Applications. Cambridge University Press, Cambridge.",
+            "title": "Banach algebras and the general theory of ^*-algebras",
+            "type": "book",
+            "volume": "2"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gröchenig",
+                    "given": "K."
+                }
+            ],
+            "container-title": "B. Forster and P. Massopust, editors, Four Short Courses on Harmonic Analysis, Appl. Num. Harm. Anal. Birkhäuser, Boston",
+            "id": "Gr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "page": "",
+            "title": "Wiener’s lemma: Theme and variations. An introduction to spectral invariance",
+            "title-short": "Wiener’s lemma",
+            "type": "article-journal",
+            "volume": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Quigg",
+                    "given": "J. C."
+                },
+                {
+                    "family": "Raeburn",
+                    "given": "I."
+                }
+            ],
+            "container-title": "J. Operator Theory",
+            "id": "QR",
+            "issued": {
+                "date-parts": [
+                    [
+                        1997
+                    ]
+                ]
+            },
+            "page": "311-340",
+            "title": "Characterizations of crossed products by partial actions",
+            "type": "article-journal",
+            "volume": "37"
+        },
+        {
+            "author": [
+                {
+                    "family": "Quigg",
+                    "given": "J. C."
+                }
+            ],
+            "container-title": "J. Austral. Math. Soc. (Series A)",
+            "id": "Qu",
+            "issued": {
+                "date-parts": [
+                    [
+                        1996
+                    ]
+                ]
+            },
+            "page": "204-221",
+            "title": "Discrete C^*-coactions and C^*-algebraic bundles",
+            "type": "article-journal",
+            "volume": "60"
+        },
+        {
+            "author": [
+                {
+                    "family": "Mantoiu",
+                    "given": "M."
+                }
+            ],
+            "container-title": "Banach Journal of Mathematical Analysis",
+            "id": "Ma",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "page": "289-310",
+            "title": "Symmetry and inverse closedness for banach C^*-algebras associated to discrete groups",
+            "type": "article-journal",
+            "volume": "9(2)"
+        },
+        {
+            "author": [
+                {
+                    "family": "Samei",
+                    "given": "E."
+                },
+                {
+                    "family": "Wiersma",
+                    "given": "M."
+                }
+            ],
+            "container-title": "Adv. Math",
+            "id": "SW",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "page": "",
+            "title": "Quasi-hermitian locally compact groups are amenable",
+            "type": "article-journal",
+            "volume": "359"
+        },
+        {
+            "author": [
+                {
+                    "family": "Nica",
+                    "given": "A."
+                }
+            ],
+            "container-title": "J. Oper. Th.",
+            "id": "Ni",
+            "issued": {
+                "date-parts": [
+                    [
+                        1992
+                    ]
+                ]
+            },
+            "page": "17-52",
+            "title": "C*-algebras generated by isometries and wiener-hopf operators",
+            "type": "article-journal",
+            "volume": "27(1)"
+        },
+        {
+            "author": [
+                {
+                    "family": "Leptin",
+                    "given": "H."
+                }
+            ],
+            "container-title": "Archiv der Mathematik",
+            "id": "Lp",
+            "issued": {
+                "date-parts": [
+                    [
+                        1976
+                    ]
+                ]
+            },
+            "page": "394-400",
+            "title": "Symmetrie in banachschen algebren",
+            "type": "article-journal",
+            "volume": "27(1)"
+        },
+        {
+            "author": [
+                {
+                    "family": "Balan",
+                    "given": "R."
+                }
+            ],
+            "container-title": "Trans. Amer. Math. Soc.",
+            "id": "Ba",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "page": "3921-3941",
+            "title": "The noncommutative wiener lemma, linear independence and spectral properties of the algebra of time-frequency shift operators",
+            "type": "article-journal",
+            "volume": "360"
+        },
+        {
+            "author": [
+                {
+                    "family": "Baskakov",
+                    "given": "A. G."
+                }
+            ],
+            "container-title": "Funktsional. Anal. i Prilozhen",
+            "id": "Bas",
+            "issued": {
+                "date-parts": [
+                    [
+                        1990
+                    ]
+                ]
+            },
+            "page": "",
+            "title": "Wiener’s theorem and asymptotic estimates for elements of inverse matrices",
+            "type": "article-journal",
+            "volume": "24"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kurbatov",
+                    "given": "V. G."
+                }
+            ],
+            "container-title": "Funktsional. Anal. i Prilozhen",
+            "id": "Kur",
+            "issued": {
+                "date-parts": [
+                    [
+                        1990
+                    ]
+                ]
+            },
+            "page": "87-88",
+            "title": "Algebras of difference and integral operators",
+            "type": "article-journal",
+            "volume": "24"
+        },
+        {
+            "author": [
+                {
+                    "family": "Austad",
+                    "given": "A."
+                },
+                {
+                    "family": "Ortega",
+                    "given": "E."
+                }
+            ],
+            "container-title": "arXiv:2105.14793 [math.FA]",
+            "id": "AO",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "page": "",
+            "title": "Groupoids and hermitian banach *-algebras",
+            "type": "article-journal",
+            "volume": ""
+        },
+        {
             "URL": "https://www.R-project.org/",
             "author": [
                 {
