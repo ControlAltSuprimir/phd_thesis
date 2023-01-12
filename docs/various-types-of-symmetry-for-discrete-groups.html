@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Various types of symmetry for discrete groups | Symmetry and spectral invariance for topologically graded C*‐algebras and partial action systems</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Various types of symmetry for discrete groups | Symmetry and spectral invariance for topologically graded C*‐algebras and partial action systems" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Various types of symmetry for discrete groups | Symmetry and spectral invariance for topologically graded C*‐algebras and partial action systems" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Diego Jauré" />
+
+
+<meta name="date" content="2023-01-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction.html"/>
+<link rel="next" href="exemple.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="" data-path="agradecimientos.html"><a href="agradecimientos.html"><i class="fa fa-check"></i>Agradecimientos</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="various-types-of-symmetry-for-discrete-groups.html"><a href="various-types-of-symmetry-for-discrete-groups.html"><i class="fa fa-check"></i><b>2</b> Various types of symmetry for discrete groups</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="various-types-of-symmetry-for-discrete-groups.html"><a href="various-types-of-symmetry-for-discrete-groups.html#flocinor"><i class="fa fa-check"></i><b>2.1</b> The Main Result</a></li>
+<li class="chapter" data-level="2.2" data-path="various-types-of-symmetry-for-discrete-groups.html"><a href="various-types-of-symmetry-for-discrete-groups.html#cerculix"><i class="fa fa-check"></i><b>2.2</b> Topologically graded algebras from dual actions and partial crossed products</a></li>
+<li class="chapter" data-level="2.3" data-path="various-types-of-symmetry-for-discrete-groups.html"><a href="various-types-of-symmetry-for-discrete-groups.html#idealuri"><i class="fa fa-check"></i><b>2.3</b> Inverse closedness modulo ideals.</a></li>
+<li class="chapter" data-level="2.4" data-path="various-types-of-symmetry-for-discrete-groups.html"><a href="various-types-of-symmetry-for-discrete-groups.html#decay"><i class="fa fa-check"></i><b>2.4</b> Other types of decay</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exemple.html"><a href="exemple.html"><i class="fa fa-check"></i><b>3</b> Examples</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="exemple.html"><a href="exemple.html#restrix"><i class="fa fa-check"></i><b>3.1</b> Inverse closed Banach *-algebras from topological partial actions</a></li>
+<li class="chapter" data-level="3.2" data-path="exemple.html"><a href="exemple.html#dedenix"><i class="fa fa-check"></i><b>3.2</b> Toeplitz-Bunce-Deddens operators</a></li>
+<li class="chapter" data-level="3.3" data-path="exemple.html"><a href="exemple.html#afelliz"><i class="fa fa-check"></i><b>3.3</b> UHF algebras</a></li>
+<li class="chapter" data-level="3.4" data-path="exemple.html"><a href="exemple.html#afellix"><i class="fa fa-check"></i><b>3.4</b> CAR algebras</a></li>
+<li class="chapter" data-level="3.5" data-path="exemple.html"><a href="exemple.html#quasilatix"><i class="fa fa-check"></i><b>3.5</b> Wiener-Hopf algebras associated to quasi-lattice ordered groups</a></li>
+<li class="chapter" data-level="3.6" data-path="exemple.html"><a href="exemple.html#oroflix"><i class="fa fa-check"></i><b>3.6</b> Higher rank graph algebras</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="symmetry-in-a-groupoid-setting.html"><a href="symmetry-in-a-groupoid-setting.html"><i class="fa fa-check"></i><b>4</b> Symmetry in a groupoid setting</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="symmetry-in-a-groupoid-setting.html"><a href="symmetry-in-a-groupoid-setting.html#groupoids-and-groupoid-actions"><i class="fa fa-check"></i><b>4.1</b> Groupoids and groupoid actions</a></li>
+<li class="chapter" data-level="4.2" data-path="symmetry-in-a-groupoid-setting.html"><a href="symmetry-in-a-groupoid-setting.html#fell-bundles"><i class="fa fa-check"></i><b>4.2</b> Fell bundles</a></li>
+<li class="chapter" data-level="4.3" data-path="symmetry-in-a-groupoid-setting.html"><a href="symmetry-in-a-groupoid-setting.html#fell-bundles-over-groupoids"><i class="fa fa-check"></i><b>4.3</b> Fell bundles over groupoids</a></li>
+<li class="chapter" data-level="4.4" data-path="symmetry-in-a-groupoid-setting.html"><a href="symmetry-in-a-groupoid-setting.html#rigidly-symmetric-and-hypersymmetric-groupoids"><i class="fa fa-check"></i><b>4.4</b> Rigidly symmetric and hypersymmetric groupoids</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Symmetry and spectral invariance for topologically graded C*‐algebras and partial action systems</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="various-types-of-symmetry-for-discrete-groups" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Various types of symmetry for discrete groups<a href="various-types-of-symmetry-for-discrete-groups.html#various-types-of-symmetry-for-discrete-groups" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="flocinor" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> The Main Result<a href="various-types-of-symmetry-for-discrete-groups.html#flocinor" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Throughout this thesis, <span class="math inline">\(\G\)</span> will be a discrete group with unit <span class="math inline">\(\e\)</span> .
+As explained in Remark <a href="#lantors" reference-type="ref" reference="lantors"><span class="math display">\[lantors\]</span></a>, there is no loss if we assume it amenable. For
+constructions involving graded <span class="math inline">\(C^*\)</span>-algebras we followed <span class="citation">(<a href="#ref-Ex3" role="doc-biblioref">Exel 1997</a>; <a href="#ref-FD2" role="doc-biblioref">Fell and Doran 1988</a>)</span> ;
+we decided not to mention Fell bundles explicitly (with one exception),
+but they can be perceived in the background.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-1" class="definition"><strong>Definition 2.1  </strong></span><span id="claro" label="claro"></span> We say that the unital <span class="math inline">\(C^*\)</span>-algebra
+<span class="math inline">\(\mathfrak{C}\)</span> is <span class="math inline">\(\G\)</span><em>-graded</em> if that there is a family
+<span class="math inline">\(\big\{\mathfrak{C}_g\,\vert\,g\in\normalfont{\G}\big\}\)</span> of closed
+subspaces of <span class="math inline">\(\mathfrak{C}\)</span> such that the algebraic direct sum
+<span class="math inline">\(\,\bigoplus_{g\in\normalfont{\G}}\mathfrak{C_g}\)</span> is dense in
+<span class="math inline">\(\mathfrak{C}\)</span> and such that</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\mathfrak{C}_g\mathfrak{C}_h\subset\mathfrak{C}_{gh}\,\)</span> for every
+<span class="math inline">\(g,h\in\normalfont{\G}\)</span> ,</p></li>
+<li><p><span class="math inline">\(\mathfrak{C}_g^*\subset\mathfrak{C}_{g^{-1}}\,\)</span> for every
+<span class="math inline">\(g\in\normalfont{\G}\)</span> ,</p></li>
+</ol>
+<p>For every <span class="math inline">\(h\in\normalfont{\G}\)</span> we denote by
+<span class="math inline">\(P_h:\bigoplus_{g\in\normalfont{\G}}\!\mathfrak{C}_g\to\mathfrak{C}_h\)</span>
+the canonical projection (in general it might not be continuous). If
+<span class="math inline">\(P_\e\)</span> is continuous, <span class="math inline">\(\mathfrak{C}\)</span> is <em>a topologically
+<span class="math inline">\(\normalfont{\G}\)</span>-graded <span class="math inline">\(C^*\)</span>-algebra.</em> We are going to write
+<span class="math display">\[\label{veverita}
+\mathfrak{C}=\widetilde{\bigoplus}_{g\in\normalfont{\G}}\mathfrak{C}_g\,.\]</span></p>
+</div>
+<p>For <span class="math inline">\(\Phi,\Psi\in\bigoplus_{g\in\G}\mathfrak{C}_g\)</span> and <span class="math inline">\(g\in\G\)</span> one
+verifies easily that <span class="math display">\[\label{multiplix}
+P_g(\Phi\Psi)=\sum_{hk=g}P_h(\Phi)P_k(\Psi)\,,\]</span> <span class="math display">\[\label{multiplex}
+P_g(\Phi)^*=P_{g^{-1}}(\Phi^*)\,.\]</span> When the grading is topological,
+there are several facilities which will be crucial for our approach. Let
+us denote by <span class="math inline">\(\widetilde{P}_\e:\mathfrak{C}\to\mathfrak{C_\e}\)</span> the
+extension of <span class="math inline">\(P_\e\)</span> to a linear bounded map. By Tomiyama’s Theorem (<span class="citation">(<a href="#ref-BO" role="doc-biblioref">Brown and Ozawa 2008</a> Thm. 1.5.10)</span>, see also <span class="citation">(<a href="#ref-Ex3" role="doc-biblioref">Exel 1997, Thm. 3.3</a>)</span>), it is a positive contractive
+conditional expectation. Then all the projections <span class="math inline">\(P_g\)</span> do extend to
+contractions <span class="math inline">\(\widetilde{P}_g:\mathfrak{C}\to\mathfrak{C_g}\)</span> . We refer
+to the proof of Theorem <a href="various-types-of-symmetry-for-discrete-groups.html#teoremix" reference-type="ref" reference="teoremix"><span class="math display">\[teoremix\]</span></a>,(ii) for another use of topological grading, in
+conjunction with amenability.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-2" class="definition"><strong>Definition 2.2  </strong></span><span id="glaro" label="glaro"></span> Let <span class="math inline">\(\mathfrak{C}\)</span> be a topologically graded
+<span class="math inline">\(C^*\)</span>-algebra. On <span class="math inline">\(\,\bigoplus_{g\in\normalfont{\G}}\!\mathfrak{C}_g\)</span> we
+can introduce the new norm
+<span class="math display">\[\p\!\Phi\!\p_{\ell^1(\mathfrak C)}\,:=\sum_{g\in\normalfont{\G}}\p\! P_g(\Phi)\!\p.\]</span>
+The completion <span class="math inline">\(\ell^1(\mathfrak{C})\)</span> of
+<span class="math inline">\(\bigoplus_{g\in \normalfont{\G}}\!\mathfrak{C}_g\)</span> in this norm is
+called <em>the <span class="math inline">\(\ell^1\)</span>-algebra of the graded <span class="math inline">\(C^*\)</span>-algebra
+<span class="math inline">\(\mathfrak{C}\)</span></em>.</p>
+</div>
+<p>Since <span class="math inline">\(\p\!\cdot\!\p\,\le\,\p\!\cdot\!\p_{\ell^1(\mathfrak{C})}\)</span> on
+<span class="math inline">\(\bigoplus_{g\in\G}\!\mathfrak{C}_g\)</span>, one may interpret
+<span class="math inline">\(\ell^1(\mathfrak{C})\)</span> as a subspace of <span class="math inline">\(\mathfrak{C}\)</span>:
+<span class="math display">\[\label{interpretatix}
+\ell^1(\mathfrak{C})=\Big\{\Phi\in\mathfrak{C}\;\Big\vert\,\sum_{g\in\G}\p\! \widetilde{P}_g(\Phi)\!\p\,&lt;\infty\Big\}\,.\]</span>
+In fact it is a Banach <span class="math inline">\(^*\)</span>-subalgebra with the algebraic structure
+borrowed from <span class="math inline">\(\mathfrak{C}\)</span> and its new norm. Its elements may be
+written as unconditionally convergent series
+<span class="math inline">\(\Phi=\sum_{g\in\G}\widetilde{P}_g(\Phi)\)</span> in the norm topology.</p>
+<p>The next result, besides being interesting in itself, is basic for our
+approach.</p>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-3" class="proposition"><strong>Proposition 2.1  </strong></span><span id="isometrix" label="isometrix"></span> Let
+<span class="math inline">\(\mathfrak{C}=\widetilde{\bigoplus}_{g\in\normalfont{\G}}\mathfrak{C}_g\)</span>
+be a topologically graded <span class="math inline">\(C^*\)</span>-algebra over a discrete group
+<span class="roman"><span class="math inline">\(\normalfont{\G}\)</span></span>. There exists a <span class="math inline">\(C^*\)</span>-algebra <span class="math inline">\(\B\)</span> and an
+isometric <span class="math inline">\(^*\)</span>-morphism <span class="math display">\[\label{guyana}
+T:\ell^1(\mathfrak{C})\hookrightarrow \ell^1(\normalfont{\G};\mathcal{B})\equiv\ell^1(\normalfont{\G})\otimes \B\,.\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-4" class="proof"><em>Proof</em>. </span><em>Proof.</em> Let <span class="math inline">\(\pi:\mathfrak{C}\to\mathbb{B}(\h)\)</span> be a faithful
+representation. For any <span class="math inline">\(g\in\G\)</span> we denote by <span class="math inline">\(\pi_g\)</span> the restriction of
+<span class="math inline">\(\pi\)</span> to the closed subspace <span class="math inline">\(\mathfrak{C}_g\)</span>; it is a linear isometry.
+One has <span class="math display">\[\label{primika}
+\pi_g(\Phi)\pi_h(\Psi)=\pi_{gh}(\Phi\Psi)\,,\quad\forall\,g,h\in\G\,,\ \Phi\in\mathfrak{C}_g\,,\ \Psi\in\mathfrak{C}_h\,,\]</span>
+<span class="math display">\[\label{secundika}
+\pi_g(\Phi^*)=\pi_{g^{-1}}(\Phi)^*,\quad\forall\,g\in\G\,,\ \Phi\in\mathfrak{C}_g\,.\]</span></p>
+<p>Then we set <span class="math display">\[\label{tronc}
+\big[T(\Phi)\big](g):=\pi_g\big[\widetilde P_g(\Phi)\big]\,,\quad\Phi\in\ell^1(\mathfrak{C})\,,\ g\in\G\,.\]</span>
+Clearly <span class="math inline">\(T\)</span> is a well-defined linear isometry from <span class="math inline">\(\ell^1(\mathfrak C)\)</span>
+to <span class="math inline">\(\ell^1\big(\G,\mathbb B(\h)\big)\)</span> :
+<span class="math display">\[\p\!T(\Phi)\!\p_{\ell^1(\G,\mathbb B(\h))}\,=\sum_{g\in\G}\p\!\pi_g\big[\widetilde P_g(\Phi)\big]\!\p_{\mathbb B(\h)}\,=\sum_{g\in\G}\p\!\widetilde P_g(\Phi)\!\p\,=\,\p\!\Phi\!\p_{\ell^1(\mathfrak C)}.\]</span>
+To check that <span class="math inline">\(T\)</span> respects the algebraic operations, it is enough to
+work with elements of the algebraic direct sum. By taking
+<span class="math inline">\(\Phi,\Psi\in\bigoplus_g\!\mathfrak{C}_g\)</span>, one can write
+<span class="math display">\[\begin{aligned}
+\big[(T\Phi)\star(T\Psi)\big](g)&amp;=\sum_{h\in \G}(T\Phi)(h)(T\Psi)(h^{-1}g) \\
+&amp;=\sum_{h\in \G}\pi_h\left[P_h(\Phi)\right]\,\pi_{h^{-1}g}\big[P_{h^{-1}g}(\Psi)\big] \\
+&amp;\overset{\eqref{primika}}{=}\sum_{h\in \G}\pi_g\big[P_h(\Phi)P_{h^{-1}g}(\Psi)\big]\\
+&amp;=\pi_g\Big(\sum_{h\in \G}P_h(\Phi)P_{h^{-1}g}(\Psi)\Big)\\
+&amp;\overset{\eqref{multiplix}}{=}\pi_g\big[P_g(\Phi\Psi)\big]=\big[T(\Phi\Psi)\big](g)\,,
+\end{aligned}\]</span> showing that <span class="math inline">\(T\)</span> is an algebraic morphism. Finally we
+treat the involution: <span class="math display">\[\begin{aligned}
+\left[T(\Phi)\right]^\star\!(g) &amp; =\pi_{g^{-1}}\!\left[P_{g^{-1}}(\Phi)\right]^*\overset{\eqref{secundika}}{=} \pi_g\big[P_{g^{-1}}(\Phi)^*\big]\\
+&amp; \overset{\eqref{multiplix}}{=} \pi_g[P_g(\Phi^*)]= \big[T(\Phi^*)\big](g)\,.
+\end{aligned}\]</span> ◻</p>
+</div>
+<p>With Proposition <a href="various-types-of-symmetry-for-discrete-groups.html#isometrix" reference-type="ref" reference="isometrix"><span class="math display">\[isometrix\]</span></a> in hand, we prove now our main abstract result.
+Recall that a Banach <span class="math inline">\(^*\)</span>-algebra is called <em>reduced</em> if its universal
+<span class="math inline">\(C^*\)</span>-seminorm is in fact a norm. In this case, its enveloping
+<span class="math inline">\(C^*\)</span>-algebra is simply its completion in this <span class="math inline">\(C^*\)</span>-norm (no quotient
+is needed).</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-5" class="theorem"><strong>Theorem 2.1  </strong></span><span id="teoremix" label="teoremix"></span> Let
+<span class="math inline">\(\mathfrak C=\widetilde{\bigoplus}_{g\in\normalfont{\G}}\mathfrak C_g\)</span>
+be topologically graded over a rigidly symmetric discrete group
+<span class="math inline">\(\normalfont{\G}\)</span> .</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\ell^1(\mathfrak C)\)</span> is a symmetric Banach <span class="math inline">\(^*\)</span>-algebra.</p></li>
+<li><p><span class="math inline">\(\ell^1(\mathfrak C)\)</span> is an inverse closed subalgebra of
+<span class="math inline">\(\,\mathfrak C\)</span> .</p></li>
+<li><p>Let <span class="math inline">\(\Pi:\mathfrak C\to \mathbb{B}(\h)\)</span> be a faithful
+representation. Then <span class="math inline">\(\Pi\left[\ell^1(\mathfrak C)\right]\)</span> is
+inverse closed in <span class="math inline">\(\mathbb{B}(\h)\)</span> .</p></li>
+</ol>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-6" class="proof"><em>Proof</em>. </span><em>Proof.</em> (i) By <span class="citation">(<a href="#ref-Pa2" role="doc-biblioref">Palmer 2001, 2:Th.11.4.2</a>)</span>, a closed <span class="math inline">\(^*\)</span>-algebra of a symmetric
+Banach <span class="math inline">\(^*\)</span>-algebra is also symmetric. Proposition
+<a href="various-types-of-symmetry-for-discrete-groups.html#isometrix" reference-type="ref" reference="isometrix"><span class="math display">\[isometrix\]</span></a>
+and the fact that <span class="math inline">\(\ell^1(\G;\mathcal B)\)</span> was assumed symmetric proves
+the result.</p>
+<p><span class="math inline">\(ii\)</span> It is known <span class="citation">(<a href="#ref-Pa2" role="doc-biblioref">Palmer 2001, 2:11.4</a>)</span> that a reduced Banach <span class="math inline">\(^*\)</span>-algebra is
+symmetric if and only if it is inverse closed in its enveloping
+<span class="math inline">\(C^*\)</span>-algebra. If we show that we are in such a case, we then apply (i).
+Our <span class="math inline">\(\ell^1(\mathfrak C)\)</span> is clearly reduced, being given as a
+<span class="math inline">\(^*\)</span>-subalgebra of <span class="math inline">\(\mathfrak C\)</span> . Actually, we claim that <span class="math inline">\(\mathfrak C\)</span>
+can be seen as (a copy of) the enveloping <span class="math inline">\(C^*\)</span>-algebra of
+<span class="math inline">\(\ell^1(\mathfrak C)\)</span> . In <span class="citation">(<a href="#ref-SW" role="doc-biblioref">Samei and Wiersma 2020, Corol. 4.8</a>)</span> it is shown that a symmetric
+group (as our rigidly symmetric <span class="math inline">\(\G\)</span>) is surely amenable. For such
+groups, one may identify <span class="math inline">\(\mathfrak C\)</span> with both the full and the
+reduced <span class="math inline">\(C^*\)</span>-algebras of the Fell bundle associated to the topological
+grading <span class="citation">(<a href="#ref-Ex3" role="doc-biblioref">Exel 1997, Prop. 4.2, Thm. 4.7</a>)</span> and then the assertion about
+enveloping follows <span class="citation">(<a href="#ref-FD2" role="doc-biblioref">Fell and Doran 1988, 1:VIII.17</a>)</span>.</p>
+<p><span class="math inline">\(iii\)</span> Is a consequence of (ii), since any <span class="math inline">\(C^*\)</span>-algebra is inverse
+closed in a larger <span class="math inline">\(C^*\)</span>-algebra. ◻</p>
+</div>
+<p>In the context of group actions on <span class="math inline">\(C^*\)</span>-algebras one deals with
+convolution dominated kernels and operators <span class="citation">(<a href="#ref-FL" role="doc-biblioref">Fendler and Leinert 2016</a>; <a href="#ref-FGL" role="doc-biblioref">Fendler, Gröchenig, and Leinert 2008</a>; <a href="#ref-Gr" role="doc-biblioref">Gröchenig 2010</a>; <a href="#ref-GL2" role="doc-biblioref">Gröchenig and Leinert 2006</a>; <a href="#ref-Ma" role="doc-biblioref">Mantoiu 2015</a>)</span>.
+We briefly indicate an extension for the topologically graded case,
+leading to another form of a symmetric Banach <span class="math inline">\(^*\)</span>-algebra at the level
+of kernels. Representations by integral operators and their inverse
+closedness properties are left to the reader.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-7" class="definition"><strong>Definition 2.3  </strong></span><span id="kimpembe" label="kimpembe"></span> <em>A convolution dominated kernel</em> (or
+<em>matrix</em>) is a function
+<span class="math inline">\(K:\normalfont{\G}\times\textsf{\G}\to \mathfrak{C}\)</span> such that
+<span class="math inline">\(K(g,h)\in\mathfrak{C}_{gh^{-1}}\)</span> for every <span class="math inline">\(g,h\in\normalfont{\G}\)</span> and
+such that the norm <span class="math display">\[\label{cambio}
+\p\!K\!\p_\mathscr{K}\,:=\inf\big\{\!\p\!\kappa\!\p_{\ell^1(\normalfont{\G})}\,\big\vert\,\p\!K(g,h)\!\p_\mathfrak{C}\,\le|\kappa(gh^{-1})|\,,\,\forall\,g,h\in\normalfont{\G}\big\}\]</span>
+is finite. We denote by <span class="math inline">\(\mathscr K_{\normalfont{\G}}(\mathfrak{C})\)</span> the
+vector space of all these convolution dominated kernels. An element <span class="math inline">\(K\)</span>
+of <span class="math inline">\(\mathscr K_{\normalfont{\G}}(\mathfrak{C})\)</span> is called <em>covariant</em>,
+and we write
+<span class="math inline">\(K\in\mathscr{K}^{\textrm{ co}}_{\normalfont{\G}}(\mathfrak{C})\)</span> , if
+<span class="math display">\[\label{pusimic}
+K(gk,hk)=K(g,h)\,,\quad\forall\,g,h,k\in{\normalfont{\G}}\,.\]</span></p>
+</div>
+<p>From the definition above, <span class="math inline">\(K\)</span> is covariant if and only if for all
+<span class="math inline">\(g,h\in G\)</span> we have <span class="math inline">\(K(g, h)= k_0(gh^{-1})\)</span> for some function
+<span class="math inline">\(k_0:G\rightarrow \mathfrak{C}\)</span> such that <span class="math inline">\(k_0(k)\in \mathfrak{C}_k\)</span> for
+all <span class="math inline">\(g\in G\)</span> and <span class="math inline">\(\| k_0(\cdot ) \|_{\mathfrak C}\in \ell^1(G)\)</span>. Thus
+the isomorphism between <span class="math inline">\(\mathscr K^{\textrm{ co}}_\G(\mathfrak C)\)</span> and
+<span class="math inline">\(\ell^1(\mathfrak C)\)</span> is straightforward.</p>
+<p>It is straightforward to show that endowed with the norm
+<span class="math inline">\(\p\!\cdot\!\p_\mathscr K\)</span> , the multiplication <span class="math display">\[\label{greta}
+(K\bu L)(g,h):=\sum_{k\in\G}K(g,k)L(k,h)\]</span> and the involution
+<span class="math inline">\(K^\bu(g,h):=K(h,g)^*\)</span>, the space
+<span class="math inline">\(\mathscr K_{\normalfont{\G}}(\mathfrak C)\)</span> is a Banch <span class="math inline">\(^*\)</span>-algebra.</p>
+<div class="corollary">
+<p><span id="cor:unlabeled-div-8" class="corollary"><strong>Corollary 2.1  </strong></span><span id="climatic" label="climatic"></span> The subspace
+<span class="math inline">\(\mathscr K^{\textrm{ co}}_{\normalfont{\G}}(\mathfrak C)\)</span> is a
+symmetric Banach <span class="math inline">\(^*\)</span>-algebra.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-9" class="proof"><em>Proof</em>. </span><em>Proof.</em> It is easy to check that
+<span class="math inline">\(\mathscr K^{\textrm{ co}}_\G(\mathfrak C)\)</span> is a closed <span class="math inline">\(^*\)</span>-subalgebra
+of <span class="math inline">\(\mathscr K_\G(\mathfrak C)\)</span> . Let us define <span class="math display">\[\label{london}
+\big[\Upsilon(\Phi)\big](g,h):=\widetilde P_{gh^{-1}}(\Phi)\,,\quad\forall\,g,h\in\G\,.\]</span>
+Then <span class="math inline">\(\Upsilon:\ell^1(\mathfrak C)\to\mathscr K_\G(\mathfrak C)\)</span> is an
+isometric <span class="math inline">\(^*\)</span>-morphism with range
+<span class="math inline">\(\mathscr K^{\textrm{ co}}_\G(\mathfrak C)\)</span> . For the algebraic
+relations use <a href="#multiplix" reference-type="eqref" reference="multiplix"><span class="math display">\[multiplix\]</span></a> and
+<a href="#multiplex" reference-type="eqref" reference="multiplex"><span class="math display">\[multiplex\]</span></a> (extended). On this range, the inverse reads
+<span class="math display">\[\label{reads}
+\big[\Upsilon^{-1}(K)\big]_g:=K(g,\e)\,,\quad\forall\,g\in\G\,.\]</span> Since
+<span class="math inline">\(\mathscr K^{\textrm{ co}}_\G(\mathfrak C)\)</span> and <span class="math inline">\(\ell^1(\mathfrak C)\)</span>
+are isomorphic, the result follows from Theorem
+<a href="various-types-of-symmetry-for-discrete-groups.html#teoremix" reference-type="ref" reference="teoremix"><span class="math display">\[teoremix\]</span></a>(i). ◻</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-10" class="remark"><em>Remark</em>. </span><span id="fratrix" label="fratrix"></span> In <span class="citation">(<a href="#ref-Ra" role="doc-biblioref">Raeburn 2016</a>)</span> it is shown how to deform Fell
+bundles by a cohomological twisting. We adapt this here to our problem.
+Let <span class="math inline">\(\o:\normalfont{\G}\!\times\!\normalfont{\G}\to\T\)</span> be a <span class="math inline">\(2\)</span>-cocycle,
+bound to satisfy for every <span class="math inline">\(g,h,k\in\normalfont{\G}\)</span> the axioms
+<span class="math display">\[\label{bundix}
+\o(g,h)\o(gh,k)=\o(h,k)\o(g,hk)\,,\quad\o(g,\e)=1=\o(\e,g)\,.\]</span> For a
+topologically graded <span class="math inline">\(C^*\)</span>-algebra
+<span class="math inline">\(\mathfrak C=\widetilde{\bigoplus}_{g\in\normalfont{\G}}\mathfrak C_g\)</span> ,
+it is possible to construct a new one <span class="math inline">\(\mathfrak C\{\o\}\)</span> in the
+following way: On the (same) algebraic direct sum we modify the
+algebraic structure, setting for finite sums <span class="math inline">\(\Phi:=\sum_g\!\Phi_g\)</span> and
+<span class="math inline">\(\Psi:=\sum_g\!\Psi_g\)</span> <span class="math display">\[\label{finitex}
+\Phi\cdot_\o\!\Psi:=\sum_{g,h}\o(g,h)\Phi_g\Psi_h\,,\quad\Phi^{*_\o}\!:=\sum_g\overline{\o(g,g^{-1})}\Phi_g\,.\]</span></p>
+<p>An argument using Fell bundles and the amenability of our discrete group
+certifies the existence of the topological graded <span class="math inline">\(C^*\)</span>-algebra
+<span class="math inline">\(\mathfrak C\{\o\}=\widetilde{\bigoplus}^\o_{g\in\normalfont{\G}}\mathfrak C_g\)</span> .
+The norm is also different (on the common algebraic sum), having in view
+the way the universal norm (identical here with the reduced one, by
+amenability) is constructed in the setting of Fell bundles. <em>In the case
+where <span class="math inline">\(\omega\)</span> is not trivially equal to <span class="math inline">\(1\)</span>, the Banach <span class="math inline">\(^*\)</span>-algebra
+<span class="math inline">\(\ell^1\big(\mathfrak C\{\o\}\big)\)</span> is different from
+<span class="math inline">\(\ell^1(\mathfrak C)\)</span> and it is symmetric and inverse closed in
+<span class="math inline">\(\mathfrak C\{\o\}\)</span> .</em></p>
+</div>
+</div>
+<div id="cerculix" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Topologically graded algebras from dual actions and partial crossed products<a href="various-types-of-symmetry-for-discrete-groups.html#cerculix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Given a <span class="math inline">\(C^*\)</span>-algebra, it is often not obvious whether it has an
+interesting grading or not. In this subsection we are going to review
+some ways to solve this problem, following especially results of Exel,
+Quigg and Raeburn. This will lead to two reformulations of Theorem
+<a href="various-types-of-symmetry-for-discrete-groups.html#theoremix" reference-type="ref" reference="theoremix"><span class="math display">\[theoremix\]</span></a>
+that can be useful when studying examples and which will also provide
+the reader with a more extended picture. We will take advantage of the
+fact that our group <span class="math inline">\(\G\)</span> is discrete and amenable; this will allow for
+some simplifications.</p>
+<p>The most general statement is that in this setting, <em>topologically
+graded <span class="math inline">\(C^*\)</span>-algebras over <span class="math inline">\(\G\)</span> are equivalent to coactions of <span class="math inline">\(\,\G\)</span></em> ,
+cf. <span class="citation">(<a href="#ref-Qu" role="doc-biblioref">Quigg 1996</a>)</span> and <span class="citation">(<a href="#ref-Ra" role="doc-biblioref">Raeburn 2016</a> App. A)</span>. In this direction we only indicate the case
+of Abelian groups and the dual of an Abelian group is a group, making
+the constructions more transparent.</p>
+<p>So we fix for a while a discrete Abelian group <span class="math inline">\(\G\)</span> . Its Pontryagin
+dual <span class="math inline">\(\widehat\G\)</span> is a compact Abelian group with normalized Haar
+measure <span class="math inline">\(d\chi\)</span> . Let <span class="math inline">\(\big(\mathfrak C,\alpha,\wG\,\big)\)</span> be a (usual,
+full) action of <span class="math inline">\(\wG\)</span> on a <span class="math inline">\(C^*\)</span>-algebra. For every <span class="math inline">\(g\in\G\)</span> let
+<span class="math display">\[\label{spectrix}
+\mathfrak C_g:=\big\{\Phi\in\mathfrak C\,\big\vert\,\alpha_\chi(\Phi)=\chi(g)\Phi\,,\,\forall\,\chi\in\wG\big\}\]</span>
+be the <span class="math inline">\(g\)</span>’th spectral subspace of the action. It is easy to see that
+one gets a grading, as in
+<a href="#veverita" reference-type="eqref" reference="veverita"><span class="math display">\[veverita\]</span></a>.
+We have now the concrete projections <span class="math display">\[\label{projetrix}
+\widetilde P_g:\mathfrak C\to\mathfrak C_g\,,\quad \widetilde P_g(\Phi):=\int_{\wG}\,\overline{\chi(g)}\,\alpha_\chi(\Phi)\,d\chi\,,\]</span>
+which are obviously contractive; then <span class="math inline">\(\mathfrak C\)</span> is a topological
+grading. We can reformulate Theorem
+<a href="various-types-of-symmetry-for-discrete-groups.html#teoremix" reference-type="ref" reference="teoremix"><span class="math display">\[teoremix\]</span></a> in
+this Abelian setting; the <span class="math inline">\(\ell^1\)</span>-algebra will deserve a special
+notation, to recall the action <span class="math inline">\(\alpha\)</span> and the type of decay.</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-11" class="theorem"><strong>Theorem 2.2  </strong></span><span id="exelix" label="exelix"></span> Let
+<span class="math inline">\(\big(\mathfrak C,\alpha,\normalfont{\wG}\,\big)\)</span> be a continuous action
+of a compact Abelian group <span class="math inline">\(\normalfont{\wG}\)</span> on a unital <span class="math inline">\(C^*\)</span>-algebra.
+Denoting by <span class="math inline">\(\normalfont{\G}\)</span> the dual of <span class="math inline">\(\,\normalfont{\wG}\)</span> ,
+<span class="math display">\[\label{peru}
+\ell^1(\mathfrak C)\equiv\bigoplus_{g\in\normalfont{\G}}^{1,\alpha}\mathfrak C_g=\Big\{\Phi\in\mathfrak C\;\Big\vert\,\sum_{g\in\normalfont{\G}}\p\! \widetilde P_g(\Phi)\!\p\,&lt;\infty\Big\}\]</span>
+is a reduced and symmetric Banach <span class="math inline">\(^*\)</span>-algebra, which is inverse closed
+in <span class="math inline">\(\mathfrak C\)</span> .</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-12" class="remark"><em>Remark</em>. </span><span id="crucix" label="crucix"></span> Using normal subgroups of <span class="math inline">\(\normalfont{\G}\)</span>
+one can increase the family of symmetric subalgebras. If, as above,
+<span class="math inline">\(\big(\mathfrak C,\alpha,\widehat{\normalfont{\G}}\,\big)\)</span> is a
+continuous action of the dual of the Abelian discrete group
+<span class="math inline">\(\normalfont{\G}\)</span> and <span class="math inline">\(\n\)</span> is a normal subgroup, the dual
+<span class="math inline">\(\widehat{\normalfont{\G}/\n}\)</span> of the quotient is isomorphic to the
+closed subgroup <span class="math display">\[\label{clarix}
+\textrm{ Ann}\big(\n\!\mid\!\wG\big):=\big\{\chi\in\wG\,\big\vert\,\chi|_{\n}=1\big\}\,.\]</span>
+Thus from <span class="math inline">\(\alpha\)</span> we deduce a continuous action <span class="math inline">\(\alpha^\n\)</span> of
+<span class="math inline">\(\widehat{\normalfont{\G}/\n}\)</span> on <span class="math inline">\(\mathfrak C\)</span> , first by restricting
+<span class="math inline">\(\alpha\)</span> to <span class="math inline">\(\textrm{ Ann}\big(\n\!\mid\!\wG\big)\)</span> and then composing
+with the isomorphism. In this way we obtain the new symmetric Banach
+<span class="math inline">\(^*\)</span>-algebra <span class="math display">\[\label{perux}
+\ell^1\big(\mathfrak{C}^{\normalfont{\G}/\n}\big)\equiv\bigoplus_{\gamma\in\normalfont{\G}/\n}^{1,\alpha^{\n}}\mathfrak{C}_{\gamma}\,.
+%=\Big\{\Phi\in\mathfrak C\;\Big\vert\,\sum_{g\in\normalfont{\G}}\p\! \widehat P_g(\Phi)\!\p\,&lt;\infty\Big\}\]</span>
+Extreme cases are
+<span class="math inline">\(\ell^1\big(\mathfrak C^{\normalfont{\G}/\{\e\}}\big)=\ell^1(\mathfrak C)\)</span>
+and
+<span class="math inline">\(\ell^1\big(\mathfrak C^{\normalfont{\G}/\normalfont{\G}}\big)=\mathfrak C\)</span> .</p>
+</div>
+<p>Crossed products assigned to partial actions of (discrete) groups <span class="math inline">\(\G\)</span>
+on (unital) <span class="math inline">\(C^*\)</span>-algebras are among the most important examples of
+graded <span class="math inline">\(C^*\)</span>-algebras, and they were our initial motivation. In <span class="citation">(<a href="#ref-Ex2" role="doc-biblioref">Exel 2017, Thm. 27.11</a>)</span> they are characterized among the larger class, while <span class="citation">(<a href="#ref-QR" role="doc-biblioref">Quigg and Raeburn 1997, Thm. 4.1</a>)</span> gives a Landstad-type description of them in terms of the
+associated coaction. In many cases what we are actually given is the
+partial action; the grading comes afterwards. Now the discrete group
+<span class="math inline">\(\G\)</span> is no longer Abelian.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-13" class="definition"><strong>Definition 2.4  </strong></span><span id="bazika" label="bazika"></span> A <em>partial action</em> of <span class="math inline">\(\normalfont{\G}\)</span> on
+the <span class="math inline">\(C^*\)</span>-algebra <span class="math inline">\(\A\)</span> is a pair
+<span class="math inline">\(\big(\{\A_g\}_{g\in \normalfont{\G}},\{\te_g\}_{g\in\normalfont{\G}}\}\big)\)</span> ,
+where for each <span class="math inline">\(g\in \normalfont{\G}\)</span> , <span class="math inline">\(\A_g\)</span> is a closed two-sided
+ideal in <span class="math inline">\(\A\)</span> , <span class="math inline">\(\te_g\)</span> is a <span class="math inline">\(^*\)</span>-isomorphism from <span class="math inline">\(\A_{g^{-1}}\)</span> onto
+<span class="math inline">\(\A_g\)</span> , satisfying the following conditions, for all
+<span class="math inline">\(g,h\in\normalfont{\G}\)</span> :</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\A_\e=\A\)</span> and <span class="math inline">\(\te_\e\)</span> is the identity automorphism of <span class="math inline">\(\A\)</span> ,</p></li>
+<li><p><span class="math inline">\(\te_g\!\left(\A_{g^{-1}}\!\cap \A_h\right)\subset\A_{gh}\)</span> ,</p></li>
+<li><p><span class="math inline">\(\te_g\big(\te_h(a)\big)=\te_{gh}(a)\)</span> ,
+<span class="math inline">\(\forall\,a\in\A_{h^{-1}}\!\cap\A_{(gh)^{-1}}\)</span> .</p></li>
+</ol>
+</div>
+<p>We also denote by <span class="math inline">\((\A,\te,\G)\)</span> the partial dynamical system. It follows
+easily that we have <span class="math inline">\(\te_{g^{-1}}\!=\te_g^{-1}\)</span>. Our main object is the
+following vector space: <span class="math display">\[\label{thetika}
+\ell^1_\te(\G;\A):= \left\{\Phi\in\ell^1(\textsf{G};\A)\mid\Phi(g)\in \A_g \,,\,\forall\,g\in \G\right\},\]</span>
+which is obviously closed. For <span class="math inline">\(\Phi,\Psi\in\ell^1_\te(\G;\A)\)</span> we define
+the product <span class="math display">\[\label{strugure}
+\left( \Phi\star_{\theta} \Psi\right)(g)  =\sum_{h\in \G} \theta_h\!\left[\theta_{h}^{-1}\big(\Phi(h)\big)\Psi\big(h^{-1}g\big)\right]\]</span>
+and the involution
+<span class="math inline">\(\Phi^{\star_\theta}(g) = \theta_g\!\left[\Phi\big(g^{-1}\big)\right]^*.\)</span>
+Then
+<span class="math inline">\(\big(\ell^1_\te(\G;\A),\star_{\theta},^{\star_{\theta}}\!,\|\cdot\|_{\ell^1_\te(\G;\A)}\big)\)</span>
+is a Banach <span class="math inline">\(^*\)</span>-algebra. We will refer to it as <em>the <span class="math inline">\(\ell^1\)</span>-partial
+crossed product</em>. Its enveloping <span class="math inline">\(C^*\)</span>-algebra is denoted by
+<span class="math inline">\(\A\!\rtt_\te\!\G\)</span> and called <em>the partial crossed product associated to
+<span class="math inline">\((\A,\te,\G)\)</span></em> . We used the fancy symbol <span class="math inline">\(\rtt\)</span> instead of the more
+usual <span class="math inline">\(\rtimes\)</span> to stress that our crossed product is assigned to a
+<em>partial</em> action.</p>
+<p>We indicate the particularization of Theorem
+<a href="various-types-of-symmetry-for-discrete-groups.html#teoremix" reference-type="ref" reference="teoremix"><span class="math display">\[teoremix\]</span></a> to
+partial actions. Since <span class="math inline">\(\G\)</span> must be amenable, by <span class="citation">(<a href="#ref-Ex3" role="doc-biblioref">Exel 1997</a>)</span> the full and the
+reduced partial crossed products are identical and possess a (faithful)
+positive contractive conditional expectation.</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-14" class="theorem"><strong>Theorem 2.3  </strong></span><span id="corolyx" label="corolyx"></span> Let <span class="math inline">\((\A,\te,\normalfont{\G})\)</span> be a partial
+<span class="math inline">\(C^*\)</span>-dynamical system with rigidly symmetric discrete group
+<span class="math inline">\(\normalfont{\G}\)</span> and unital <span class="math inline">\(C^*\)</span>-algebra <span class="math inline">\(\A\)</span> . Then
+<span class="math inline">\(\ell^1_\te(\normalfont{\G};\A)\)</span> is symmetric and inverse closed in
+<span class="math inline">\(\A\rtt_\te\!\normalfont{\G}\)</span> . If
+<span class="math inline">\(\,\Pi:\A\rtt_{\te}\!\normalfont{\G}\to \mathbb{B}(\h)\)</span> is a faithful
+representation, <span class="math inline">\(\Pi\left[\ell^1_\te(\normalfont{\G};\A)\right]\)</span> is
+inverse closed in <span class="math inline">\(\mathbb{B}(\h)\)</span> .</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-15" class="proof"><em>Proof</em>. </span><em>Proof.</em> The crossed product <span class="math inline">\(\mathfrak C:=\A\!\rtt_\te\!\G\)</span> is a
+topologically graded <span class="math inline">\(C^*\)</span>-algebra <span class="citation">(<a href="#ref-Ex2" role="doc-biblioref">Exel 2017</a>)</span>, where <span class="math display">\[\label{verita}
+\mathfrak C_g=\big\{\Phi\in\ell^1_\te(\textsf{ G};\A)\,\big\vert\,\textrm{ supp}(\Phi)\subset\{g\}\big\}\,,\quad\forall\,g\in\G\,.\]</span>
+Its <span class="math inline">\(\ell^1\)</span>-algebra is <span class="math display">\[\label{veveriz}
+\ell^1(\mathfrak C)\equiv\ell^1\big(\A\!\rtt_\te\!\G\big)=\ell^1_\te(\textsf{G};\A)\,,\]</span>
+reinterpreting <span class="math inline">\(\rtt_\te\)</span> as the partial crossed product between group
+<span class="math inline">\(G\)</span> and the <span class="math inline">\(C^*\)</span>-algebra <span class="math inline">\(A\)</span>. Thus we can apply Theorem
+<a href="various-types-of-symmetry-for-discrete-groups.html#teoremix" reference-type="ref" reference="teoremix"><span class="math display">\[teoremix\]</span></a>. ◻</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-16" class="remark"><em>Remark</em>. </span><span id="apucalaie" label="apucalaie"></span> The result can also be obtained
+directly, by means specific to partial action. To prove the isometric
+linear embedding
+<span class="math inline">\(\ell^1_\te(\textsf{ G};\A)\hookrightarrow\ell^1\big(\G;\mathbb B(\h))\)</span>
+one uses the map <span class="math inline">\(\big[T(\Phi)\big](g):=\rho\big[\Phi(g)\big]u_g\)</span> ,
+where <span class="math inline">\((\rho,u)\)</span> is a covariant representation of <span class="math inline">\((\A,\te,\G)\)</span> in the
+Hilbert space <span class="math inline">\(\h\)</span> , as in <span class="citation">(<a href="#ref-Ex2" role="doc-biblioref">Exel 2017</a> Sect. 13)</span>. Here <span class="math inline">\(\rho\)</span> should be a
+<em>faithful</em> representation of <span class="math inline">\(\A\)</span> and <span class="math inline">\(u\)</span> a <em>partial</em> representation of
+<span class="math inline">\(\G\)</span> , connected by an equivariance condition.</p>
+</div>
+</div>
+<div id="idealuri" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Inverse closedness modulo ideals.<a href="various-types-of-symmetry-for-discrete-groups.html#idealuri" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unlabeled-div-17" class="definition"><strong>Definition 2.5  </strong></span><span id="idealix" label="idealix"></span> Let <span class="math inline">\(\mathfrak{K}\)</span> be an ideal of the
+unital C<span class="math inline">\(^*\)</span>-algebra <span class="math inline">\(\mathfrak{C}\)</span> . The <span class="math inline">\(^*\)</span>-subalgebra <span class="math inline">\(\mathfrak{B}\)</span>
+of <span class="math inline">\(\mathfrak{C}\)</span> is called <em><span class="math inline">\(\mathfrak{K}\)</span>-inverse closed</em> if
+<span class="math inline">\(\mathfrak{B}/(\mathfrak{B}\cap\mathfrak{K})\)</span> is inverse closed in
+<span class="math inline">\(\mathfrak{C}/\mathfrak{K}\)</span> .</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-18" class="example"><strong>Example 2.1  </strong></span><span id="fredholmix" label="fredholmix"></span> If <span class="math inline">\(\,\mathfrak{K}=\{0\}\)</span> , the
+notion coincides with that introduced in Definition
+<a href="#symmetric" reference-type="ref" reference="symmetric"><span class="math display">\[symmetric\]</span></a>.
+However the main motivating case is as follows: Let <span class="math inline">\(\mathfrak C\)</span> be a
+<span class="math inline">\(C^*\)</span>-algebra of bounded operators in the Hilbert space <span class="math inline">\(\h\)</span> ,
+containing the ideal <span class="math inline">\(\mathbb K(\h)\)</span> of all the compact operators. We
+recall that <span class="math inline">\(T\in\mathbb B(\h)\)</span> is called <em>Fredholm</em> if its range is
+closed and its kernel and its cokernel are both finite-dimensional. By
+Atkinson’s Theorem, this happens exactly if the image of <span class="math inline">\(T\)</span> in the
+Calkin algebra <span class="math inline">\(\mathbb B(\h)/\mathbb K(\h)\)</span> is invertible. A
+<span class="math inline">\(^*\)</span>-subalgebra <span class="math inline">\(\mathfrak B\)</span> of <span class="math inline">\(\mathbb B(\h)\)</span> will be called
+<em>Fredholm inverse closed</em> if the situation in Definition
+<a href="various-types-of-symmetry-for-discrete-groups.html#idealix" reference-type="ref" reference="idealix"><span class="math display">\[idealix\]</span></a> holds
+with <span class="math inline">\(\mathfrak K=\mathbb K(\h)\)</span> . For <span class="math inline">\(\mathfrak C\)</span> we can take any
+<span class="math inline">\(C^*\)</span>-algebra of <span class="math inline">\(\mathbb B(\h)\)</span> containing <span class="math inline">\(\mathfrak B\)</span> .</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-19" class="definition"><strong>Definition 2.6  </strong></span><span id="buhonero" label="buhonero"></span> Let
+<span class="math inline">\(\mathfrak C=\widetilde{\bigoplus}_{g\in\normalfont{\G}}\mathfrak C_g\)</span>
+be a graded <span class="math inline">\(C^*\)</span>-algebra over the discrete group <span class="math inline">\(\G\)</span> . The ideal
+<span class="math inline">\(\mathfrak K\)</span> of <span class="math inline">\(\mathfrak C\)</span> is <em>a graded ideal</em> if the ideal
+generated by <span class="math inline">\(\mathfrak K\cap\mathfrak C_\e\)</span> coincides with
+<span class="math inline">\(\mathfrak K\)</span> (or, equivalently, that
+<span class="math inline">\(\bigoplus_{g\in\normalfont{\G}}\mathfrak K\cap\mathfrak C_g\)</span> is dense
+in <span class="math inline">\(\mathfrak K\)</span>).</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-20" class="theorem"><strong>Theorem 2.4  </strong></span><span id="ruye" label="ruye"></span> Let
+<span class="math inline">\(\mathfrak C=\widetilde{\bigoplus}_{g\in\normalfont{\G}}\mathfrak C_g\)</span>
+be a topologically graded <span class="math inline">\(C^*\)</span>-algebra over the discrete rigidly
+symmetric group <span class="math inline">\(\normalfont{\G}\)</span> and <span class="math inline">\(\mathfrak K\)</span> a graded ideal. Then
+<span class="math inline">\(\ell^1(\mathfrak C)\)</span> is <span class="math inline">\(\mathfrak K\)</span>-inverse closed in <span class="math inline">\(\mathfrak C\)</span> .</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-21" class="proof"><em>Proof</em>. </span><em>Proof.</em> One needs to show that
+<span class="math inline">\(\ell^1(\mathfrak C)/\ell^1(\mathfrak C)\cap\mathfrak K\)</span> is inverse
+closed in <span class="math inline">\(\mathfrak C/\mathfrak K\)</span> . Let us denote by
+<span class="math inline">\(\kappa:\mathfrak C\to\mathfrak C/\mathfrak K\)</span> the quotient map. By
+<span class="citation">(<a href="#ref-Ex2" role="doc-biblioref">Exel 2017, Prop. 23.10</a>)</span> (or by <span class="citation">(<a href="#ref-Ex3" role="doc-biblioref">Exel 1997, Prop. 3.11</a>)</span>), under the stated
+conditions upon the graded algebra and the ideal,
+<span class="math inline">\(\mathfrak C/\mathfrak K\)</span> is topologically graded by the subspaces
+<span class="math display">\[\big\{(\mathfrak C/\mathfrak K)_g:=\kappa(\mathfrak C_g)\,\big\vert\,g\in\G\big\}\,.\]</span>
+The corresponding linear contraction
+<span class="math inline">\(\widetilde Q_g:\mathfrak C/\mathfrak K\to(\mathfrak C/\mathfrak K)_g\)</span>
+satisfies <span class="math display">\[\label{traznau}
+\widetilde Q_g\circ\kappa=\kappa\circ\widetilde P_g\,,\quad\forall\,g\in\G\,.\]</span>
+Using this and the form of the <span class="math inline">\(\ell^1\)</span>-norms, one shows immediately
+that <span class="math inline">\(\kappa\)</span> sends <span class="math inline">\(\ell^1(\mathfrak C)\)</span> into
+<span class="math inline">\(\ell^1(\mathfrak C/\mathfrak K)\)</span> contractively. Its kernel is clearly
+<span class="math inline">\(\ell^1(\mathfrak C)\cap\mathfrak K\)</span> . Let us show its surjectivity,
+starting from
+<span class="math display">\[\varphi:=\sum_{g\in\G}\varphi_g\equiv\sum_{g\in\G}\widetilde Q_g(\varphi)\in\ell^1(\mathfrak C/\mathfrak K)\]</span>
+(unconditional convergence in <span class="math inline">\(\mathfrak C/\mathfrak K\)</span>) . Let
+<span class="math inline">\(\{\beta_g\!\mid\!g\in\G\}\)</span> be a summable family of positive numbers.
+For each <span class="math inline">\(g\)</span>, there is an element <span class="math inline">\(\Phi_g\in\mathfrak C_g\)</span> such that
+<span class="math inline">\(\kappa(\Phi_g)=\varphi_g\)</span> and
+<span class="math inline">\(\p\!\Phi_g\!\p_\mathfrak C\,\le\,\p\!\varphi_g\!\p_{\mathfrak C/\mathfrak K}+\beta_g\)</span> .
+Then <span class="math inline">\(\Phi:=\sum_{g}\Phi_g\in\ell^1(\mathfrak C)\)</span> and
+<span class="math inline">\(\kappa(\Phi)=\varphi\)</span> . So
+<span class="math inline">\(\ell^1(\mathfrak C)/\ell^1(\mathfrak C)\cap\mathfrak K\)</span> may be
+identified with <span class="math inline">\(\ell^1(\mathfrak C/\mathfrak K)\)</span> . We apply Theorem
+<a href="various-types-of-symmetry-for-discrete-groups.html#teoremix" reference-type="ref" reference="teoremix"><span class="math display">\[teoremix\]</span></a>
+(ii) to the topologically graded quotient algebra
+<span class="math inline">\(\mathfrak C/\mathfrak K\)</span> and finish the proof. ◻</p>
+</div>
+<p>The particular case of partial actions is worth mentioning. Suppose that
+<span class="math inline">\((\mathcal{A},\theta,\G)\)</span> is a partial dynamical system with discrete
+group <span class="math inline">\(\G\)</span> and that <span class="math inline">\(\mathcal{K}\)</span> is an ideal of <span class="math inline">\(\mathcal{A}\)</span> that is
+<span class="math inline">\(\theta\)</span>-invariant:
+<span class="math display">\[\theta_g\big(\A_{g^{-1}}\!\cap\mathcal{K}\big)\subset \mathcal{K}\,,\quad\forall\,g\in \G\,.\]</span>
+We denote by the same letter <span class="math inline">\(\theta\)</span> the action of <span class="math inline">\(\G\)</span> by partial
+automorphisms of <span class="math inline">\(\mathcal{K}\)</span> defined by restrictions. One gets the
+C<span class="math inline">\(^*\)</span>-partial dynamical system <span class="math inline">\((\mathcal{K},\theta,\G)\)</span> . The partial
+crossed product <span class="math inline">\(\mathcal{K}\rtt_{\theta}\G\)</span> may be identified with an
+ideal of <span class="math inline">\(\mathcal{A}\rtt_{\theta}\G\)</span> . Under this identification,
+<span class="math inline">\(\ell^1_{\theta}(\G;\mathcal{K})\)</span> becomes an ideal of
+<span class="math inline">\(\ell^1_{\theta}(\G;\mathcal{A})\)</span> in the natural way: the
+<span class="math inline">\(\ell^1\)</span>-function <span class="math inline">\(\varphi:\G\rightarrow \mathcal{K}\)</span> is taken to be
+<span class="math inline">\(\mathcal{A}\)</span>-valued. One can use the exactness of the partial crossed
+product construction <span class="citation">(<a href="#ref-ELQ" role="doc-biblioref">Exel, Laca, and Quigg 2002, Sect. 3</a>)</span> to prove</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-22" class="theorem"><strong>Theorem 2.5  </strong></span><span id="theoremix" label="theoremix"></span> Assume that the discrete group
+<span class="math inline">\(\normalfont{\G}\)</span> is rigidly symmetric. The Banach <span class="math inline">\(^*\)</span>-algebra
+<span class="math inline">\(\ell^1_{\theta}(\normalfont{\G};\mathcal{A})\)</span> is
+<span class="math inline">\(\mathcal{K}\!\rtt_{\theta}\!\normalfont{\G}\)</span>-inverse closed in the
+partial crossed product <span class="math inline">\(\mathcal{A}\!\rtt_{\theta}\!\normalfont{\G}\)</span>
+for any <span class="math inline">\(\theta\)</span>-invariant ideal <span class="math inline">\(\mathcal{K}\)</span> of <span class="math inline">\(\mathcal{A}\)</span> .</p>
+</div>
+<p>Theorem <a href="various-types-of-symmetry-for-discrete-groups.html#theoremix" reference-type="ref" reference="theoremix"><span class="math display">\[theoremix\]</span></a> can also be obtained as a consequence of Theorem
+<a href="various-types-of-symmetry-for-discrete-groups.html#ruye" reference-type="ref" reference="ruye"><span class="math display">\[ruye\]</span></a>, since partial
+crossed products are topologically graded, and the ideal
+<span class="math inline">\(\mathcal{K}\!\rtt_{\theta}\!\G\)</span> is indeed graded under the stated
+assumptions.</p>
+<p>The situation in Exemple
+<a href="various-types-of-symmetry-for-discrete-groups.html#fredholmix" reference-type="ref" reference="fredholmix"><span class="math display">\[fredholmix\]</span></a> is the most interesting:</p>
+<div class="corollary">
+<p><span id="cor:unlabeled-div-23" class="corollary"><strong>Corollary 2.2  </strong></span><span id="honduras" label="honduras"></span> Let <span class="math inline">\((\A,\theta,\normalfont{\G})\)</span> be a
+partial C<span class="math inline">\(^*\!\)</span>-dynamical system with discrete rigidly symmetric group
+<span class="math inline">\(\normalfont{\G}\)</span> and <span class="math inline">\(\K\)</span> a <span class="math inline">\(\theta\)</span>-invariant ideal in <span class="math inline">\(\A\)</span> . Let
+<span class="math inline">\(\Pi\!:\!\A\rtt_{\theta}\!\normalfont{\G} \to \mathbb{B}(\mathcal{H})\)</span>
+be a faithful representation such that
+<span class="math inline">\(\Pi\big(\K\rtt_{\theta}\!\normalfont{\G}\big)=\mathbb{K}(\mathcal{H})\)</span> .
+Then the Banach <span class="math inline">\(^*\)</span>-algebra <span class="math inline">\(\Pi[\ell^1_{\theta}(\normalfont{\G};\A)]\)</span>
+is Fredholm inverse closed.</p>
+</div>
+</div>
+<div id="decay" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Other types of decay<a href="various-types-of-symmetry-for-discrete-groups.html#decay" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unlabeled-div-24" class="definition"><strong>Definition 2.7  </strong></span><span id="sconx" label="sconx"></span> A <em>weight</em> on the discrete group
+<span class="math inline">\(\normalfont{\G}\)</span> is a function <span class="math inline">\(\nu: \normalfont{\G}\to [1,\infty)\)</span>
+satisfying everywhere <span class="math display">\[\label{submultiplicative}
+\nu(gh)\leq \nu(g)\nu(h)\,,\quad\nu(g^{-1})=\nu(g)\,, \quad \forall g,h\in\normalfont{\G}.\]</span>
+Let <span class="math inline">\(\mathfrak C\)</span> be a topologically graded <span class="math inline">\(C^*\)</span>-algebra. On
+<span class="math inline">\(\,\bigoplus_{g\in\normalfont{\G}}\!\mathfrak C_g\)</span> we can introduce the
+norm <span class="math display">\[\label{normix}
+\p\!\Phi\!\p_{\ell^{1,\nu}(\mathfrak C)}\,:=\sum_{g\in\normalfont{\G}}\nu(g)\!\p\!P_g(\Phi)\!\p.\]</span>
+The completion in this norm, denoted by <span class="math inline">\(\ell^{1,\nu}(\mathfrak C)\)</span> ,
+can be seen as a Banach <span class="math inline">\(^*\)</span>-algebra with the algebraic structure
+inherited from <span class="math inline">\(\ell^1(\mathfrak C)\)</span> (or from <span class="math inline">\(\mathfrak C\)</span>) .</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-25" class="theorem"><strong>Theorem 2.6  </strong></span><span id="oix" label="oix"></span> Let <span class="math inline">\(\normalfont{\G}\)</span> be a rigidly symmetric
+discrete group and <span class="math inline">\(\nu\)</span> a weight. Assume that there exists a generating
+subset <span class="math inline">\(V\)</span> of <span class="math inline">\(\,\normalfont{\G}\)</span> containing the unit <span class="math inline">\(\e\)</span> such that</p>
+<ol style="list-style-type: decimal">
+<li><p>the following uGRS (uniform Gelfand-Raikov-Shilov) condition holds:
+<span class="math display">\[\label{limitConditionOfWeight}
+\lim_{n\rightarrow \infty}\sup_{g_1,\dots,g_n \in V}\nu(g_1\cdots g_n)^{\frac{1}{n}}=1\,,\]</span></p></li>
+<li><p>for some finite constant <span class="math inline">\(C\)</span> one has for any <span class="math inline">\(n\in\mathbb{N}\)</span>
+<span class="math display">\[\label{limitt}
+\sup_{g\in V^n\setminus V^{n-1}}\nu(g) \leq C\!\inf_{g\in V^n\setminus V^{n-1}}\nu(g)\,.\]</span></p></li>
+</ol>
+<p>Then <span class="math inline">\(\ell^{1,\nu}(\mathfrak C)\)</span> is a symmetric Banach <span class="math inline">\(^*\)</span>-algebra for
+every topologically <span class="math inline">\(\normalfont{\G}\)</span>-graded <span class="math inline">\(C^*\)</span>-algebra
+<span class="math inline">\(\mathfrak C\)</span> .</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-26" class="proof"><em>Proof</em>. </span><em>Proof.</em> The problem of the symmetry of a weighted <span class="math inline">\(\ell^1\)</span>-algebra as a
+<span class="math inline">\(^*\)</span>-subalgebra of an unweighted one has been solved in <span class="citation">(<a href="#ref-FGL" role="doc-biblioref">Fendler, Gröchenig, and Leinert 2008, Th. 3</a>)</span> in
+a more particular context. We are going to check that the arguments can
+be adapted to the more general case. The main idea is proving that,
+given an element <span class="math inline">\(\Phi\in \ell^{1,\nu}(\mathfrak C)\)</span> , its spectral
+radius is the same as in <span class="math inline">\(\ell^{1}(\mathfrak C)\)</span> . Then one applies
+Hulanicki’s Lemma.</p>
+<p>As <span class="math inline">\(\nu(\cdot)\geq 1\)</span> , we have
+<span class="math display">\[\p\!\Phi\!\p_{\ell^{1}(\mathfrak C)}=\sum_{g\in\normalfont{\G}}\!\p\!P_g(\Phi)\!\p\leq\sum_{g\in\normalfont{\G}}\nu(g)\!\p\!P_g(\Phi)\!\p = \p\!\Phi\!\p_{\ell^{1,\nu}(\mathfrak C)}\,\]</span>
+and using the spectral radius formula
+<span class="math display">\[r_{\ell^{1}(\mathfrak{C})}(\Phi)\leq r_{\ell^{1,\nu}(\mathfrak{C})}(\Phi)\,,\quad\forall\,\Phi\in {\ell^{1,\nu}(\mathfrak{C})}\,.\]</span>
+To prove the opposite inequality, pick <span class="math inline">\(V\)</span> a generating set for <span class="math inline">\(\G\)</span> and
+define on <span class="math inline">\(\mathbb Z\)</span> the function
+<span class="math display">\[v(n):=\sup_{g\in V^{|n|}} \nu(g)\,.\]</span> Due to the uGRS condition, it is
+a weight and one has the obvious associated weighted space
+<span class="math inline">\(\ell^{1,\nu}(\Z)\)</span> . By induction, from the equation
+<a href="#normix" reference-type="eqref" reference="normix"><span class="math display">\[normix\]</span></a> we get
+<span class="math display">\[\p\!\Phi^n \!\p_{\ell^{1,\nu}(\mathfrak{C})}\,\leq \sum_{g_1\in\G}\cdots\sum_{g_n\in\G}\nu(g_1\dots g_n)\p\!P_{g_1}(\Phi) \!\p\cdots \!\p\!P_{g_n}(\Phi) \!\p.\]</span>
+Since <span class="math inline">\(\G=\bigsqcup_{m\in\mathbb N}(V^m\setminus V^{m-1})\)</span> , where
+<span class="math inline">\(V^0=\emptyset\)</span> , we may split the sum accordingly. This yields
+<span class="math display">\[\label{shocarix}
+\p\!\Phi^n \!\p_{\ell^{1,\nu}(\mathfrak{C})}\,\leq\!\sum_{m_1,\dots,m_n=1}^{\infty}\sum_{V^{m_1}\setminus V^{m_1-1}}\cdots\sum_{V^{m_n}\setminus V^{m_n-1}} \nu(g_1\dots g_n)\p P_{g_1}(\Phi) \!\p\cdots \!\p P_{g_n}(\Phi) \!\p.\]</span>
+If <span class="math inline">\(g_j\in V^{m_j}\setminus V^{m_j-1}\)</span>, then
+<span class="math inline">\(g_1\cdots g_n \in V^{m_1+\cdots +m_n}\)</span> and so the weight is majorized
+by
+<span class="math display">\[\nu(g_1\cdots g_n)\leq \sup_{h\in V^{m_1+\cdots +m_n}} \nu(h) =v(m_1+\cdots m_n)\,.\]</span>
+Set <span class="math inline">\(b_m:=\sum_{g\in V^m\setminus V^{m-1}}\!\p P_g(\Phi) \!\p\)</span> and
+<span class="math inline">\(b=(b_m)_{m\in\mathbb N}\)</span> . Then we have
+<span class="math inline">\(\!\p\Phi \!\p_{\ell^1(\mathfrak C)}\,=\,\p b \!\p_{\ell^1(\mathbb N)}\)</span> .
+Also the condition <a href="#limitt" reference-type="eqref" reference="limitt"><span class="math display">\[limitt\]</span></a> implies immediately that
+<span class="math display">\[C^{-1}\!\p b\!\p_{\ell^{1,v}(\mathbb Z)}\,\leq \,\p\Phi \!\p_{\ell^{1,\nu}(\mathfrak C)}\,\leq\,\p\,b \!\p_{\ell^{1,v}(\mathbb Z)}.\]</span>
+Returning to <a href="#shocarix" reference-type="eqref" reference="shocarix"><span class="math display">\[shocarix\]</span></a> we obtain
+<span class="math display">\[\!\p \Phi^n \!\p_{\ell^{1,\nu}(\mathfrak{C})}\,\leq\!\sum_{m_1,\dots,m_n=1}^{\infty}\!v(m_1+\cdots +m_n)\,b_{m_1}\cdots b_{m_n}\!=\;\p b^n \!\p_{\ell^{1,v}(\mathbb Z)}\,&lt;\infty\,.\]</span>
+By its definition the weight <span class="math inline">\(v\)</span> on <span class="math inline">\(\mathbb Z\)</span> satisfies the
+GRS-condition, and <span class="math inline">\(\ell^{1,v}(\mathbb Z)\)</span> is symmetric by <span class="citation">(<a href="#ref-FGL0" role="doc-biblioref">Fendler, Gröchenig, and Leinert 2006</a>)</span>.
+Hence <span class="math display">\[\begin{aligned}
+r_{\ell^{1,\nu}(\mathfrak{C})}(\Phi)&amp;=\lim_{n\rightarrow\infty} \!\p \Phi^n \!\p_{\ell^{1,\nu}(\mathfrak{C})}^{1/n}\leq \lim_{n\rightarrow\infty} \!\p b^n \!\p_{\ell^{1,\nu}(\mathbb{Z})}^{1/n}\\
+&amp;=r_{\ell^{1,\nu}(\mathbb{Z})}(b)=r_{\ell^{1}(\mathbb{Z})}(b)\\
+&amp;\le\,\p b \!\p_{\ell^{1}(\mathbb{Z})}=\,\p \Phi \!\p_{\ell^{1}(\mathfrak{C})}.
+\end{aligned}\]</span> So for all <span class="math inline">\(k\in\mathbb N\)</span> we have
+<span class="math display">\[r_{\ell^{1,\nu}(\mathfrak{C})}(\Phi)=r_{\ell^{1,\nu}(\mathfrak{C})}(\Phi^n)^{1/n}\leq\,\p \Phi^n \!\p_{\ell^{1}(\mathfrak{C})}^{1/n},\]</span>
+and by letting <span class="math inline">\(n\rightarrow\infty\)</span> we obtain the required inequality
+<span class="math inline">\(\,r_{\ell^{1,\nu}(\mathfrak{C})}(\Phi)\leq r_{\ell^{1}(\mathfrak{C})}(\Phi)\)</span> . ◻</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-27" class="remark"><em>Remark</em>. </span><span id="labix" label="labix"></span> There is a different way to prove Theorem
+<a href="various-types-of-symmetry-for-discrete-groups.html#oix" reference-type="ref" reference="oix"><span class="math display">\[oix\]</span></a>. We define <em>the
+Beurling algebra associated to the weight <span class="math inline">\(\nu\)</span> and to the <span class="math inline">\(C^*\)</span>-algebra
+<span class="math inline">\(\mathcal B\)</span></em> as <span class="math display">\[\label{sharpix}
+\ell^{1,\nu}(\normalfont{\G};\mathcal B):=\big\{\Psi\, \vert \,\nu\Psi\in \ell^{1}(\normalfont{\G};\mathcal B)\big\}\,,\]</span>
+with norm
+<span class="math inline">\(\p \cdot \!\p_{\ell^{1,\nu}(\normalfont{\G},\mathcal B)}\,:=\,\p\nu\,\cdot\,\!\p_{\ell^{1}(\normalfont{\G};\mathcal B)}\)</span>.
+By <span class="citation">(<a href="#ref-FGL" role="doc-biblioref">Fendler, Gröchenig, and Leinert 2008</a>)</span>, the assumptions on the weight imply that
+<span class="math inline">\(\ell^{1,\nu}(\normalfont{\G};\mathcal B)\)</span> is a symmetric Banach
+<span class="math inline">\(^*\)</span>-algebra. One then shows as in Proposition
+<a href="various-types-of-symmetry-for-discrete-groups.html#isometrix" reference-type="ref" reference="isometrix"><span class="math display">\[isometrix\]</span></a>
+an isometric embedding
+<span class="math inline">\(\ell^{1,\nu}(\mathfrak C)\hookrightarrow\ell^{1,\nu}(\normalfont{\G};\mathcal B)\)</span> ,
+for some <span class="math inline">\(C^*\)</span>-algebra <span class="math inline">\(\mathcal B\)</span> , and use this as in Theorem
+<a href="various-types-of-symmetry-for-discrete-groups.html#teoremix" reference-type="ref" reference="teoremix"><span class="math display">\[teoremix\]</span></a> to
+deduce the symmetry of <span class="math inline">\(\ell^{1,\nu}(\mathfrak C)\)</span> .</p>
+</div>
+
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-BO" class="csl-entry">
+Brown, N. P., and N. Ozawa. 2008. <em>C*-Algebras and Finite-Dimensional Approximations, Graduate Studies in Mathematics</em>. American Mathematical Society, Providence, Rhode Island.
+</div>
+<div id="ref-Ex3" class="csl-entry">
+———. 1997. <span>“Amenability for Fell Bundles.”</span> <em>J. Reine Angew. Math.</em> 492: 41–73.
+</div>
+<div id="ref-Ex2" class="csl-entry">
+———. 2017. <span>“Partial Dynamical Systems, Fell Bundles and Applications.”</span> <em>Mathematical Surveys and Monographs</em> 224.
+</div>
+<div id="ref-ELQ" class="csl-entry">
+Exel, R., M. Laca, and J. Quigg. 2002. <span>“Partial Dynamical Systems and c*-Algebras Generated by Partial Isometries.”</span> <em>J. Oper. Th.</em> 47(1): 169–86.
+</div>
+<div id="ref-FD2" class="csl-entry">
+Fell, J. M. G., and R. S. Doran. 1988. <em>Representations of <span class="math inline">\(^*\)</span>-Algebras, Locally Compact Groups, and Banach <span class="math inline">\(^*\)</span>-Algebraic Bundles, 6th. Edn</em>. Vol. 1. Elsevier.
+</div>
+<div id="ref-FGL0" class="csl-entry">
+Fendler, G., K. Gröchenig, and M. Leinert. 2006. <span>“Symmetry of Weighted <span class="math inline">\(L^1\)</span>-Algebras and the GRS-Condition.”</span> <em>Bull. London Math. Soc.</em> 38: 625–35.
+</div>
+<div id="ref-FGL" class="csl-entry">
+———. 2008. <span>“Convolution-Dominated Operators on Discrete Groups.”</span> <em>Integral Equations Operator Theory</em> 61(4): 49–509.
+</div>
+<div id="ref-FL" class="csl-entry">
+Fendler, G., and M. Leinert. 2016. <span>“On Convolution Dominated Operators.”</span> <em>Integral Equations Operator Theory</em> 86(2): 209–30.
+</div>
+<div id="ref-Gr" class="csl-entry">
+Gröchenig, K. 2010. <span>“Wiener’s Lemma: Theme and Variations. An Introduction to Spectral Invariance.”</span> <em>B. Forster and P. Massopust, Editors, Four Short Courses on Harmonic Analysis, Appl. Num. Harm. Anal. Birkhäuser, Boston</em>.
+</div>
+<div id="ref-GL2" class="csl-entry">
+———. 2006. <span>“Symmetry and Inverse-Closedness of Matrix Algebras and Functional Calculus for Infinite Matrices.”</span> <em>Trans. Of the A.M.S.</em> 358(6): 2695–2711.
+</div>
+<div id="ref-Ma" class="csl-entry">
+Mantoiu, M. 2015. <span>“Symmetry and Inverse Closedness for Banach <span class="math inline">\(C^*\)</span>-Algebras Associated to Discrete Groups.”</span> <em>Banach Journal of Mathematical Analysis</em> 9(2): 289–310.
+</div>
+<div id="ref-Pa2" class="csl-entry">
+Palmer, T. W. 2001. <em>Banach Algebras and the General Theory of <span class="math inline">\(^*\)</span>-Algebras</em>. Vol. 2. Encyclopedia of Mathematics; its Applications. Cambridge University Press, Cambridge.
+</div>
+<div id="ref-Qu" class="csl-entry">
+Quigg, J. C. 1996. <span>“Discrete <span class="math inline">\(C^*\)</span>-Coactions and <span class="math inline">\(C^*\)</span>-Algebraic Bundles.”</span> <em>J. Austral. Math. Soc. (Series A)</em> 60: 204–21.
+</div>
+<div id="ref-QR" class="csl-entry">
+Quigg, J. C., and I. Raeburn. 1997. <span>“Characterizations of Crossed Products by Partial Actions.”</span> <em>J. Operator Theory</em> 37: 311–40.
+</div>
+<div id="ref-Ra" class="csl-entry">
+Raeburn, I. 2016. <span>“Deformations of Fell Bundles and Twisted Graph Algebras.”</span> <em>Math. Proc. Cambridge Philos. Soc.</em> 161: 535–58.
+</div>
+<div id="ref-SW" class="csl-entry">
+Samei, E., and M. Wiersma. 2020. <span>“Quasi-Hermitian Locally Compact Groups Are Amenable.”</span> <em>Adv. Math</em> 359.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exemple.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-cross-refs.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Symmetry in a groupoid setting | Symmetry and spectral invariance for topologically graded C*‐algebras and partial action systems</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Symmetry in a groupoid setting | Symmetry and spectral invariance for topologically graded C*‐algebras and partial action systems" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Symmetry in a groupoid setting | Symmetry and spectral invariance for topologically graded C*‐algebras and partial action systems" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Diego Jauré" />
+
+
+<meta name="date" content="2023-01-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="exemple.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="" data-path="agradecimientos.html"><a href="agradecimientos.html"><i class="fa fa-check"></i>Agradecimientos</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="various-types-of-symmetry-for-discrete-groups.html"><a href="various-types-of-symmetry-for-discrete-groups.html"><i class="fa fa-check"></i><b>2</b> Various types of symmetry for discrete groups</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="various-types-of-symmetry-for-discrete-groups.html"><a href="various-types-of-symmetry-for-discrete-groups.html#flocinor"><i class="fa fa-check"></i><b>2.1</b> The Main Result</a></li>
+<li class="chapter" data-level="2.2" data-path="various-types-of-symmetry-for-discrete-groups.html"><a href="various-types-of-symmetry-for-discrete-groups.html#cerculix"><i class="fa fa-check"></i><b>2.2</b> Topologically graded algebras from dual actions and partial crossed products</a></li>
+<li class="chapter" data-level="2.3" data-path="various-types-of-symmetry-for-discrete-groups.html"><a href="various-types-of-symmetry-for-discrete-groups.html#idealuri"><i class="fa fa-check"></i><b>2.3</b> Inverse closedness modulo ideals.</a></li>
+<li class="chapter" data-level="2.4" data-path="various-types-of-symmetry-for-discrete-groups.html"><a href="various-types-of-symmetry-for-discrete-groups.html#decay"><i class="fa fa-check"></i><b>2.4</b> Other types of decay</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exemple.html"><a href="exemple.html"><i class="fa fa-check"></i><b>3</b> Examples</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="exemple.html"><a href="exemple.html#restrix"><i class="fa fa-check"></i><b>3.1</b> Inverse closed Banach *-algebras from topological partial actions</a></li>
+<li class="chapter" data-level="3.2" data-path="exemple.html"><a href="exemple.html#dedenix"><i class="fa fa-check"></i><b>3.2</b> Toeplitz-Bunce-Deddens operators</a></li>
+<li class="chapter" data-level="3.3" data-path="exemple.html"><a href="exemple.html#afelliz"><i class="fa fa-check"></i><b>3.3</b> UHF algebras</a></li>
+<li class="chapter" data-level="3.4" data-path="exemple.html"><a href="exemple.html#afellix"><i class="fa fa-check"></i><b>3.4</b> CAR algebras</a></li>
+<li class="chapter" data-level="3.5" data-path="exemple.html"><a href="exemple.html#quasilatix"><i class="fa fa-check"></i><b>3.5</b> Wiener-Hopf algebras associated to quasi-lattice ordered groups</a></li>
+<li class="chapter" data-level="3.6" data-path="exemple.html"><a href="exemple.html#oroflix"><i class="fa fa-check"></i><b>3.6</b> Higher rank graph algebras</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="symmetry-in-a-groupoid-setting.html"><a href="symmetry-in-a-groupoid-setting.html"><i class="fa fa-check"></i><b>4</b> Symmetry in a groupoid setting</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="symmetry-in-a-groupoid-setting.html"><a href="symmetry-in-a-groupoid-setting.html#groupoids-and-groupoid-actions"><i class="fa fa-check"></i><b>4.1</b> Groupoids and groupoid actions</a></li>
+<li class="chapter" data-level="4.2" data-path="symmetry-in-a-groupoid-setting.html"><a href="symmetry-in-a-groupoid-setting.html#fell-bundles"><i class="fa fa-check"></i><b>4.2</b> Fell bundles</a></li>
+<li class="chapter" data-level="4.3" data-path="symmetry-in-a-groupoid-setting.html"><a href="symmetry-in-a-groupoid-setting.html#fell-bundles-over-groupoids"><i class="fa fa-check"></i><b>4.3</b> Fell bundles over groupoids</a></li>
+<li class="chapter" data-level="4.4" data-path="symmetry-in-a-groupoid-setting.html"><a href="symmetry-in-a-groupoid-setting.html#rigidly-symmetric-and-hypersymmetric-groupoids"><i class="fa fa-check"></i><b>4.4</b> Rigidly symmetric and hypersymmetric groupoids</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Symmetry and spectral invariance for topologically graded C*‐algebras and partial action systems</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="symmetry-in-a-groupoid-setting" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Symmetry in a groupoid setting<a href="symmetry-in-a-groupoid-setting.html#symmetry-in-a-groupoid-setting" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="groupoids-and-groupoid-actions" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Groupoids and groupoid actions<a href="symmetry-in-a-groupoid-setting.html#groupoids-and-groupoid-actions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="defn">
+<p>A <em>groupoid</em> is a small category in which every morphism is an
+isomorphism, i.e. is invertible.</p>
+</div>
+<p>The reference for the following more detailed form of the definition is
+<span class="citation">(<a href="#ref-Kum" role="doc-biblioref">Kumjian 1998</a>)</span>.</p>
+<div class="defn">
+<p>A groupoid <span class="math inline">\(\Xi\)</span> is a set endowed with two maps
+<span class="math display">\[\label{eq:groupoidOperations}
+\cdot:{\Xi}^{(2)}\rightarrow\Xi, \,\,\,\,\,\,\,\, ^*  : \Xi\rightarrow \Xi\]</span>
+called <em>multiplication</em> and <em>inverse</em> respectively, where <span class="math inline">\(\Xi^{(2)}\)</span> is
+a subset of <span class="math inline">\(\Xi\times\Xi\)</span> called the set of <em>composable elements</em>.
+These operations satisfy the following properties:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\((\gamma^*)^*=\gamma\)</span> for every <span class="math inline">\(\gamma\in\Xi\)</span>,</p></li>
+<li><p>if <span class="math inline">\((\gamma,\alpha),(\alpha,\beta)\in\Xi^{(2)}\)</span> then
+<span class="math inline">\((\gamma\alpha,\beta),(\gamma,\alpha\beta)\in\Xi^{(2)}\)</span> and
+<span class="math inline">\((\gamma\alpha)\beta=\gamma(\alpha\beta)\)</span>,</p></li>
+<li><p>if <span class="math inline">\((\gamma^*,\gamma)\in\Xi^{(2)}\)</span> and if
+<span class="math inline">\((\gamma,\alpha)\in\Xi^{(2)}\)</span> then <span class="math inline">\(\gamma^*(\gamma\alpha)=\alpha\)</span>,</p></li>
+<li><p>if <span class="math inline">\((\gamma,\gamma^*)\in\Xi^{(2)}\)</span> and if
+<span class="math inline">\((\beta,\gamma)\in\Xi^{(2)}\)</span> then <span class="math inline">\((\beta\gamma)\gamma^*=\beta\)</span>.</p></li>
+</ol>
+<p>If <span class="math inline">\(\gamma\in\Xi\)</span>, <span class="math inline">\(\s(\gamma)=\gamma^*\gamma\)</span> and
+<span class="math inline">\(\r(\gamma)=\gamma\gamma^*\)</span> are the <em>domain</em> and <em>range</em> of <span class="math inline">\(\gamma\)</span>
+respectively. The pair <span class="math inline">\((\gamma, \alpha)\)</span> is composable if and only if
+<span class="math inline">\(\s(\gamma)=\r(\alpha)\)</span>. We define <span class="math inline">\(\Xi^{(0)}:=\s(\Xi)=\r(\Xi)\)</span> as the
+<em>unit space</em> of <span class="math inline">\(\Xi\)</span>.<br />
+Usually a groupoid is denoted as
+<span class="math display">\[\Xi \stackrel{\s\text{,}\r}{\overrightarrow{\rightarrow}} \Xi^{(0)}.\]</span>
+Other useful subset of the groupoid <span class="math inline">\(\Xi\)</span> is the <em>isotropy group</em> of a
+given <span class="math inline">\(v\in\Xi^{(0)}\)</span> which it is defined by
+<span class="math display">\[\Xi_v^v:=\left\{\gamma\in\Xi|\,\, \s(\gamma)=\r(\gamma)=v\right\}.\]</span>
+The isotropy group of <span class="math inline">\(v\)</span> if often seen as <span class="math inline">\(\Xi_v^v=\Xi_v\cap\Xi^v\)</span>
+where <span class="math inline">\(\Xi_v:=\s^{-1}(\{v\})\)</span> and <span class="math inline">\(\Xi^v:=\r^{-1}(\{v\})\)</span> and these are
+called the <span class="math inline">\(\s\)</span>-fibre and <span class="math inline">\(\r\)</span>-fibre respectively. One also uses the
+<em>isotropic subgroupoid</em> of <span class="math inline">\(\Xi\)</span> written as
+<span class="math inline">\(\text{Iso}(\Xi):=\cup_{v\in\Xi^{(0)}}\Xi_v^v\)</span>.</p>
+</div>
+</div>
+<div id="fell-bundles" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Fell bundles<a href="symmetry-in-a-groupoid-setting.html#fell-bundles" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="defn">
+<p>Let <span class="math inline">\(X\)</span> be a Hausdorff topological space. A <em>bundle</em> over <span class="math inline">\(X\)</span> is a pair
+<span class="math inline">\(\&lt;\mathscr{C},\pi\&gt;\)</span>, where <span class="math inline">\(\mathscr{C}\)</span> is a Hausdorff topological
+space and <span class="math inline">\(\pi:\mathscr{C}\to X\)</span> is a continuous open surjection.</p>
+</div>
+<p>The concept of Fell bundles over groups introduced here can be found in
+<span class="citation">(<a href="#ref-Ex2" role="doc-biblioref">Exel 2017</a> Def. 16.1)</span>.</p>
+<div class="defn">
+<p>A <em>Fell Bundle</em> (also known as a <em>C<span class="math inline">\(^*\)</span>-algebraic bundle</em>) over a group
+<span class="math inline">\(\normalfont{\G}\)</span> is a bundle <span class="math inline">\(\mathscr{C}=\&lt;\mathscr C,\pi\&gt;\)</span> over
+<span class="math inline">\(\normalfont{\G}\)</span>, where we define <span class="math inline">\(\mathfrak{C}_g:=\pi^{-1}(\{g\})\)</span> as
+the <em>fibers</em>. In addition it is equipped with continuous multiplication
+and involution operations
+<span class="math display">\[\cdot:\mathscr{C}\times\mathscr{C}\rightarrow\mathscr{C}, \,\,\,\,\,\,\,\, ^*  : \mathscr{C}\rightarrow \mathscr{C},\]</span>
+satisfying the following properties for all <span class="math inline">\(g,h\in\normalfont{\G}\)</span> and
+all <span class="math inline">\(b,c\in\mathscr{C}\)</span></p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\mathfrak{C}_g\cdot \mathfrak{C}_h \subset \mathfrak{C}_{gh}\)</span>,</p></li>
+<li><p>the product <span class="math inline">\(\cdot\)</span> is bilinear on
+<span class="math inline">\(\mathfrak{C}_g\times \mathfrak{C}_h\)</span> to <span class="math inline">\(\mathfrak{C}_{gh}\)</span>,</p></li>
+<li><p>the product <span class="math inline">\(\cdot\)</span> on <span class="math inline">\(\mathscr{C}\)</span> is associative,</p></li>
+<li><p><span class="math inline">\(\Vert b \cdot c \Vert_{\pi(bc)} \leq \Vert b \Vert_{\pi(b)} \Vert c \Vert_{\pi(c)}\)</span>,</p></li>
+<li><p><span class="math inline">\((\mathfrak{C}_g)^*\subset \mathfrak{C}_{g^{-1}}\)</span>,</p></li>
+<li><p>For each <span class="math inline">\(g\in\normalfont{\G}\)</span>, <span class="math inline">\(^*\)</span> restricted to <span class="math inline">\(\mathfrak{C}_g\)</span>
+is conjugate-linear from <span class="math inline">\(\mathfrak{C}_g\)</span> to
+<span class="math inline">\(\mathfrak{C}_{g^{-1}}\)</span>,</p></li>
+<li><p><span class="math inline">\((bc)^*=c^*b^*\)</span>,</p></li>
+<li><p><span class="math inline">\(b^{**}=b\)</span>,</p></li>
+<li><p><span class="math inline">\(\Vert b^* \Vert_{\pi(b^*)}=\Vert b\Vert_{\pi(b)}\)</span>,</p></li>
+<li><p><span class="math inline">\(\Vert b^*b \Vert_{e}=\Vert b\Vert^2_{\pi(b)}\)</span>,</p></li>
+<li><p><span class="math inline">\(b^*b\geq 0\)</span> in <span class="math inline">\(\mathfrak{C}_\e\)</span>.</p></li>
+</ol>
+<p>We will write the Fell bundle in the form
+<span class="math inline">\(\mathscr{C}:=(\mathfrak{C}_g)_{g\in\normalfont{\G}}\)</span>. It is important
+to note that <span class="math inline">\(\mathfrak{C}_\e\)</span> is a C<span class="math inline">\(^*\)</span>-algebra with the restricted
+operations, it is often refered as the unit fiber algebra <span class="citation">(<a href="#ref-Ex2" role="doc-biblioref">Exel 2017, 124</a>)</span>.</p>
+</div>
+<p>Consider the Fell Bundle <span class="math inline">\(\mathscr{C}=\&lt;\mathscr C,\pi\&gt;\)</span> over the
+locally compact Hausdorff group <span class="math inline">\(\normalfont{\G}\)</span>. On the space
+<span class="math display">\[\Ce_c(\G,\mathscr{C}):=\left\{ \varphi:\G\to\mathscr{C}\,\, \text{ continuous };\,\, \varphi(g)\in \mathfrak{C}_g\,\,\forall g\in\G \,\, \textrm{ s.t. supp}(\varphi) \textrm{ is compact} \right\},\]</span>
+one defines the convolution product
+<span class="math display">\[\varphi\star\psi(g):= \int_\G \varphi(gh^{-1}) \psi(h)dh.\]</span> Then we
+define <span class="math inline">\(L^1(\G,\mathscr{C})\)</span> as a Banach <span class="math inline">\(^*\)</span>-algebra by completing
+<span class="math inline">\(\Ce_c(\G,\mathscr{C})\)</span> with respect to the norm
+<span class="math display">\[\Vert \varphi \Vert_{L^1(\G,\mathscr{C})}:=\sum_{g\in\G}\Vert\varphi(g)\Vert_{\mathfrak{C}_g}\,\, \textrm{ for }\,\, \varphi\in \Ce_c(\G,\mathscr{C}).\]</span></p>
+</div>
+<div id="fell-bundles-over-groupoids" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Fell bundles over groupoids<a href="symmetry-in-a-groupoid-setting.html#fell-bundles-over-groupoids" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We introduce the concept of Fell bundles over groupoids which can be
+found in <span class="citation">(<a href="#ref-Kum" role="doc-biblioref">Kumjian 1998</a>; <a href="#ref-MW" role="doc-biblioref">Muhly and Williams 2008</a>; <a href="#ref-Yam" role="doc-biblioref">Yamagami 1990</a>)</span>.</p>
+<div class="defn">
+<p>A <em>Fell Bundle</em> (also known as a <em>C<span class="math inline">\(^*\)</span>-algebraic bundle</em>) over a
+discrete groupoid <span class="math inline">\(\Xi\)</span> is a bundle <span class="math inline">\(\mathscr{C}=\&lt;\mathscr C,\pi\&gt;\)</span>
+over <span class="math inline">\(\Xi\)</span>, where we define
+<span class="math inline">\(\mathfrak{C}_{\gamma}:=\pi^{-1}(\{\gamma\})\)</span> as the <em>fibers</em> and we set
+<span class="math display">\[\mathscr{C}^{(2)}:=\left\{(c_1,c_2)\in\mathscr{C}\times\mathscr{C};\,\,(\pi(c_1),\pi(c_2))\in\Xi^{(2)}\right\}.\]</span>
+In addition it is equipped with continuous multiplication and involution
+operations
+<span class="math display">\[\cdot:\mathscr{C}^{(2)}\rightarrow\mathscr{C}, \,\,\,\,\,\,\,\, ^*  : \mathscr{C}\rightarrow \mathscr{C},\]</span>
+satisfying the following properties</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\mathfrak{C}_{\gamma_1}\cdot \mathfrak{C}_{\gamma_2} \subset \mathfrak{C}_{\gamma_1\gamma_2}\)</span>,
+if <span class="math inline">\((\gamma_1,\gamma_2)\in\Xi^{(2)}\)</span>,</p></li>
+<li><p>the product <span class="math inline">\(\cdot\)</span> is bilinear on
+<span class="math inline">\(\mathfrak{C}_{\gamma_1}\times \mathfrak{C}_{\gamma_2}\)</span> for every
+<span class="math inline">\((\gamma_1,\gamma_2)\in\Xi^{(2)}\)</span>,</p></li>
+<li><p>the product <span class="math inline">\(\cdot\)</span> on <span class="math inline">\(\mathscr{C}\)</span> is associative, this means
+<span class="math inline">\((c_1 \cdot c_2) \cdot c_3 = c_1 \cdot( \cdot c_2 \cdot c_3 )\)</span> in
+<span class="math inline">\(\mathfrak{C_{\gamma_1\gamma_2\gamma_3}}\)</span> if
+<span class="math inline">\((c_1,c_2)\in \mathscr{C}^{(2)}\)</span> and
+<span class="math inline">\((c_2,c_3)\in \mathscr{C}^{(2)}\)</span>, where
+<span class="math inline">\(c_i\in\mathscr{C}_{\gamma_i}\)</span> for <span class="math inline">\(i=1,2,3\)</span>,</p></li>
+<li><p><span class="math inline">\(\Vert c_1 \cdot c_2 \Vert_{\mathfrak{C}_{\gamma_1\gamma_2}} \leq \Vert c_1 \Vert_{\mathfrak{C}_{\gamma_1}} \Vert c_2 \Vert_{\mathfrak{C}_{\gamma_2}}\)</span>
+if <span class="math inline">\((c_1,c_2)\in\mathscr{C}^{(2)}\)</span>,</p></li>
+<li><p><span class="math inline">\((\mathfrak{C}_\gamma)^*\subset \mathfrak{C}_{\gamma^*}\)</span> for every
+<span class="math inline">\(\gamma\in\Xi\)</span>, which could be written as <span class="math inline">\(\pi(c^*)=\pi(c)^*\)</span> for
+every <span class="math inline">\(c\in\mathscr{C}\)</span>,</p></li>
+<li><p>For each <span class="math inline">\(\gamma\in\Xi\)</span>, <span class="math inline">\(^*\)</span> restricted to <span class="math inline">\(\mathfrak{C}_{\gamma}\)</span>
+is conjugate-linear from <span class="math inline">\(\mathfrak{C}_{\gamma}\)</span> to
+<span class="math inline">\(\mathfrak{C}_{\gamma^*}\)</span>,</p></li>
+<li><p><span class="math inline">\((c_1c_2)^*=c_2^*c_1^*\)</span> for every <span class="math inline">\((c_1,c_2)\in\mathscr{C}^{(2)}\)</span>,</p></li>
+<li><p><span class="math inline">\(c^{**}=c\)</span> for every <span class="math inline">\(c\in\mathscr{C}\)</span>,</p></li>
+<li><p><span class="math inline">\(\Vert c^* \Vert_{\mathfrak{C}_{\gamma}^*}=\Vert c\Vert_{\mathfrak{C}_{\gamma}}\)</span>
+for every <span class="math inline">\(c\in\mathfrak{C}_\gamma\)</span>,</p></li>
+<li><p><span class="math inline">\(\Vert c^*\cdot c \Vert_{\mathfrak{C}_{\gamma^*\gamma}}=\Vert c\Vert_{\mathfrak{C}_\gamma}^2\)</span>
+for every <span class="math inline">\(c\in\mathfrak{C}_\gamma\)</span>,</p></li>
+<li><p><span class="math inline">\(c^*c\geq 0\)</span> in <span class="math inline">\(\mathfrak{C}_{\gamma^*\gamma}\)</span> for every
+<span class="math inline">\(c\in\mathfrak{C}_\gamma\)</span>.</p></li>
+</ol>
+<p>We will continue to write the Fell bundle in the form
+<span class="math inline">\(\mathscr{C}:=(\mathfrak{C}_g)_{g\in\Xi}\)</span>.</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-43" class="remark"><em>Remark</em>. </span>Note that if <span class="math inline">\(\gamma\in\Xi^{(0)}\)</span> then
+<span class="math inline">\(\mathfrak{C}_\gamma:=\pi^{-1}(\{\gamma\})\)</span> is a C<span class="math inline">\(^*\)</span>-algebra (with
+norm, multiplication and involution induced from the bundle).</p>
+</div>
+</div>
+<div id="rigidly-symmetric-and-hypersymmetric-groupoids" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Rigidly symmetric and hypersymmetric groupoids<a href="symmetry-in-a-groupoid-setting.html#rigidly-symmetric-and-hypersymmetric-groupoids" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let <span class="math inline">\(\Xi\)</span> be a discrete groupoid, with unit spce <span class="math inline">\(\Xi^{(0)}\!=:\!U\)</span> ,
+domain and range maps <span class="math inline">\(\s\)</span> and <span class="math inline">\(\r\)</span>  respectively. The set of composable
+pairs is <span class="math inline">\(\Xi^{(2)}\!:=\{(x,y)\!\mid\!\textrm{ r}(y)=\textrm{ d}(x)\}\)</span> .</p>
+<div class="defn">
+<p>Let <span class="math inline">\(\Gamma:\mathfrak{B}\rightarrow \textrm{End}(\mathcal{E})\)</span> be a
+representation of the Banach <span class="math inline">\(^*\)</span>-algebra <span class="math inline">\(\mathfrak{B}\)</span> in the Banach
+space <span class="math inline">\(\mathcal{E}\)</span>. The representation is called <em>preunitary</em> if there
+exists a Hilbert space <span class="math inline">\(\mathcal{H}\)</span>, a topologically irreducible
+<span class="math inline">\(^*\)</span>-representation
+<span class="math inline">\(\Pi:\mathfrak{B}\rightarrow \mathbb{B}(\mathcal{H})\)</span> and an injective
+linear bounded operator <span class="math inline">\(V:\mathcal{E}\rightarrow \mathcal{H}\)</span> such that
+<span class="math display">\[V\Gamma(\phi)=\Pi(\phi)V,\,\,\forall \phi\in\mathfrak{B}.\]</span></p>
+</div>
+<p>Our interest in this notion lies in the next characterization, taken
+from <span class="citation">(<a href="#ref-Lp" role="doc-biblioref">Leptin 1976</a>)</span>:</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-44" class="theorem"><strong>Theorem 4.1  </strong></span>The Banach <span class="math inline">\(^*\)</span>-algebra <span class="math inline">\(\mathfrak{B}\)</span> is symmetric if and only if all
+its non-trivial algebraically irreducible representations are
+preunitary.</p>
+</div>
+<p>An interesting object on the representation of Fell Bundles is <em>the Hahn
+algebra</em> <span class="math inline">\(\ell^{\infty,1}(\Xi\!\mid\!\mathscr C)\)</span> adapted to this
+structure <span class="citation">(<a href="#ref-MW" role="doc-biblioref">Muhly and Williams 2008</a> Ch. 1)</span>, which in our discrete case is formed by the
+sections <span class="math inline">\(\Phi:\Xi\to\mathfrak C\)</span> (thus satisfying
+<span class="math inline">\(\Phi(x)\in\mathfrak C_x\)</span> for every <span class="math inline">\(x\in\Xi\)</span>) such that <em>the Hahn-type
+norm</em> <span class="math display">\[\label{parts}
+\p\!\Phi\p_{\infty,1}\,:=\max\Big\{\sup_{u\in U}\sum_{\textrm{ r}(x)=u}\!\p\!\Phi(x)\!\p_{\mathfrak C_x}\,,\,\sup_{u\in U}\sum_{\textrm{ d}(x)=u}\!\p\!\Phi(x)\!\p_{\mathfrak C_x}\!\Big\}\]</span>
+is finite. It is a Banach <span class="math inline">\(^*\)</span>-algebra under the multiplication
+<span class="math display">\[\label{tiplication}
+(\Phi\star \Psi)(x):=\sum_{yz=x}\Phi(y)\bullet\Psi\big(z)\]</span> and the
+involution <span class="math display">\[\label{tion}
+\Phi^\star(x):=\Phi\big(x^{-1}\big)^\bu.\]</span> The space
+<span class="math inline">\(C_\textrm{ c}(\Xi\!\mid\!\mathscr C)\)</span> of finitely-supported sections
+forms a dense <span class="math inline">\(^*\)</span>-algebra of the Hahn algebra. The complexity of the
+multiplication, largely responsable for the generality of the emerging
+algebras, comes both from the complexity of the ‘inner’ Fell
+multiplication <span class="math inline">\(\bu\)</span> and from the groupoid-type convolution inherent to
+the formula.</p>
+<p>We need some special Fell bundles associated to Hilbert bundles
+<span class="math inline">\(\mathscr H\!:=\bigsqcup_{u\in U}\h_u\)</span> over the unit space; here the
+fact that <span class="math inline">\(\Xi\)</span> is discrete will be crucial. For <span class="math inline">\(u,v\in U\)</span> we set
+<span class="math inline">\(\mathbb B(\h_u,\h_v)\equiv\mathbb B(u,v)\)</span> for the Banach space of all
+bounded linear operators <span class="math inline">\(A:\h_u\to\h_v\)</span> . Taking advantage of the norm,
+the multiplication <span class="math display">\[\begin{aligned}
+    \mathbb B(\h_w,\h_v)\!\times\!\mathbb B(\h_u,\h_w)&amp;\to\mathbb B(\h_u,\h_v)\\
+    (A,B) &amp;\mapsto A\circ B
+\end{aligned}\]</span> and the involution <span class="math display">\[\begin{aligned}
+    \mathbb B(\h_u,\h_v)&amp;\to\mathbb B(\h_v,\h_u)\\
+    A&amp;\mapsto A^*,
+\end{aligned}\]</span> one constructs the Fell bundle
+<span class="math display">\[\mathbb B^\mathscr H\!:=\!\!\bigsqcup_{(u,v)\in U\times U}\!\mathbb B(u,v)\to U\!\!\times\!U\]</span>
+over the pair groupoid.</p>
+<p>Actually we are interested in the Fell Bundle <span class="math display">\[\begin{aligned}
+    \mathscr B^\mathscr H\!&amp;:=\!\bigsqcup_{x\in\Xi}\mathfrak B_x\overset{p}{\to}\Xi\,,
+\end{aligned}\]</span> with fibres
+<span class="math inline">\(\mathfrak{B}_x:=\mathbb{B}\big(\s(x),\r(x)\big)\)</span> and the structure
+<span class="math display">\[(A_x,B_y)\in \left(\mathscr{\mathscr B^\mathscr H}\right)^{(2)} \quad \quad \text{ if and only if }\quad \quad s(x)=r(y),\]</span>
+where we can see
+<span class="math inline">\(A_x\cdot B_y\in \mathfrak{B}_{xy}=\mathbb{B}(s(y),r(x))\)</span>. The Fell
+Bundle <span class="math inline">\(\mathscr B^\mathscr H\)</span> is called the pull-back Fell bundle of
+<span class="math inline">\(\mathbb B^\mathscr H\)</span> through the groupoid morphism
+<span class="math inline">\((\s,\r):\Xi\to U\!\times\!U\)</span> which it is also denoted by
+<span class="math inline">\((\s,\r)^*(\mathbb B^\mathscr H)\)</span> (see <span class="citation">(<a href="#ref-Kum" role="doc-biblioref">Kumjian 1998</a> Rem. 2.6)</span>).</p>
+<div class="defn">
+<p><span id="groupsymmetric" label="groupsymmetric"></span></p>
+<ol style="list-style-type: decimal">
+<li><p>The discrete groupoid <span class="math inline">\(\Xi\)</span> is called <em>symmetric</em> if the convolution
+Banach <span class="math inline">\(^*\)</span>-algebra <span class="math inline">\(\ell^{\infty,1}(\Xi)\)</span> is symmetric.</p></li>
+<li><p>The discrete groupoid <span class="math inline">\(\Xi\)</span> is called <em>rigidly symmetric</em> if, given
+any Hilbert bundle <span class="math inline">\(\mathscr H\!=\bigsqcup_{x\in X}\h_x\)</span> over its
+unit space, the Banach <span class="math inline">\(^*\)</span>-algebra
+<span class="math inline">\(\ell^{\infty,1}\big(\Xi\,\big\vert\,\mathscr B^\mathscr H\big)\)</span> is
+symmetric.</p></li>
+<li><p>The discrete groupoid <span class="math inline">\(\Xi\)</span> is called <em>hypersymmetric</em> if given any
+Fell bundle <span class="math inline">\(\mathscr C\!=\bigsqcup_{x\in\Xi}\mathfrak C _x\)</span> , the
+Banach <span class="math inline">\(^*\)</span>-algebra <span class="math inline">\(\ell^{\infty,1}(\Xi\!\mid\!\mathscr C)\)</span> is
+symmetric.</p></li>
+</ol>
+</div>
+<p>It is clear that rigid symmetry implies symmetry; just take the constant
+field <span class="math inline">\(\h_u\!:=\mathbb C\)</span> for every <span class="math inline">\(u\)</span> . As said in the Introduction,
+even for discrete groups it is still unknown if the two notions
+coincide.</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-45" class="theorem"><strong>Theorem 4.2  </strong></span><span id="principala" label="principala"></span> For a discrete groupoid, rigid
+symmetry and hypersymmetry coincide.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-46" class="proof"><em>Proof</em>. </span><em>Proof.</em> The fact that hypersymmetry implies rigid symmetry is obvious,
+since <span class="math inline">\(\mathscr B^\mathscr H\)</span> is a particular type of discrete groupoid
+Fell bundle. So we need to show the converse implication.</p>
+<p>We will first prove a result concerning the existence of isometric
+representations of such Fell bundles. We rely on the integrated form of
+such a representation. In general the connections between
+representations and their integrated forms is an intricate issue (see
+<span class="citation">(<a href="#ref-MW" role="doc-biblioref">Muhly and Williams 2008</a> Sect. 3,4,5)</span> for instance), especially at the level of
+‘disintegration’, but for discrete <span class="math inline">\(\Xi\)</span> this simplifies a lot. We will
+sketch the constructions we need without saying how they fit the general
+case. But just a hint: the counting measure on <span class="math inline">\(U\)</span> is invariant with
+respect to the Haar system composed of counting measures on the fibers
+of the discrete groupoid. So one is given an arbitrary Fell bundle
+<span class="math inline">\(\mathscr C=\bigsqcup_{x\in\Xi}\mathfrak C _x\overset{q}{\to}\Xi\)</span> . Let
+<span class="math display">\[\pi:\mathscr C\to\mathscr B^\mathscr H\!=\bigsqcup_{x\in\Xi}\mathbb B\big(\h_{\textrm{ s}(x)},\h_{\textrm{ r}(x)}\big)\]</span>
+be a representation, where <span class="math inline">\(\mathscr H=\bigsqcup_{u\in U}\h _u\)</span> is a
+Hilbert bundle over <span class="math inline">\(U\)</span> . In our context this just means that <span class="math inline">\(\pi\)</span> is a
+morphism of Fell bundles. Its integrated form
+<span class="math inline">\(\Pi:\ell^{\infty,1}(\Xi\!\mid\!\mathscr C)\to\mathbb B\Big(\bigoplus_{u\in U}\h_u\big)\)</span>
+is defined by <span class="math display">\[\label{surpr}
+\big[\Pi(\Phi)h\big](u):=\!\sum_{\textrm{ r}(x)=u}\!\pi\big[\Phi(x)\big]h\big[\textrm{ s}(x)\big]\,,\quad\forall\,h\in\bigoplus_{u\in U}\h_u\,.\]</span>
+We embed <span class="math inline">\(\mathfrak C_v\)</span> into
+<span class="math inline">\(C_\textrm{ c}(\Xi\!\mid\!\mathscr C)\subset\ell^{\infty,1}(\Xi\!\mid\!\mathscr C)\)</span>
+setting for each <span class="math inline">\(a\in\mathfrak C_v\)</span>
+<span class="math display">\[(\te_v a)(x):=a\ \ \textrm{ if}\ \ x=v\,,\quad(\te_v a)(x):=0_{\mathfrak C_x}\ \ \textrm{ if}\ \ x\ne v\,\]</span>
+and we get from <a href="#surpr" reference-type="eqref" reference="surpr"><span class="math display">\[surpr\]</span></a>
+<span class="math display">\[\big[\Pi(\te_v a)h\big](u)=\pi(a)h(v)\ \ \textrm{ if}\ \ u=v\,,\quad\big[\Pi(\te_v a)h\big](u)=0_{\h_u}\ \ \textrm{ if}\ \ u\ne v\,.\]</span>
+It follows immediately that if <span class="math inline">\(\Pi\)</span> is injective, then the restriction
+of <span class="math inline">\(\pi\)</span> to <span class="math inline">\(\mathfrak C_v\)</span> is also injective, i. e. isometric. Actually
+<span class="math inline">\(\Pi\)</span> extends to the full <span class="math inline">\(C^*\)</span>-algebra <span class="math inline">\(C^*(\Xi\!\mid\!\mathscr C)\)</span> of
+the Fell bundle, which contains densely
+<span class="math inline">\(\ell^{\infty}(\Xi\!\mid\!\mathscr C)\)</span> . Injective representations of
+<span class="math inline">\(C^*\)</span>-algebras do exist; we conclude that the Fell bundle representation
+<span class="math inline">\(\pi\)</span> is isometric on the <span class="math inline">\(C^*\)</span>-algebras corresponding to the units. But
+then, by a standard argument, the isometry also propagates on all the
+Banach spaces of the Fell bundle: if <span class="math inline">\(b\in\mathfrak C_x\)</span> the axioms
+allow us to write
+<span class="math display">\[\p\!\pi(b)\!\p_{\mathfrak B_x}^2=\,\p\!\pi(b)^*\pi(b)\!\p_{\mathfrak B_{\textrm{ s}(x)}}=\,\p\!\pi\big(b^\bu\bu b\big)\!\p_{\mathfrak B_{\textrm{ s}(x)}}=\,\p\!b^\bu\bu b\!\p_{\mathfrak C_{\textrm{ s}(x)}}
+=\,\p\!b\!\p_{\mathfrak C_x}^2.\]</span></p>
+<p>Now define
+<span class="math display">\[\Upsilon_\pi\!:\ell^{\infty,1}(\Xi\!\mid\!\mathscr C)\to\ell^{\infty,1}\big(\Xi\,\big\vert\,\mathscr B^\mathscr H\big)\,,\quad\big(\Upsilon_\pi(\Phi)\big)(x)\!:=\pi\big(\Phi(x)\big)\,.\]</span>
+It is a well-defined linear isometry: we compute for the range part of
+the norm <a href="#parts" reference-type="eqref" reference="parts"><span class="math display">\[parts\]</span></a>
+(using more detailed notations); the same is true for the source part.
+<span class="math display">\[\begin{aligned}
+\p\!\Upsilon_\pi(\Phi)\!\p^{\textrm{ r}}_{\ell^{\infty,1}(\Xi\,\vert\,\mathscr B^\mathscr H)}\,&amp;=\sup_u\!\sum_{\textrm{ r}(x)=u}\!\p\!\pi\big(\Phi(x)\big)\!\p_{\mathfrak B_x}\\
+&amp;=\sup_u\!\sum_{\textrm{ r}(x)=u}\!\p\!\Phi(x)\!\p_{\mathfrak C_x}=\,\p\!\Phi\!\p^{\textrm{ r}}_{\ell^{\infty,1}(\Xi\mid\mathscr C)}.
+\end{aligned}\]</span> It is also an involutive morphism. For the
+multiplication, for instance, we have: <span class="math display">\[\begin{aligned}
+\big[\Upsilon_\pi(\Phi)\star\Upsilon_\pi(\Psi)\big](\Xi)&amp;=\sum_{yz=x}\big[\Upsilon_\pi(\Phi)\big](y)\big[\Upsilon_\pi(\Psi)\big](z)\\
+&amp;=\sum_{yz=x}\pi[\Phi(y)]\pi[\Psi(z)]\\
+&amp;=\pi\Big(\sum_{yz=x}\Phi(y)\bu\Psi(z)\Big)\\
+&amp;=\big[\pi(\Phi\star\Psi)\big](x)\\
+&amp;=\big[\Upsilon_\pi(\Phi\star\Psi)\big](x)\,.
+\end{aligned}\]</span></p>
+<p>Thus we proved that <span class="math inline">\(\ell^{\infty,1}(\Xi\!\mid\!\mathscr C)\)</span> can be
+embedded as a closed <span class="math inline">\(^*\)</span>-algebra of the symmetric Banach <span class="math inline">\(^*\)</span>-algebra
+<span class="math inline">\(\ell^{\infty,1}\big(\Xi\,\big\vert\,\mathscr B^\mathscr H\big)\)</span> , so it
+is also symmetric, by <span class="citation">(<a href="#ref-Pa2" role="doc-biblioref">Palmer 2001, 2:Th.11.4.2</a>)</span>. The proof is finished. ◻</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-47" class="example"><strong>Example 4.1  </strong></span><span id="purgrupal" label="purgrupal"></span> If <span class="math inline">\(\Xi\equiv\textsf{ H}\)</span> is a discrete
+group with unit <span class="math inline">\(\e\)</span> , one recovers the first part of Theorem
+<a href="various-types-of-symmetry-for-discrete-groups.html#teoremix" reference-type="ref" reference="teoremix"><span class="math display">\[teoremix\]</span></a>
+(the second one may be found in <span class="citation">(<a href="#ref-JM" role="doc-biblioref">Jauré and Măntoiu 2022</a>)</span>). In this case, since <span class="math inline">\(U=\{\e\}\)</span> ,
+the <span class="math inline">\(\ell^{\infty,1}\)</span>-algebras reduce to the usual <span class="math inline">\(\ell^1\)</span>-algebras
+associated to Fell bundles with discrete groups <span class="citation">(<a href="#ref-FD2" role="doc-biblioref">Fell and Doran 1988</a>)</span>. The Hilbert
+bundle reduces to a single Hilbert space <span class="math inline">\(\h_{\e}=:\h\)</span> , the Fell bundle
+<span class="math inline">\(\mathscr B^\mathscr H\)</span> is only composed of <span class="math inline">\(\mathbb B(\h)\)</span>  and then
+<span class="math inline">\(\ell^{\infty,1}\big(\textsf{H}\,\big\vert\,\mathscr B^\mathscr H\big)\)</span>
+becomes <span class="math inline">\(\ell^1\big(\textsf{H},\mathbb B(\h)\big)\)</span> , which is isomorphic
+to the projective tensor product
+<span class="math inline">\(\ell^1(\textsf{H})\!\otimes\!\mathbb B(\h)\)</span> . We recover in the case
+the classical notion of rigidly symmetric group; see <span class="citation">(<a href="#ref-Po" role="doc-biblioref">Poguntke 1992</a>)</span>. This
+explains a posteriori our terminology.</p>
+</div>
+
+
+
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Ex2" class="csl-entry">
+———. 2017. <span>“Partial Dynamical Systems, Fell Bundles and Applications.”</span> <em>Mathematical Surveys and Monographs</em> 224.
+</div>
+<div id="ref-FD2" class="csl-entry">
+Fell, J. M. G., and R. S. Doran. 1988. <em>Representations of <span class="math inline">\(^*\)</span>-Algebras, Locally Compact Groups, and Banach <span class="math inline">\(^*\)</span>-Algebraic Bundles, 6th. Edn</em>. Vol. 1. Elsevier.
+</div>
+<div id="ref-JM" class="csl-entry">
+Jauré, D., and M. Măntoiu. 2022. <span>“Symmetry and Spectral Invariance for Topologically Graded <span class="math inline">\(C^*\)</span>-Algebras and Partial Action Systems.”</span> <em>arXiv:2108.09587 and to Appear in <em>Bull. London Math. Soc.</em></em>
+</div>
+<div id="ref-Kum" class="csl-entry">
+Kumjian, A. 1998. <span>“Fell Bundles over Groupoids.”</span> <em>Proc. Amer. Math. Soc.</em> 126(4): 115–25.
+</div>
+<div id="ref-Lp" class="csl-entry">
+Leptin, H. 1976. <span>“Symmetrie in Banachschen Algebren.”</span> <em>Archiv Der Mathematik</em> 27(1): 394–400.
+</div>
+<div id="ref-MW" class="csl-entry">
+Muhly, P., and D. Williams. 2008. <span>“Equivalence and Disintegration Theorems for Fell Bundles and Their <span class="math inline">\(C^*\)</span>-Algebras.”</span> <em>Dissertationes Math. (Rozprawy Mat.)</em> 456: 1–57.
+</div>
+<div id="ref-Pa2" class="csl-entry">
+Palmer, T. W. 2001. <em>Banach Algebras and the General Theory of <span class="math inline">\(^*\)</span>-Algebras</em>. Vol. 2. Encyclopedia of Mathematics; its Applications. Cambridge University Press, Cambridge.
+</div>
+<div id="ref-Po" class="csl-entry">
+Poguntke, D. 1992. <span>“Rigidly Symmetric <span class="math inline">\(L^1\)</span>-Group Algebras.”</span> <em>Seminar Sophus Lie</em> 2: 189–97.
+</div>
+<div id="ref-Yam" class="csl-entry">
+Yamagami, S. 1990. <span>“On the Ideal Structure of c*-Algebras over Locally Compact Groupoids.”</span> <em>Mappings of Operator Algebras (Philadelphia, PA, 1988), in: Progress in Math., 84, Birkhäuser Boston, Boston, MA</em> 6: 199–204.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="exemple.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/04-citations.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

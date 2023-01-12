@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Examples | Symmetry and spectral invariance for topologically graded C*‐algebras and partial action systems</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Examples | Symmetry and spectral invariance for topologically graded C*‐algebras and partial action systems" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Examples | Symmetry and spectral invariance for topologically graded C*‐algebras and partial action systems" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Diego Jauré" />
+
+
+<meta name="date" content="2023-01-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="various-types-of-symmetry-for-discrete-groups.html"/>
+<link rel="next" href="symmetry-in-a-groupoid-setting.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="" data-path="agradecimientos.html"><a href="agradecimientos.html"><i class="fa fa-check"></i>Agradecimientos</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="various-types-of-symmetry-for-discrete-groups.html"><a href="various-types-of-symmetry-for-discrete-groups.html"><i class="fa fa-check"></i><b>2</b> Various types of symmetry for discrete groups</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="various-types-of-symmetry-for-discrete-groups.html"><a href="various-types-of-symmetry-for-discrete-groups.html#flocinor"><i class="fa fa-check"></i><b>2.1</b> The Main Result</a></li>
+<li class="chapter" data-level="2.2" data-path="various-types-of-symmetry-for-discrete-groups.html"><a href="various-types-of-symmetry-for-discrete-groups.html#cerculix"><i class="fa fa-check"></i><b>2.2</b> Topologically graded algebras from dual actions and partial crossed products</a></li>
+<li class="chapter" data-level="2.3" data-path="various-types-of-symmetry-for-discrete-groups.html"><a href="various-types-of-symmetry-for-discrete-groups.html#idealuri"><i class="fa fa-check"></i><b>2.3</b> Inverse closedness modulo ideals.</a></li>
+<li class="chapter" data-level="2.4" data-path="various-types-of-symmetry-for-discrete-groups.html"><a href="various-types-of-symmetry-for-discrete-groups.html#decay"><i class="fa fa-check"></i><b>2.4</b> Other types of decay</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exemple.html"><a href="exemple.html"><i class="fa fa-check"></i><b>3</b> Examples</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="exemple.html"><a href="exemple.html#restrix"><i class="fa fa-check"></i><b>3.1</b> Inverse closed Banach *-algebras from topological partial actions</a></li>
+<li class="chapter" data-level="3.2" data-path="exemple.html"><a href="exemple.html#dedenix"><i class="fa fa-check"></i><b>3.2</b> Toeplitz-Bunce-Deddens operators</a></li>
+<li class="chapter" data-level="3.3" data-path="exemple.html"><a href="exemple.html#afelliz"><i class="fa fa-check"></i><b>3.3</b> UHF algebras</a></li>
+<li class="chapter" data-level="3.4" data-path="exemple.html"><a href="exemple.html#afellix"><i class="fa fa-check"></i><b>3.4</b> CAR algebras</a></li>
+<li class="chapter" data-level="3.5" data-path="exemple.html"><a href="exemple.html#quasilatix"><i class="fa fa-check"></i><b>3.5</b> Wiener-Hopf algebras associated to quasi-lattice ordered groups</a></li>
+<li class="chapter" data-level="3.6" data-path="exemple.html"><a href="exemple.html#oroflix"><i class="fa fa-check"></i><b>3.6</b> Higher rank graph algebras</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="symmetry-in-a-groupoid-setting.html"><a href="symmetry-in-a-groupoid-setting.html"><i class="fa fa-check"></i><b>4</b> Symmetry in a groupoid setting</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="symmetry-in-a-groupoid-setting.html"><a href="symmetry-in-a-groupoid-setting.html#groupoids-and-groupoid-actions"><i class="fa fa-check"></i><b>4.1</b> Groupoids and groupoid actions</a></li>
+<li class="chapter" data-level="4.2" data-path="symmetry-in-a-groupoid-setting.html"><a href="symmetry-in-a-groupoid-setting.html#fell-bundles"><i class="fa fa-check"></i><b>4.2</b> Fell bundles</a></li>
+<li class="chapter" data-level="4.3" data-path="symmetry-in-a-groupoid-setting.html"><a href="symmetry-in-a-groupoid-setting.html#fell-bundles-over-groupoids"><i class="fa fa-check"></i><b>4.3</b> Fell bundles over groupoids</a></li>
+<li class="chapter" data-level="4.4" data-path="symmetry-in-a-groupoid-setting.html"><a href="symmetry-in-a-groupoid-setting.html#rigidly-symmetric-and-hypersymmetric-groupoids"><i class="fa fa-check"></i><b>4.4</b> Rigidly symmetric and hypersymmetric groupoids</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Symmetry and spectral invariance for topologically graded C*‐algebras and partial action systems</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="exemple" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Examples<a href="exemple.html#exemple" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="restrix" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Inverse closed Banach *-algebras from topological partial actions<a href="exemple.html#restrix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We introduce now certain partial crossed product <span class="math inline">\(C^*\)</span>-algebras
+associated to partial topological actions of the discrete group. We do
+not consider the most general case; in particular, we restrict
+generality in such a way to have certain natural faithful Hilbert space
+representations. In this way, transparent results on inverse closedness
+will be available.</p>
+<p>So let <span class="math inline">\((X,\Theta,\G)\)</span> be a <em>partial action</em> of the group <span class="math inline">\(\G\)</span> (assumed
+here to be countable) on the compact Hausdorff space <span class="math inline">\(X\)</span>. In more
+detail, the partial action is denoted by
+<span class="math inline">\(\big\{\Theta_g:X_{g^{-1}}\!\to X_g\,\big\vert\, g\in\G\big\}\)</span> , where
+each <span class="math inline">\(X_g\)</span> is an open subset of <span class="math inline">\(X\)</span> and <span class="math inline">\(\Theta_g\)</span> is a homeomorphism
+with domain <span class="math inline">\(X_{g^{-1}}\)</span> and image <span class="math inline">\(X_g\)</span> . One requires</p>
+<ul>
+<li><p><span class="math inline">\(X_\e=X\)</span> and <span class="math inline">\(\Theta_\e=\textrm{id}_X\)</span> ,</p></li>
+<li><p>for every <span class="math inline">\(g,h\in\G\)</span> , the homeomorphism <span class="math inline">\(\Theta_{gh}\)</span> extends
+<span class="math inline">\(\Theta_{g}\circ\Theta_{h}\)</span>.</p></li>
+</ul>
+<p>Observe that the composition <span class="math inline">\(\Theta_g\circ\Theta_h\)</span> is meant to refer
+to the map whose domain is the set of all elements <span class="math inline">\(x \in X\)</span> for which
+<span class="math inline">\(\Theta_g\circ\Theta_h(x)\)</span> is well defined, therefore the domain of
+<span class="math inline">\(\Theta_g\circ\Theta_h\)</span> is the set <span class="math inline">\(\Theta_h^{-1}( X_h\cap X_{g^{-1}})\)</span>.</p>
+<p>In fact each locally compact partial dynamical system may be deduced by
+restricting a global one in an essentially canonical way: there exists a
+global action <span class="math inline">\(\tau\)</span> of the group <span class="math inline">\(G\)</span> on a topological space <span class="math inline">\(\tilde{X}\)</span>
+such that
+<span class="math display">\[X_g=\tau_g(\tilde{X})\cap \tilde{X} \quad \quad \forall g\in G\]</span> and
+<span class="math inline">\(\tau_g|_{X_{g^{-1}}}=\Theta_g\)</span> <span class="citation">(<a href="#ref-Ex2" role="doc-biblioref">Exel 2017</a> Ch. 3)</span>. But this restriction of
+the global action might fail in the case the total space <span class="math inline">\(\tilde X\)</span> is
+not Hausdorff (<span class="citation">(<a href="#ref-Ex2" role="doc-biblioref">Exel 2017</a> Prop. 5.6)</span> and <span class="citation">(<a href="#ref-Ab" role="doc-biblioref">Abadie 2003</a> Th. 4.44)</span>).</p>
+<p>We obtain from <span class="math inline">\((X,\Theta,\G)\)</span> a partial <span class="math inline">\(C^*\)</span>-dynamical system
+<span class="math inline">\(\big(C(X),\te,\G\big)\)</span> , where the ideals are <span class="math display">\[\label{santodomingo}
+\mathcal A_g\!:=C\big(X_{g}\big)\equiv\big\{a\in C(X)\,\big\vert\,a(x)=0\,,\,\forall\,x\notin X_{g}\big\}\]</span>
+and the isomorphisms are <span class="math display">\[\label{panama}
+\te_g:C\big(X_{g^{-1}}\big)\to C\big(X_{g}\big)\,,\quad\te_g(a):=a\circ\Theta_{g^{-1}}\,.\]</span>
+Therefore, one can construct the Banach <span class="math inline">\(^*\)</span>-algebra
+<span class="math inline">\(\ell^1_\te\big(\G;C(X)\big)\)</span> and its enveloping partial crossed product
+<span class="math inline">\(C(X)\!\rtt_\te\!\G\)</span> . We deduce from Theorem
+<a href="various-types-of-symmetry-for-discrete-groups.html#teoremix" reference-type="ref" reference="teoremix"><span class="math display">\[teoremix\]</span></a></p>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-28" class="proposition"><strong>Proposition 3.1  </strong></span><span id="corolix" label="corolix"></span> If <span class="math inline">\(\,\normalfont{\G}\)</span> is rigidly
+symmetric, <span class="math inline">\(\ell^1_\te\big(\normalfont{\G},C(X)\big)\)</span> is reduced,
+symmetric and inverse closed in the partial crossed product.</p>
+</div>
+<p>Assume now that under the partial action there is an open dense orbit
+<span class="math inline">\(Y\)</span> with trivial isotropy. Thus, for some (and then any) <span class="math inline">\(y\in Y\)</span> one
+has <span class="math display">\[\label{guadelupa}
+\G(y):=\big\{g\in\G\,\big\vert\,y\in X_{g^{-1}}\,,\Theta_g(y)=y\big\}=\{\e\}\,.\]</span>
+Then <span class="math inline">\(X\)</span> will be a compactification of the discrete orbit <span class="math inline">\(Y\)</span> and for
+any <span class="math inline">\(y\in Y\)</span> the orbit map <span class="math inline">\(g\to\Theta_g(y)\)</span> will be a homeomorphism on
+its image.</p>
+<p>In the Hilbert space <span class="math inline">\(\ell^2\big(Y\big)\)</span> we introduce the representation
+by multiplication operators <span class="math display">\[\label{mexic}
+\pi:C(X)\to\mathbb B\big[\ell^2(Y)\big]\,,\quad\big[\pi(a)\xi\big](y):=a(y)\xi(y)\,.\]</span>
+For any <span class="math inline">\(h\in\G\,,\,y\in Y\)</span> and <span class="math inline">\(\xi\in\ell^2(Y)\)</span> one defines
+<span class="math display">\[\label{partilix}
+\big[u_h(\xi)\big](y):=
+\begin{cases}
+\xi\big(\Theta_{h^{-1}}(y)\big) &amp;\textrm{if}\ \;y\in X_h\,,\\
+0\, &amp;\textrm{if}\ \;y\notin X_h\,.
+\end{cases}\]</span> Then <span class="math inline">\(\big(\pi,u,\ell^2(Y)\big)\)</span> <em>is a covariant
+representation of</em> <span class="math inline">\(\big(C(X),\te,\G\big)\)</span> and <em>the integrated form
+representation</em>
+<span class="math display">\[\Pi\equiv\pi\!\rtt u\!:C(X)\!\rtt_\te\!\G\to\mathbb B\big[\ell^2(Y)\big]\,,\]</span>
+which acts on <span class="math inline">\(\ell^1_\te\big(\G;C(X)\big)\)</span> as
+<span class="math inline">\(\Pi(\Phi)=\sum_{h\in\G}\pi\big[\Phi(h)\big]u_h\)</span> and which satisfies
+<span class="math display">\[\label{lemikainnen}
+\Pi\big(a\otimes\delta_h\big)=\pi(a)u_h\,,\quad\forall\,h\in\G\,,\,a\in C(X_h)\,.\]</span>
+To express it explicitly, we need some notations. For <span class="math inline">\(y,z\in Y\)</span> we set
+<span class="math inline">\(g_{yz}\)</span> for the unique element of the group such that
+<span class="math inline">\(\Theta_{g_{yz}}(y)=z\)</span> ; we use the fact that <span class="math inline">\(Y\)</span> is an orbit with
+trivial isotropy. Note the relations <span class="math display">\[\label{dominicana}
+g_{yz}^{-1}=g_{zy}\,,\quad g_{zy}=g_{xy}g_{zx}\,,\quad\forall\,x,y,z\in Y.\]</span>
+A direct computation, relying on
+<a href="#dominicana" reference-type="eqref" reference="dominicana"><span class="math display">\[dominicana\]</span></a>, shows that on <span class="math inline">\(\ell^1_\te\big(\G;C(X)\big)\)</span> the
+representation <span class="math inline">\(\Pi\)</span> reads <span class="math display">\[\label{flochax}
+\big[\Pi(\Phi)\xi\big](y)=\sum_{z\in Y}\Phi\big(g_{zy},y\big)\xi(z)\,,\]</span>
+where we set <span class="math inline">\(\big[\Phi(k)\big](y)=:\Phi(k,y)\)</span> .</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-29" class="theorem"><strong>Theorem 3.1  </strong></span><span id="pohjola" label="pohjola"></span> Suppose that <span class="math inline">\(\normalfont{\G}\)</span> is countable
+and rigidly symmetric and that <span class="math inline">\(Y\)</span> is a open dense orbit of the space
+<span class="math inline">\(X\)</span>, with trivial isotropy. Let
+<span class="math inline">\(\Phi\in\ell^1_\te\big(\normalfont{\G};C(X)\big)\)</span> .</p>
+<ol style="list-style-type: decimal">
+<li><p>If the operator <span class="math inline">\(\,\Pi(\Phi)\)</span> is invertible, there exists
+<span class="math inline">\(\Psi\in\ell^1_\te\big(\normalfont{\G};C(X)\big)\)</span> such that
+<span class="math inline">\(\Pi(\Phi)^{-1}\!=\Pi(\Psi)\)</span> .</p></li>
+<li><p>If <span class="math inline">\(\,\Pi(\Phi)\)</span> is Fredholm, at least one of its inverses <span class="math inline">\(T\)</span>
+modulo <span class="math inline">\(\mathbb K\big[\ell^2(Y)\big]\)</span> belongs to
+<span class="math inline">\(\Pi[\ell^1_{\theta}\big(\normalfont{\G};C(X)\big)]\)</span> .</p></li>
+</ol>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-30" class="proof"><em>Proof</em>. </span><em>Proof.</em> (i) Having in view Proposition
+<a href="exemple.html#corolix" reference-type="ref" reference="corolix"><span class="math display">\[corolix\]</span></a>, we
+only need to check that the representation <span class="math inline">\(\Pi\)</span> is faithful; see also
+Theorem <a href="various-types-of-symmetry-for-discrete-groups.html#teoremix" reference-type="ref" reference="teoremix"><span class="math display">\[teoremix\]</span></a>(iv). The universal and the reduced partial crossed
+products here are the same, cf. Remark
+<a href="#lantors" reference-type="ref" reference="lantors"><span class="math display">\[lantors\]</span></a>. Note
+that the restriction of <span class="math inline">\(\Pi\)</span> to <span class="math inline">\(C(X)\)</span> coincides with <span class="math inline">\(\pi\)</span> (set <span class="math inline">\(h=\e\)</span>
+in <a href="#lemikainnen" reference-type="eqref" reference="lemikainnen"><span class="math display">\[lemikainnen\]</span></a>). By <span class="citation">(<a href="#ref-ELQ" role="doc-biblioref">Exel, Laca, and Quigg 2002, Th. 2.6</a>)</span>, injectivity of <span class="math inline">\(\Pi\)</span> would
+follow if we prove that <span class="math inline">\(\pi\)</span> is injective and the action is
+topologically free. The injectivity of <span class="math inline">\(\pi\)</span> is obvious: <span class="math inline">\(\pi(a)=0\)</span>
+means that the restriction of <span class="math inline">\(a\)</span> to <span class="math inline">\(Y\)</span> is null, which implies that <span class="math inline">\(a\)</span>
+is null, since the orbit <span class="math inline">\(Y\)</span> was supposed dense. Topological freeness
+(cf. <span class="citation">(<a href="#ref-ELQ" role="doc-biblioref">Exel, Laca, and Quigg 2002, Def. 2.1</a>.)</span>) is clear, since <span class="math inline">\(Y\)</span> is dense: having trivial
+isotropy, it is disjoint from any set of the form
+<span class="math display">\[F_g:=\big\{x\in X_{g^{-1}}\,\big\vert\,\Theta_g(x)=x\big\}\,,\quad g\ne\e\,,\]</span>
+so this one must have empty interior.</p>
+<p><span class="math inline">\(ii\)</span> Since <span class="math inline">\(Y\)</span> is discrete, the elements of <span class="math inline">\(C_0(Y)\)</span> are transformed
+by the representation <span class="math inline">\(\pi\)</span> into compact multiplication operators in
+<span class="math inline">\(\ell^2(Y)\)</span> . The <span class="math inline">\(\te\)</span>-invariant ideal <span class="math inline">\(C_0(Y)\)</span> gives rise to the ideal
+<span class="math inline">\(C_0(Y)\!\rightthreetimes_\te\!\G\)</span> of the partial crossed product
+<span class="math inline">\(C(X)\!\rtt_\te\!\G\)</span> and one has
+<span class="math inline">\(\Pi\big[C_0(Y)\!\rtt_\te\!\G\big]=\mathbb K\big[\ell^2(Y)\big]\)</span> .
+Therefore one can apply Corollary
+<a href="various-types-of-symmetry-for-discrete-groups.html#honduras" reference-type="ref" reference="honduras"><span class="math display">\[honduras\]</span></a> and
+conclude that
+<span class="math inline">\(\Pi[\ell^1_{\theta}\big(\G;C(X)\big)]\subset\mathbb B\big[\ell^2(Y)\big]\)</span>
+is Fredholm inverse closed. Then the assertion follows easily from
+Atkinson’s Theorem; see also Example
+<a href="various-types-of-symmetry-for-discrete-groups.html#fredholmix" reference-type="ref" reference="fredholmix"><span class="math display">\[fredholmix\]</span></a>. ◻</p>
+</div>
+</div>
+<div id="dedenix" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Toeplitz-Bunce-Deddens operators<a href="exemple.html#dedenix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the Hilbert space <span class="math inline">\(\ell^2(\N)\)</span> , with canonical orthonormal base
+<span class="math inline">\(\{\delta_n\}_{n\in\N}\)</span> , each function <span class="math inline">\(a\in\ell^\infty(\N)\)</span> defines a
+bounded multiplication operator <span class="math inline">\(\textsf{M}_a\)</span> . Let us denote by
+<span class="math inline">\(\textsf{S}\)</span> the right shift uniquely determined by
+<span class="math inline">\(\textsf{S}\,\delta_n\!:=\delta_{n+1}\)</span> for every <span class="math inline">\(n\in\N\)</span> . For
+<span class="math inline">\(q\in\N\)</span> , we say that <span class="math inline">\(a\in\ell^\infty(\N)\)</span> is <span class="math inline">\(q\)</span>-periodic if
+<span class="math inline">\(a(n+q)=a(n)\,,\,\forall\,n\in\N\)</span> . We denote by <span class="math inline">\(\ell^\infty(\N;q)\)</span> the
+<span class="math inline">\(C^*\)</span>-subalgebra of all <span class="math inline">\(q\)</span>-periodic functions. The starting point in
+constructing a Toeplitz-Bunce-Deddens algebra is an infinite family
+<span class="math inline">\(\mathbf q:=\{q_i\!\mid\!i\in\N\}\)</span> of strictly increasing positive
+integers such that each <span class="math inline">\(q_i\)</span> divides <span class="math inline">\(q_{i+1}\)</span> , i.e. <span class="math inline">\(q_{i+1}=r_i q_i\)</span>
+with <span class="math inline">\(r_i\ge 2\)</span> .</p>
+<div class="defn">
+<p><span id="buncix" label="buncix"></span> <em>The Toeplitz-Bunce-Deddens algebra
+<span class="math inline">\(\mathfrak D(\mathbf q)\)</span> associated to the multi-integer <span class="math inline">\(\mathbf q\)</span></em> is
+the <span class="math inline">\(C^*\)</span>-algebras of operators in <span class="math inline">\(\ell^2(\N)\)</span> generated by the family
+<span class="math display">\[\label{generatrix}
+\Big\{\textsf{ S}_a:=\textsf{ S}\textsf{ M}_a\,\Big\vert\,a\in\bigcup_{i\in\N}\ell^\infty(\N;q_i)\Big\}\,.\]</span></p>
+</div>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-31" class="proposition"><strong>Proposition 3.2  </strong></span><span id="propotrix" label="propotrix"></span> The Toeplitz-Bunce-Deddens algebra is
+topologically graded over <span class="math inline">\(\Z\)</span> . Its <span class="math inline">\(\ell^1\)</span>-Banach <span class="math inline">\(^*\)</span>-algebra
+<span class="math inline">\(\ell^1\big[\mathfrak D(\mathbf q)\big]\)</span> is reduced, symmetric and
+inverse closed in <span class="math inline">\(\mathfrak D(\mathbf q)\)</span> and in
+<span class="math inline">\(\mathbb B\big[\ell^2(\N)\big]\)</span> (an explicit description is included in
+the proof).</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-32" class="proof"><em>Proof</em>. </span><em>Proof.</em> By <span class="citation">(<a href="#ref-Exs1" role="doc-biblioref">Exel 1994b</a>)</span>, a canonical action <span class="math inline">\(\alpha\)</span> of the torus
+<span class="math inline">\(\mathbb T=\widehat\Z\)</span> on <span class="math inline">\(\mathfrak D(\mathbf q)\)</span> is defined as
+follows: For every <span class="math inline">\(z\in\mathbb T\)</span> the unitary multiplication operator
+determined by <span class="math inline">\(U_z\delta_n:=z^n\delta_n\)</span> (<span class="math inline">\(n\in\N\)</span>) defines on
+<span class="math inline">\(\mathbb B\big[\ell^2(\N)\big]\)</span> the inner automorphism
+<span class="math inline">\(T\to U_z TU_z^*\)</span>. Because of <span class="math display">\[\label{costarica}
+\alpha_z(S_a)=U_z S_aU_z^*=zS_a\,,\quad\forall\,a\in\ell^\infty(\N)\,,\]</span>
+<span class="math inline">\(\big(\mathfrak D(\mathbf q),\alpha,\T\big)\)</span> is indeed a (full)
+continuous action. We also write <span class="math inline">\(\ell^\infty(\N;\mathbf q)\)</span> for the
+(unital, Abelian) <span class="math inline">\(C^*\)</span>-subalgebra of <span class="math inline">\(\ell^\infty(\N)\)</span> generated by
+<span class="math inline">\(\bigcup_{i\in\N}\ell^\infty(\N;q_i)\)</span> . The spectral subspace
+<span class="math inline">\(\mathfrak D(\mathbf q)_k\)</span> is generated by operators of the ordered form
+<span class="math display">\[\label{paracetamol}
+S_{a_1}\dots S_{a_n}S^*_{b_1}\dots S^*_{b_m}\,,\quad a_1,\dots,a_n,b_1,\dots,b_m\in\ell^\infty(\N;\mathbf q)\,,\ n-m=k\,.\]</span>
+This follows easily from the relations <span class="math inline">\(S^*_a S_b=M_{\overline ab}\)</span> and
+<span class="math inline">\(M_a S_b=S_{\tilde ab}\)</span> , where <span class="math inline">\(\tilde a_n:=a_{n-1}\)</span> if <span class="math inline">\(n\ge 1\)</span> .
+Since <span class="math inline">\(\tilde a_0\)</span> does not appear in the definition of the weighted
+shift operator, it can be fixed such that <span class="math inline">\(\tilde a\)</span> is periodic. Other
+forms of the elements in <span class="math inline">\(\mathfrak D(\mathbf q)_k\)</span> could involve the
+final projection <span class="math inline">\(Q:=SS^*\)</span>. These having been settled, the assertions
+concerning the <span class="math inline">\(\ell^1\)</span>-Banach algebra follow from Theorem
+<a href="various-types-of-symmetry-for-discrete-groups.html#exelix" reference-type="ref" reference="exelix"><span class="math display">\[exelix\]</span></a>. ◻</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-33" class="remark"><em>Remark</em>. </span><span id="toeplix" label="toeplix"></span> In <span class="citation">(<a href="#ref-Exs1" role="doc-biblioref">Exel 1994b</a>)</span> one gets the isomorphism
+<span class="math display">\[\label{triplix}
+\mathfrak D(\mathbf q)\overset{\sim}{\longrightarrow}\big[c_0(\N)\oplus\ell^\infty(\N;\mathbf q)\big]\!\rtt_\te\Z\cong C\big[\N(\mathbf q)\big]\!\rtt_\te\Z\,.\]</span>
+We refer to <span class="citation">(<a href="#ref-Exs1" role="doc-biblioref">Exel 1994b</a>)</span> for the Gelfand spectrum
+<span class="math inline">\(\N(\mathbf q)=\N\sqcup\Si(\mathbf q)\)</span> of the Abelian <span class="math inline">\(\alpha\)</span>-fixed
+point <span class="math inline">\(C^*\)</span>-algebra
+<span class="math display">\[\mathfrak D(\mathbf q)_0\!:=c_0(\N)\oplus\ell^\infty(\N;\mathbf q)\]</span>
+(a compactification of the discrete set <span class="math inline">\(\N\)</span> by a Cantor set
+<span class="math inline">\(\Si(\mathbf q)\)</span>) and for the interesting explicit form of the partial
+action <span class="math inline">\(\te\)</span> in the Gelfand realization (induced by a partial
+homeomorphism of <span class="math inline">\(\N(\mathbf q)\)</span>).</p>
+</div>
+<p>We may also state that
+<em><span class="math inline">\(\ell^1\big[\mathfrak D(\mathbf q)\big]=\bigoplus_{k\in\Z}^{1,\alpha}\mathfrak D(\mathbf q)_k\)</span>
+is Fredholm inverse closed in</em>
+<span class="math inline">\(\mathfrak D(\mathbf q)\subset\mathbb B\big[\ell^2(\N)\big]\)</span> . This
+follows from Corollary <a href="various-types-of-symmetry-for-discrete-groups.html#honduras" reference-type="ref" reference="honduras"><span class="math display">\[honduras\]</span></a>, where <span class="math inline">\(\K=c_0(\N)\)</span> and <span class="math inline">\(\Pi\)</span> is the inverse of
+the isomorphism appearing in
+<a href="#triplix" reference-type="eqref" reference="triplix"><span class="math display">\[triplix\]</span></a>,
+since
+<span class="math inline">\(\Pi\big[c_0(\N)\!\rtt_\te\!\Z\big]=\mathbb K\big[\ell^2(\N)\big]\)</span> . One
+calls the quotient <span class="math display">\[\label{triflix}
+\mathfrak D(\mathbf q)/\mathbb K\big[\ell^2(\N)\big]\cong\ell^\infty(\N;\mathbf q)\!\rtimes_\te\Z\cong C\big[\Si(\mathbf q)\big]\!\rtimes_\te\Z\]</span>
+<em>the Bunce-Deddens algebra</em>. The action "at infinity" of <span class="math inline">\(\Z\)</span> on the
+Cantor set <span class="math inline">\(\Si(\mathbf q)\)</span> is induced by an odometer map. It is a
+global action, so this quotient can be dealt with by usual crossed
+products.</p>
+</div>
+<div id="afelliz" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> UHF algebras<a href="exemple.html#afelliz" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>An UHF-algebra</em> is the inductive limit <span class="math display">\[\label{limindiz}
+\mathfrak C:=\underset{m\in\N}{\textrm{ lim\,ind}\,\mathbf M^{p_m}}\]</span> of
+a sequence of full matricial <span class="math inline">\(C^*\)</span>-algebras, with unital and injective
+connecting morphisms, where each <span class="math inline">\(p_m\)</span> divides <span class="math inline">\(p_{m+1}\)</span>. In <span class="citation">(<a href="#ref-Exs2" role="doc-biblioref">Exel 1995</a>)</span>
+Exel treated general approximately finite algebras. He defined on
+<span class="math inline">\(\mathfrak C\)</span> a regular and semi-saturated <span class="math inline">\(\mathbb T\)</span>-action and then
+he applied his theory from <span class="citation">(<a href="#ref-Exs" role="doc-biblioref">Exel 1994a</a>)</span> to get an isomorphism between
+<span class="math inline">\(\mathfrak C\)</span> and a partial crossed product <span class="math inline">\(\A\rtt_\te\Z\)</span> , where <span class="math inline">\(\A\)</span>
+is an Abelian almost finite <span class="math inline">\(AF\)</span>-algebra. To simplify, we decided to
+treat only UHF algebras; the general case is similar, but it would
+involve more complicated notations. To state a result on symmetric
+subalgebras, we make use of Theorem
+<a href="various-types-of-symmetry-for-discrete-groups.html#exelix" reference-type="ref" reference="exelix"><span class="math display">\[exelix\]</span></a>, only
+invoking the circle action and its spectral subspaces; the partial
+crossed product will not be mentioned.</p>
+<p>On every full matrix algebra <span class="math inline">\(\mathbf M^p\)</span> one defines <span class="math display">\[\label{inerix}
+\alpha^p:\mathbb T\to\textrm{ Aut}\big(\mathbf M^p\big)\,,\quad\alpha^p_z\big[(c_{ij})_{i,j}\big]=\big(z^{i-j}c_{ij}\big)_{i,j}\,.\]</span>
+The connecting morphisms
+<span class="math inline">\(\big\{\mu^{m}\!:\!\mathbf M^{p_m}\to\mathbf M^{p_{m+1}}\big\}\)</span> are
+covariant with respect to the actions <span class="math inline">\(\big\{\alpha^{p_m}\big\}\)</span>. The
+inductive limit comes with the canonical monomorphisms
+<span class="math inline">\(\big\{\nu^{m}\!:\mathbf M^{p_m}\!\to\mathfrak C\big\}\)</span> and
+<span class="math inline">\(\bigcup_m\nu^{(m)}\!\big(\mathbf M^{p_m}\big)\)</span> is dense in
+<span class="math inline">\(\mathfrak C\)</span> . For every <span class="math inline">\(z\in\mathbb T\,,m\in\N\)</span> and
+<span class="math inline">\(\Phi\in\mathbf M^{p_m}\)</span> we set <span class="math display">\[\label{tetaniz}
+\alpha_z\big[\nu^{m}(\Phi)\big]:=\nu^{m}\big[\alpha^{p_m}_z(\Phi)\big]\,.\]</span>
+It is shown in <span class="citation">(<a href="#ref-Exs2" role="doc-biblioref">Exel 1995, Sect. 2</a>)</span> that <span class="math inline">\(\alpha\)</span> extends to an action on
+<span class="math inline">\(\mathfrak C\)</span> (which is semi-saturated and regular).</p>
+<p>To make Theorem <a href="various-types-of-symmetry-for-discrete-groups.html#exelix" reference-type="ref" reference="exelix"><span class="math display">\[exelix\]</span></a> concrete, one needs the spectral subspaces. For each
+<span class="math inline">\(|k|\le p\)</span> , let us denote by <span class="math inline">\(\mathbf M^p_k\)</span> the vector subspace of
+<span class="math inline">\(p\!\times\!p\)</span>-matrices with non-empty entries only on the <span class="math inline">\(k&#39;\)</span>th
+diagonal (<span class="math inline">\(c_{ij}=0\)</span> if <span class="math inline">\(i-j\ne k\)</span>). If <span class="math inline">\(|k|&gt;p\)</span> , we set simply
+<span class="math inline">\(\mathbf M^p_k\!:=\{0\}\)</span> . Then <span class="math inline">\(\mathbf M^p_k\)</span> is the <span class="math inline">\(k&#39;\)</span>th spectral
+subspace of the action <span class="math inline">\(\alpha^p\)</span>. It is follows from the definitions
+and from the fact that each canonical morphism <span class="math inline">\(\nu^{m}\)</span> is injective
+that the spectral subspaces of the action <span class="math inline">\(\alpha\)</span> are the closures in
+<span class="math inline">\(\mathfrak C\)</span> of the unions over <span class="math inline">\(m\)</span> of the images through <span class="math inline">\(\nu^{m}\)</span> of
+the subspaces <span class="math inline">\(\mathbf M^{p_m}_k\)</span>.</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-34" class="theorem"><strong>Theorem 3.2  </strong></span><span id="cioflix" label="cioflix"></span> The Banach <span class="math inline">\(^*\)</span>-algebra <span class="math display">\[\label{perru}
+\ell^1(\mathfrak C)=\bigoplus^{1,\alpha}_{k\in\N}\overline{\bigcup_{m\in\Z}\nu^{m}\big(\mathbf M^{p_m}_k\big)}\]</span>
+is reduced, symmetric and inverse closed in <span class="math inline">\(\mathfrak C\)</span> .</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-35" class="remark"><em>Remark</em>. </span><span id="takesix" label="takesix"></span> In <span class="citation">(<a href="#ref-Ta" role="doc-biblioref"><strong>Ta?</strong></a>)</span> Takesaki (see also <span class="citation">(<a href="#ref-FD2" role="doc-biblioref">Fell and Doran 1988, 1:VIII.17</a>)</span>)
+provided an approach to UHF algebras which would lead to a different
+grading, and consequently also to a symmetric <span class="math inline">\(\ell^1\)</span>-type Banach
+<span class="math inline">\(^*\)</span>-algebra, this time over the infinite restricted product
+<span class="math inline">\(\G:=\prod^\prime_{m\in\N}\G_m\)</span> with the discrete topology, where each
+<span class="math inline">\(\G_m\)</span> is a cyclic group of a certain order <span class="math inline">\(q_m\)</span> . Actually, the UHF
+algebra <span class="math inline">\(\mathfrak C\)</span> is isomorphic to an infinite tensor product
+<span class="math inline">\(\otimes_m\mathbf M^{q_m}\)</span>, where <span class="math inline">\(q_m:=p_{m+1}/p_m\)</span> . In its turn, this
+one is shown to be isomorphic to the full crossed product
+<span class="math inline">\(C(\widehat\G\,)\!\rtimes\G\)</span> . The dual <span class="math inline">\(\widehat\G\)</span> can be identified
+with the product group <span class="math inline">\(\prod_{m\in\N}\G_m\)</span> .</p>
+</div>
+</div>
+<div id="afellix" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> CAR algebras<a href="exemple.html#afellix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let <span class="math inline">\(\big(\mathcal R,(\cdot|\cdot)\big)\)</span> be an infinitely dimensional
+separable Hilbert space and <span class="math inline">\(a:\mathcal R\to\mathbb B(\mathcal H)\)</span> <em>a
+representation of the canonical anticommutation relations</em> in the
+Hilbert space <span class="math inline">\(\h\)</span> , generating the unital <span class="math inline">\(C^*\)</span>-algebra
+<span class="math inline">\(\textrm{ CCR}(\mathcal R)\subset\mathbb B(\mathcal H)\)</span> . Thus <span class="math inline">\(a\)</span> is
+lineal and for every <span class="math inline">\(r,s\in\mathcal R\)</span> one has <span class="math display">\[\label{anticom}
+a(r)a(s)+a(s)a(r)=0\,,\quad a^*(r)a(s)+a^*(s)a(r)=(r|s)\,.\]</span> It is known
+that <span class="math inline">\(\textrm{ CCR}(\mathcal R)\)</span> is isomorphic to the UHF algebra
+<span class="math inline">\(\mathbf M(2^\infty):=\underset{m\in\N}{\textrm{ lim\,ind}\,\mathbf M^{2^m}}\)</span>
+as well as with the infinite tensor product
+<span class="math inline">\(\bigotimes_{m\in\N}\mathbf M^2\)</span>.</p>
+<p>Let also <span class="math inline">\(V:\wG\to\mathbb B(\mathcal R)\)</span> be a strongly continuous
+unitary representation of the compact Abelian group <span class="math inline">\(\wG\)</span> . Associated
+to <span class="math inline">\(V\)</span> there is a continuous action
+<span class="math inline">\(\upsilon:\wG\to\textrm{ Aut}\big[\textrm{ CCR}(\mathcal R)\big]\)</span> ,
+uniquely defined on generators by <span class="math display">\[\label{creatrix}
+\upsilon_\chi\big[a(r)\big]=a\big[V_\chi(r)\big]\,,\quad\forall\,r\in\mathcal R\,,\,\chi\in\wG\,.\]</span></p>
+<p>We denote by <span class="math inline">\(\G\)</span> the dual of <span class="math inline">\(\wG\)</span> ; it is a discrete Abelian group. We
+already have the grading <span class="math display">\[\label{carnatix}
+\textrm{ CCR}(\mathcal R)=\widetilde\bigoplus_{g\in\G}\textrm{ CCR}(\mathcal R)^{\upsilon}_g\]</span>
+in terms of spectral subspaces of the action <span class="math inline">\(\upsilon\)</span> . The next
+corollary follows directly from Theorem
+<a href="various-types-of-symmetry-for-discrete-groups.html#teoremix" reference-type="ref" reference="teoremix"><span class="math display">\[teoremix\]</span></a>.
+Note the generality: any representation <span class="math inline">\(\big(\wG,V\big)\)</span> provides a
+result.</p>
+<div class="corollary">
+<p><span id="cor:unlabeled-div-36" class="corollary"><strong>Corollary 3.1  </strong></span><span id="spermioni" label="spermioni"></span> The corresponding <span class="math inline">\(\ell^1\)</span>-algebra
+<span class="math display">\[\label{sperioni}
+\ell^1\big(\textrm{CCR}(\mathcal R)\big)=\bigoplus_{g\in\normalfont{\G}}^{1,\upsilon}\textrm{ CCR}(\mathcal R)^{\upsilon}_g\]</span>
+is symmetric and inverse closed in <span class="math inline">\(\textrm{ CCR}(\mathcal R)\)</span> and in
+<span class="math inline">\(\mathbb B(\mathcal H)\)</span> .</p>
+</div>
+<p>It is clear that <span class="math inline">\(a(r)\in\textrm{ CCR}(\mathcal R)^{\upsilon}_g\)</span> if and
+only if <span class="math inline">\(r\in\mathcal R^V_g\)</span>, meaning by definition that
+<span class="math inline">\(V_\chi(r)=\chi(g)r\)</span> for all <span class="math inline">\(\chi\in\wG\)</span> . Similarly,
+<span class="math inline">\(a^*(r)\in\textrm{ CCR}(\mathcal R)^{\upsilon}_g\)</span> if and only if
+<span class="math inline">\(r\in\mathcal R^V_{g^{-1}}\)</span> .</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-37" class="example"><strong>Example 3.1  </strong></span><span id="sfarnak" label="sfarnak"></span> If <span class="math inline">\(V:\T\to\mathbb B(\mathcal R)\)</span> is given
+by <span class="math inline">\(V_\tau(r):=e^{2\pi i\tau}r\)</span> and the group duality is implemented by
+<span class="math inline">\(\tau(k):=e^{2\pi ik\tau}\)</span> (<span class="math inline">\(k\in\Z\)</span>) , then
+<span class="math inline">\(\mathcal R^V_1=\mathcal R\)</span> , while <span class="math inline">\(\mathcal R^V_k=\{0\}\)</span> for any
+<span class="math inline">\(k\ne 1\)</span> . Thus <span class="math inline">\(a(r)\in\textrm{ CCR}(\mathcal R)^{\upsilon}_1\)</span> and
+<span class="math inline">\(a^*(r)\in\textrm{ CCR}(\mathcal R)^{\upsilon}_{-1}\)</span> , from which it
+follows that <span class="math display">\[\label{followix}
+a^*(r_1)\dots a^*(r_n)a(s_1)\dots a(s_m)\in\textrm{ CCR}(\mathcal R)^{\upsilon}_{m-n}\,,\quad\forall\,r_1,\dots,r_n,s_1,\dots s_m\in\mathcal R\,.\]</span></p>
+</div>
+</div>
+<div id="quasilatix" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Wiener-Hopf algebras associated to quasi-lattice ordered groups<a href="exemple.html#quasilatix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>One can treat this subject by using partial crossed products, as in
+Subsection <a href="various-types-of-symmetry-for-discrete-groups.html#cerculix" reference-type="ref" reference="cerculix"><span class="math display">\[cerculix\]</span></a>, due to results from <span class="citation">(<a href="#ref-QR" role="doc-biblioref">Quigg and Raeburn 1997</a>; <a href="#ref-ELQ" role="doc-biblioref">Exel, Laca, and Quigg 2002</a>; <a href="#ref-Ex2" role="doc-biblioref">Exel 2017</a>)</span>. We found
+it easier for our purposes to use the initial article <span class="citation">(<a href="#ref-Ni" role="doc-biblioref">Nica 1992</a>)</span>, combined
+with Theorem <a href="various-types-of-symmetry-for-discrete-groups.html#teoremix" reference-type="ref" reference="teoremix"><span class="math display">\[teoremix\]</span></a>.</p>
+<p>We fix a sub-monoid <span class="math inline">\(\pe\)</span> of a discrete amenable group <span class="math inline">\(\G\)</span> such that
+<span class="math inline">\(\pe\cap\pe^{-1}=\{\e\}\)</span> . One defines a left-invariant order relation
+in <span class="math inline">\(\G\)</span> by <span class="math inline">\(g\leq h\)</span> iff <span class="math inline">\(g^{-1}h\in \pe\)</span>. The ordered group <span class="math inline">\((\G,\pe)\)</span>
+is <em>quasi-lattice ordered</em> if any <span class="math inline">\(g\in\pe\pe^{-1}\)</span> has a least upper
+bound in <span class="math inline">\(\pe\)</span>. Many examples may be found at <span class="citation">(<a href="#ref-Ni" role="doc-biblioref">Nica 1992, pag.23</a>)</span>.</p>
+<p>Consider the Hilbert space <span class="math inline">\(\ell^2(\pe)\)</span> with its usual orthonormal
+basis <span class="math inline">\(\{e_q\}_{q\in\pe}\)</span>. For <span class="math inline">\(p\in\pe\)</span>, consider the bounded linear
+operator <span class="math inline">\(W_p\in \mathbb{B}(\ell^2(\pe))\)</span> defined by
+<span class="math display">\[W_p(e_q)=e_{pq}\,,\quad\forall\,q\in\pe.\]</span> We refer to <span class="math inline">\(W\)</span> as the
+<em>regular semigroup of isometries</em> of <span class="math inline">\(\pe\)</span>. The <span class="math inline">\(C^*\)</span>-algebra of
+operators on <span class="math inline">\(\ell^2(\pe)\)</span> generated by the range of <span class="math inline">\(W\)</span> is called the
+<em>Wiener-Hopf algebra of <span class="math inline">\(\,\pe\)</span></em> is denoted by <span class="math inline">\(\mathfrak{W}(\pe)\)</span> .</p>
+<p>For every <span class="math inline">\(g\in\pe\pe^{-1}\)</span> we define the closed subspace
+<span class="math display">\[\mathfrak{W}(\pe)_g:=\overline{\textrm{span}}\,\big\{W_p W_q^*\,\big\vert\,pq^{-1}\!=g\big\}\]</span>
+and set <span class="math inline">\(\mathfrak{W}(\pe)_g=\{0\}\)</span> if <span class="math inline">\(g\notin \pe\pe^{-1}\)</span>. A
+characterization of the Abelian <span class="math inline">\(C^*\)</span>-subalgebra <span class="math inline">\(\mathfrak{W}(\pe)_\e\)</span>
+is
+<span class="math display">\[\mathfrak{W}(\pe)_\e =\left\{T\in\mathfrak{W}(\pe)\!\mid\! T \textrm{ has a diagonal matrix relatively to the canonical basis of }\ell^2(\pe)\right\}.\]</span>
+In Section 3 of Nica’s paper <span class="citation">(<a href="#ref-Ni" role="doc-biblioref">Nica 1992</a>)</span> it is shown that that <em>the collection
+<span class="math inline">\(\big\{\mathfrak{W}(\pe)_g\,\big\vert\,g\in\G\big\}\)</span> provides a
+topologically graded structure of the Wiener-Hopf algebra</em>. We can apply
+now Theorem <a href="various-types-of-symmetry-for-discrete-groups.html#teoremix" reference-type="ref" reference="teoremix"><span class="math display">\[teoremix\]</span></a> and get</p>
+<div class="corollary">
+<p><span id="cor:unlabeled-div-38" class="corollary"><strong>Corollary 3.2  </strong></span><span id="mimishor" label="mimishor"></span> The Banach <span class="math inline">\(^*\)</span>-algebra
+<span class="math inline">\(\ell^1\Big( \widehat{\bigoplus}_{g\in\normalfont{\G}}\,\mathfrak{W}(\normalfont{\pe})_g \Big)\)</span>
+is symmetric and inverse closed in
+<span class="math inline">\(\mathbb B\big[\ell^2(\normalfont{\pe})\big]\)</span> .</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-39" class="remark"><em>Remark</em>. </span><span id="spresfarsit" label="spresfarsit"></span> Suppose that <span class="math inline">\(\normalfont{\pe}\)</span> is
+finitely generated (a slightly more general assumption is possible).
+Then
+<span class="math inline">\(\ell^1\Big( \widehat{\bigoplus}_{g\in\normalfont{\G}}\,\mathfrak{W}(\normalfont{\pe})_g \Big)\)</span>
+<em>is also Fredholm inverse closed</em>. We only sketch a proof. As in
+<span class="citation">(<a href="#ref-QR" role="doc-biblioref">Quigg and Raeburn 1997</a>; <a href="#ref-ELQ" role="doc-biblioref">Exel, Laca, and Quigg 2002</a>; <a href="#ref-Ex2" role="doc-biblioref">Exel 2017</a>)</span>, one has an isomorphism
+<span class="math inline">\(\mathfrak W(\normalfont{\pe})\cong\mathfrak W(\normalfont{\pe})_\e\rtt_\te\normalfont{\G}\)</span>
+for a certain partial action <span class="math inline">\(\te\)</span> of <span class="math inline">\(\normalfont{\G}\)</span> on the diagonal
+Abelian algebra. This one is induced from a (Bernoulli-type) partial
+topological action <span class="math inline">\(\Theta\)</span> on its Gelfand spectrum <span class="math inline">\(\Omega_\e\)</span> , which
+is a compactification of the monoid <span class="math inline">\(\normalfont{\pe}\)</span>. This
+compactification is regular (<span class="math inline">\(\normalfont{\pe}\)</span> is an <em>open</em> dense
+orbit) under the stated hypothesis on <span class="math inline">\(\normalfont{\pe}\)</span>. It is shown in
+<span class="citation">(<a href="#ref-Ni" role="doc-biblioref">Nica 1992, 6.3</a>)</span> that this regularity is equivalent with the fact that the
+ideal of all compact operators, identified with
+<span class="math inline">\(C(\normalfont{\pe})\rtt_\te\normalfont{\G}\)</span> , is contained in
+<span class="math inline">\(\mathfrak W(\normalfont{\pe})\,.\)</span> Then the result follows easily from
+our Corollary <a href="various-types-of-symmetry-for-discrete-groups.html#honduras" reference-type="ref" reference="honduras"><span class="math display">\[honduras\]</span></a>.</p>
+</div>
+</div>
+<div id="oroflix" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Higher rank graph algebras<a href="exemple.html#oroflix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this subsection we are going to use constructions from <span class="citation">(<a href="#ref-KP" role="doc-biblioref">Kumjian and Pask 2000</a>)</span> and
+<span class="citation">(<a href="#ref-Ra" role="doc-biblioref">Raeburn 2016</a>)</span>.</p>
+<div class="defn">
+<p><span id="hix" label="hix"></span> <em>A <span class="math inline">\(\textrm{ k}\)</span>-graph</em> ( <em>higher rank graph</em>) is a
+countable category <span class="math inline">\(\Lambda\)</span> endowed with a functor
+<span class="math inline">\(\textrm{l}:\Lambda\to\N^\textrm{ k}\)</span> ( <em>the degree functor</em>) satisfying
+the <em>factorization property</em>: For every <span class="math inline">\(\lambda\in\Lambda\)</span> such that
+<span class="math inline">\(\textrm{ l}(\lambda)=\mathfrak m+\mathfrak n\)</span> , there exist unique
+elements <span class="math inline">\(\mu,\nu\in\Lambda\)</span> such that <span class="math inline">\(\textrm{l}(\mu)=\mathfrak m\)</span> ,
+<span class="math inline">\(\textrm{l}(\nu)=\mathfrak n\)</span> and <span class="math inline">\(\lambda=\mu\nu\)</span> .</p>
+</div>
+<p>If <span class="math inline">\(\textrm{ k}=1\)</span> , one identifies a <span class="math inline">\(1\)</span>-graph with the path category
+<span class="math inline">\(E^*\!:=\bigsqcup_{n\in\N}E^n\)</span> of a directed graph
+<span class="math inline">\(\big(s,r:E^1\to E^0\big)\)</span> and <span class="math inline">\(\textrm{ l}(\lambda)\)</span> is the usual
+length of a path <span class="math inline">\(\lambda:=e_1\dots e_{\textrm{ l}(\lambda)}\)</span> .
+Accordingly, for the <span class="math inline">\(\textrm{ k}\)</span>-graph
+<span class="math inline">\(\big(\textrm{ l}:\Lambda\to\N^\textrm{ k}\big)\)</span> , one denotes by
+<span class="math inline">\(\d,\r:\Lambda\to\Lambda^0\equiv\textrm{ Obj}(\Lambda)\)</span> the source and
+the range map in the category. One has the decomposition
+<span class="math display">\[\Lambda=\bigsqcup_{\mathfrak n\in\N^\textrm{ k}}\Lambda^{\mathfrak n}\equiv\bigsqcup_{\mathfrak n\in\N^\textrm{ k}}\textrm{ l}^{-1}(\mathfrak n)\,.\]</span>
+For elements from the object set <span class="math inline">\(\Lambda^0\)</span> (called <em>vertices</em>) one
+prefers notations as <span class="math inline">\(v,w\)</span> . We also set set
+<span class="math inline">\(\Lambda^{\mathfrak n}(v):=\Lambda^{\mathfrak n}\cap\textrm{ r}^{-1}(v)\)</span>
+("paths" of "length" <span class="math inline">\(\mathfrak n\in\N^\textrm{ k}\)</span> ending in
+<span class="math inline">\(v\in\Lambda^0\)</span> ).</p>
+<div class="defn">
+<p><span id="admisibilix" label="admisibilix"></span> One says that the
+<span class="math inline">\(\textrm{ k}\)</span>-graph is <em>admissible</em> if every <span class="math inline">\(\Lambda^{\mathfrak n}(v)\)</span>
+is finite (raw-finite <span class="math inline">\(\textrm{ k}\)</span>-graph) and non-void (no sources) and
+<span class="math inline">\(\Lambda^0\)</span> is finite (insuring that the <span class="math inline">\(C^*\)</span>-algebra below is unital,
+with unit <span class="math inline">\(\sum_{v\in\Lambda^0}\textsf{ S}_v\)</span>).</p>
+</div>
+<div class="defn">
+<p><span id="cstarix" label="cstarix"></span> Let
+<span class="math inline">\(\Lambda\overset{\textrm{ l}}{\longrightarrow}\N^\textrm{ k}\)</span> be an
+admissible <span class="math inline">\(\textrm{ k}\)</span>-graph. <em>A Cuntz-Krieger <span class="math inline">\(\Lambda\)</span>-family</em> is a
+set <span class="math inline">\(\{\textsf{ T}_\lambda\!\mid\!\lambda\in\Lambda\}\)</span> of partial
+isometries in a <span class="math inline">\(C^*\)</span>-algebra <span class="math inline">\(\mathfrak D\)</span> such that</p>
+<ol style="list-style-type: decimal">
+<li><p>the elements <span class="math inline">\(\big\{\textsf{ T}_v\!\mid\!v\in\Lambda^0\big\}\)</span> are
+mutually orthogonal projections,</p></li>
+<li><p>if <span class="math inline">\(\textrm{ s}(\lambda)=\textrm{ r}(\mu)\)</span> , then
+<span class="math inline">\(\textsf{ T}_\lambda\textsf{ T}_\mu=\textsf{ T}_{\lambda\mu}\)</span> ,</p></li>
+<li><p><span class="math inline">\(\textsf{ T}^*_\lambda\textsf{ T}_\lambda=\textsf{ T}_{\textrm{ s}(\lambda)}\)</span>
+for every <span class="math inline">\(\lambda\in\Lambda\)</span> ,</p></li>
+<li><p><span class="math inline">\(\textsf{ T}_v=\sum_{\lambda\in\Lambda^{\mathfrak n}(v)}\textsf{ T}_\lambda\textsf{ T}^*_\lambda\)</span>
+for every <span class="math inline">\(v\in\Lambda^0\)</span> and <span class="math inline">\(\mathfrak n\in\N^\textrm{ k}\)</span>.</p></li>
+</ol>
+<p>We define <span class="math inline">\(C^*(\Lambda,\textrm{ l})\equiv\mathfrak C(\Lambda)\)</span> to be the
+universal <span class="math inline">\(C^*\)</span>-algebra generated by a Cuntz-Krieger <span class="math inline">\(\Lambda\)</span>-family
+<span class="math inline">\(\{\textsf{ S}_\lambda\!\mid\!\lambda\in\Lambda\}\)</span> . Universality means
+that for every Cuntz-Krieger <span class="math inline">\(\Lambda\)</span>-family
+<span class="math inline">\(\{\textsf{ T}_\lambda\!\mid\!\lambda\in\Lambda\}\subset\mathfrak D\)</span> ,
+there exists a unique <span class="math inline">\(C^*\)</span>-morphism
+<span class="math inline">\(\pi_\textsf{ T}:\mathfrak C(\Lambda)\to\mathfrak D\)</span> such that
+<span class="math inline">\(\pi_\textsf{ T}(\textsf{ S}_\lambda)=\textsf{ T}_\lambda\)</span> for every
+<span class="math inline">\(\lambda\)</span> .</p>
+</div>
+<p>We identify now families of symmetric Banach <span class="math inline">\(^*\)</span>-algebras, starting
+with functors <span class="math inline">\(\textsf{ F}:\Lambda\to\G\)</span> , where <span class="math inline">\(\G\)</span> is supposed to be
+a discrete Abelian group. One particular case is <span class="math inline">\(\G=\N^\textrm{ k}\)</span> and
+<span class="math inline">\(\textsf{ F}=\textrm{ l}\)</span> , but many others are possible. For every
+<span class="math inline">\(g\in\G\)</span> one sets <span class="math display">\[\label{bebex}
+\mathfrak{C}(\Lambda)_g:=\overline{\textrm{ span}}\big\{\textsf{ S}_\lambda\textsf{ S}^*_{\mu}\,{\big\vert\,\textsf{ F}}(\lambda)\textsf{ F}(\mu)^{-1}=g\big\}\,.\]</span>
+It turns out that these are spectral subspaces of a dual action
+<span class="math inline">\(\alpha^\textsf{ F}:\wG\to\textrm{ Aut}\big[\mathfrak C(\Lambda)\big]\)</span> ,
+uniquely determined (use the universal property of
+<span class="math inline">\(\mathfrak C(\Lambda)\)</span>) by
+<span class="math display">\[\alpha^\textsf{ F}_\chi(\textsf{ S}_\lambda)=\chi\big[\textsf{ F}(\lambda)\big]\textsf{ S}_\lambda\,,\quad\forall\,\lambda\in\Lambda\,,\,\chi\in\wG\,.\]</span></p>
+<p>Applying Theorem <a href="various-types-of-symmetry-for-discrete-groups.html#exelix" reference-type="ref" reference="exelix"><span class="math display">\[exelix\]</span></a> one gets</p>
+<div class="corollary">
+<p><span id="cor:unlabeled-div-40" class="corollary"><strong>Corollary 3.3  </strong></span><span id="ix" label="ix"></span> Let
+<span class="math inline">\(\Lambda\overset{\textrm{ l}}{\longrightarrow}\N^\textrm{ k}\)</span> be an
+admissible <span class="math inline">\(\textrm{ k}\)</span>-graph and <span class="math inline">\(\textsf{ F}:\Lambda\to\G\)</span> a functor
+with values in an Abelian discrete group. Then
+<span class="math display">\[\ell^1\big(\mathfrak C(\Lambda)\big):=\bigoplus_{g\in\G}^{1,\alpha^{\textsf{F}}}\,\overline{\textrm{ span}}\big\{\textsf{ S}_\lambda\textsf{ S}^*_\mu\,{\big\vert\,\textsf{F}}(\lambda)\textsf{ F}(\mu)^{-1}=g\big\}\]</span>
+is a reduced and symmetric Banach <span class="math inline">\(^*\)</span>-algebra, which is inverse closed
+in <span class="math inline">\(\mathfrak C(\Lambda)\)</span> .</p>
+</div>
+<div class="defn">
+<p><span id="aperiodix" label="aperiodix"></span> On <span class="math inline">\(\N^\textsf{ k}\)</span> one considers the
+order
+<span class="math inline">\(\mathfrak m\le\mathfrak n\,\Leftrightarrow\,\mathfrak m_i\le\mathfrak n_i\,,\forall\,i\)</span> .
+Let <span class="math inline">\(\Lambda\overset{\textrm{ l}}{\longrightarrow}\N^\textrm{ k}\)</span> be an
+admissible <span class="math inline">\(\textrm{ k}\)</span>-graph.</p>
+<ol style="list-style-type: decimal">
+<li><p>We say that <span class="math inline">\(\rho\)</span> is <em>a minimal common extension</em> of
+<span class="math inline">\(\mu,\nu\in\Lambda\)</span> , and we write <span class="math inline">\(\rho\in\textrm{ MCE}(\mu,\nu)\)</span> ,
+if <span class="math inline">\(\textrm{ l}(\rho)=\max\{\textrm{ l}(\mu),\textrm{ l}(\nu)\}\)</span> and
+<span class="math inline">\(\rho=\mu\mu&#39;=\nu\nu&#39;\)</span> for some <span class="math inline">\(\mu&#39;,\nu&#39;\in\Lambda\)</span> .</p></li>
+<li><p>The <span class="math inline">\(\textsf{ k}\)</span>-graph is called <em>aperiodic</em> if for every
+<span class="math inline">\(\mu,\nu\in\Lambda\)</span> with <span class="math inline">\(\textrm{ s}(\mu)=\textrm{ s}(\nu)\)</span> there
+exists <span class="math inline">\(\lambda\in\Lambda\)</span> with
+<span class="math inline">\(\textrm{ r}(\lambda)=\textrm{ s}(\mu)\)</span> and
+<span class="math inline">\(\textrm{ MCE}(\mu\lambda,\nu\lambda)=\emptyset\)</span> .</p></li>
+</ol>
+</div>
+<p>The two notions are easier to visualize for <span class="math inline">\(\textsf{ k}=1\)</span> . In this
+case, for instance, <span class="math inline">\(\textrm{ MCE}(\mu,\nu)\)</span> is either void, or a
+singleton (one of the two elements) and aperiodicity boils down to
+condition (L).</p>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-41" class="proposition"><strong>Proposition 3.3  </strong></span><span id="perdrix" label="perdrix"></span> Let
+<span class="math inline">\(\Lambda\overset{\textrm{ l}}{\longrightarrow}\N^\textrm{ k}\)</span> be an
+admissible and aperiodic <span class="math inline">\(\textrm{ k}\)</span>-graph and
+<span class="math inline">\(\textsf{ F}:\Lambda\to\normalfont{\G}\)</span> a functor with values in an
+Abelian discrete group. Let
+<span class="math inline">\(\{\textsf{ T}_\lambda\!\mid\!\lambda\in\Lambda\}\)</span> be a Cuntz-Krieger
+<span class="math inline">\(\Lambda\)</span>-family of partial isometries in the Hilbert space <span class="math inline">\(\h\)</span> such
+that <span class="math inline">\(\textsf{ T}_v\ne 0\)</span> for every <span class="math inline">\(v\in\Lambda^0\)</span>. Then (the quite
+obvious action <span class="math inline">\(\beta^\textsf{ F}\)</span> is explained in the proof)
+<span class="math display">\[\label{fujimori}
+\bigoplus_{g\in\normalfont{\G}}^{1,\beta^{\textsf{ F}}}\,\overline{\textrm{ span}}\big\{\textsf{ T}_\lambda\textsf{ T}^*_{\mu}\,{\big\vert\,\textsf{ F}}(\lambda)\textsf{ F}(\mu)^{-1}\!=g\big\}\]</span>
+is inverse closed in <span class="math inline">\(\mathbb B(\h)\)</span> .</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-42" class="proof"><em>Proof</em>. </span><em>Proof.</em> Under the stated assumptions, "the Cuntz-Krieger unicity
+theorem" (see <span class="citation">(<a href="#ref-KP" role="doc-biblioref">Kumjian and Pask 2000</a>; <a href="#ref-Si" role="doc-biblioref"><strong>Si?</strong></a>)</span> for example) states that the unique
+representation <span class="math inline">\(\pi_\textsf{ T}:\mathfrak C(\Lambda)\to\mathbb B(\h)\)</span>
+satisfying
+<span class="math display">\[\pi_{\textsf{T}}(\textsf{ S}_{\lambda})=\textsf{ T}_{\lambda}\,,\quad\forall\lambda\in\Lambda\]</span>
+(provided by the universal property) is injective. We denote by
+<span class="math inline">\(\mathfrak C(\textsf{ T})\)</span> its range, so that <span class="math inline">\(\mathfrak C(\Lambda)\)</span> and
+<span class="math inline">\(\mathfrak C(\textsf{ T})\)</span> are isomorphic. Theorem
+<a href="various-types-of-symmetry-for-discrete-groups.html#teoremix" reference-type="ref" reference="teoremix"><span class="math display">\[teoremix\]</span></a>
+states then that
+<span class="math inline">\(\pi_\textsf{ T}\Big[\ell^1\big(\mathfrak C(\Lambda)\big)\Big]\)</span> is
+inverse closed in <span class="math inline">\(\mathfrak C(\textsf{ T})\)</span> and in <span class="math inline">\(\mathbb B(\h)\)</span> .
+There is an action
+<span class="math inline">\(\beta^\textsf{ F}\!:\wG\to\textrm{ Aut}\big[\mathfrak C(\textsf{ T})\big]\)</span>
+such that
+<span class="math display">\[\beta^\textsf{ F}_\chi(\textsf{ T}_\lambda)=\chi[\textsf{ F}(\lambda)]\textsf{ T}_\lambda\,,\quad\forall\,\chi\in\wG\,,\,\lambda\in\Lambda\]</span>
+and <span class="math inline">\(\pi_T\)</span> intertwines the two actions. It follows that
+<span class="math inline">\(\pi_\textsf{ T}\Big[\ell^1\big(\mathfrak C(\Lambda)\big)\Big]\)</span>
+coincides with <a href="#fujimori" reference-type="eqref" reference="fujimori"><span class="math display">\[fujimori\]</span></a>. ◻</p>
+</div>
+
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Ab" class="csl-entry">
+Abadie, F. 2003. <span>“Envelopping Actions and Takai Duality for Partial Actions.”</span> <em>J. Funct. Anal.</em> 197: 14–67.
+</div>
+<div id="ref-Exs" class="csl-entry">
+Exel, R. 1994a. <span>“Circle Actions on c*-Algebras, Partial Automorphisms, and a Generalized Pimsner-Voiculescu Exact Squence.”</span> <em>J. Funct. Anal</em> 122: 361–401.
+</div>
+<div id="ref-Exs1" class="csl-entry">
+———. 1994b. <span>“The Bunce-Deddens Algebras as Crossed Products by Partial Automorphisms.”</span> <em>Bull. Braz. Math. Soc. (N.S.)</em> 25: 173–79.
+</div>
+<div id="ref-Exs2" class="csl-entry">
+———. 1995. <span>“Approximately Finite <span class="math inline">\(C^*\)</span>-Algebras and Partial Automorphisms.”</span> <em>Math. Scand.</em> 77: 281–88.
+</div>
+<div id="ref-Ex2" class="csl-entry">
+———. 2017. <span>“Partial Dynamical Systems, Fell Bundles and Applications.”</span> <em>Mathematical Surveys and Monographs</em> 224.
+</div>
+<div id="ref-ELQ" class="csl-entry">
+Exel, R., M. Laca, and J. Quigg. 2002. <span>“Partial Dynamical Systems and c*-Algebras Generated by Partial Isometries.”</span> <em>J. Oper. Th.</em> 47(1): 169–86.
+</div>
+<div id="ref-FD2" class="csl-entry">
+Fell, J. M. G., and R. S. Doran. 1988. <em>Representations of <span class="math inline">\(^*\)</span>-Algebras, Locally Compact Groups, and Banach <span class="math inline">\(^*\)</span>-Algebraic Bundles, 6th. Edn</em>. Vol. 1. Elsevier.
+</div>
+<div id="ref-KP" class="csl-entry">
+Kumjian, A., and D. Pask. 2000. <span>“Higher Rank Graph c<span class="math inline">\(^*\)</span>-Algebras.”</span> <em>New York J. Math.</em> 6: 1–20.
+</div>
+<div id="ref-Ni" class="csl-entry">
+Nica, A. 1992. <span>“C*-Algebras Generated by Isometries and Wiener-Hopf Operators.”</span> <em>J. Oper. Th.</em> 27(1): 17–52.
+</div>
+<div id="ref-QR" class="csl-entry">
+Quigg, J. C., and I. Raeburn. 1997. <span>“Characterizations of Crossed Products by Partial Actions.”</span> <em>J. Operator Theory</em> 37: 311–40.
+</div>
+<div id="ref-Ra" class="csl-entry">
+Raeburn, I. 2016. <span>“Deformations of Fell Bundles and Twisted Graph Algebras.”</span> <em>Math. Proc. Cambridge Philos. Soc.</em> 161: 535–58.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="various-types-of-symmetry-for-discrete-groups.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="symmetry-in-a-groupoid-setting.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-parts.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

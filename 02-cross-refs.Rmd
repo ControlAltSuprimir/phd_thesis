@@ -1,4 +1,4 @@
-# Various types of symmetry for discrete groups {#sec:second}
+# Various types of symmetry for discrete groups 
 
 ## The Main Result {#flocinor}
 
