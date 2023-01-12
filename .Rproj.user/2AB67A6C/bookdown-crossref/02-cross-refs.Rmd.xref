@@ -1,6 +1,6 @@
-h1:cross Cross-references
-h2:chapters-and-sub-chapters Chapters and sub-chapters
-h2:captioned-figures-and-tables Captioned figures and tables
-fig:nice-fig Here is a nice figure!
-tab:nice-tab Here is a nice table!
+h1:sec:second Various types of symmetry for discrete groups
+h2:flocinor The Main Result
+h2:cerculix Topologically graded algebras from dual actions and partial crossed products
+h2:idealuri Inverse closedness modulo ideals.
+h2:decay Other types of decay
 

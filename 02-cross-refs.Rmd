@@ -1,34 +1,627 @@
-# Cross-references {#cross}
+# Various types of symmetry for discrete groups {#sec:second}
 
-Cross-references make it easier for your readers to find and link to elements in your book.
+## The Main Result {#flocinor}
 
-## Chapters and sub-chapters
+Throughout this thesis, $\G$ will be a discrete group with unit $\e$ .
+As explained in Remark [\[lantors\]](#lantors){reference-type="ref"
+reference="lantors"}, there is no loss if we assume it amenable. For
+constructions involving graded $C^*$-algebras we followed [@Ex3; @FD2] ;
+we decided not to mention Fell bundles explicitly (with one exception),
+but they can be perceived in the background.
 
-There are two steps to cross-reference any heading:
+::: definition
+[]{#claro label="claro"} We say that the unital $C^*$-algebra
+$\mathfrak{C}$ is $\G$*-graded* if that there is a family
+$\big\{\mathfrak{C}_g\,\vert\,g\in\normalfont{\G}\big\}$ of closed
+subspaces of $\mathfrak{C}$ such that the algebraic direct sum
+$\,\bigoplus_{g\in\normalfont{\G}}\mathfrak{C_g}$ is dense in
+$\mathfrak{C}$ and such that
 
-1. Label the heading: `# Hello world {#nice-label}`. 
-    - Leave the label off if you like the automated heading generated based on your heading title: for example, `# Hello world` = `# Hello world {#hello-world}`.
-    - To label an un-numbered heading, use: `# Hello world {-#nice-label}` or `{# Hello world .unnumbered}`.
+1.  $\mathfrak{C}_g\mathfrak{C}_h\subset\mathfrak{C}_{gh}\,$ for every
+    $g,h\in\normalfont{\G}$ ,
 
-1. Next, reference the labeled heading anywhere in the text using `\@ref(nice-label)`; for example, please see Chapter \@ref(cross). 
-    - If you prefer text as the link instead of a numbered reference use: [any text you want can go here](#cross).
+2.  $\mathfrak{C}_g^*\subset\mathfrak{C}_{g^{-1}}\,$ for every
+    $g\in\normalfont{\G}$ ,
 
-## Captioned figures and tables
+For every $h\in\normalfont{\G}$ we denote by
+$P_h:\bigoplus_{g\in\normalfont{\G}}\!\mathfrak{C}_g\to\mathfrak{C}_h$
+the canonical projection (in general it might not be continuous). If
+$P_\e$ is continuous, $\mathfrak{C}$ is *a topologically
+$\normalfont{\G}$-graded $C^*$-algebra.* We are going to write
+$$\label{veverita}
+\mathfrak{C}=\widetilde{\bigoplus}_{g\in\normalfont{\G}}\mathfrak{C}_g\,.$$
+:::
 
-Figures and tables *with captions* can also be cross-referenced from elsewhere in your book using `\@ref(fig:chunk-label)` and `\@ref(tab:chunk-label)`, respectively.
+For $\Phi,\Psi\in\bigoplus_{g\in\G}\mathfrak{C}_g$ and $g\in\G$ one
+verifies easily that $$\label{multiplix}
+P_g(\Phi\Psi)=\sum_{hk=g}P_h(\Phi)P_k(\Psi)\,,$$ $$\label{multiplex}
+P_g(\Phi)^*=P_{g^{-1}}(\Phi^*)\,.$$ When the grading is topological,
+there are several facilities which will be crucial for our approach. Let
+us denote by $\widetilde{P}_\e:\mathfrak{C}\to\mathfrak{C_\e}$ the
+extension of $P_\e$ to a linear bounded map. By Tomiyama's Theorem ([@BO
+Thm. 1.5.10], see also [@Ex3 Thm. 3.3]), it is a positive contractive
+conditional expectation. Then all the projections $P_g$ do extend to
+contractions $\widetilde{P}_g:\mathfrak{C}\to\mathfrak{C_g}$ . We refer
+to the proof of Theorem [\[teoremix\]](#teoremix){reference-type="ref"
+reference="teoremix"},(ii) for another use of topological grading, in
+conjunction with amenability.
 
-See Figure \@ref(fig:nice-fig).
+::: definition
+[]{#glaro label="glaro"} Let $\mathfrak{C}$ be a topologically graded
+$C^*$-algebra. On $\,\bigoplus_{g\in\normalfont{\G}}\!\mathfrak{C}_g$ we
+can introduce the new norm
+$$\p\!\Phi\!\p_{\ell^1(\mathfrak C)}\,:=\sum_{g\in\normalfont{\G}}\p\! P_g(\Phi)\!\p.$$
+The completion $\ell^1(\mathfrak{C})$ of
+$\bigoplus_{g\in \normalfont{\G}}\!\mathfrak{C}_g$ in this norm is
+called *the $\ell^1$-algebra of the graded $C^*$-algebra
+$\mathfrak{C}$*.
+:::
 
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center', fig.alt='Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases.'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
-```
+Since $\p\!\cdot\!\p\,\le\,\p\!\cdot\!\p_{\ell^1(\mathfrak{C})}$ on
+$\bigoplus_{g\in\G}\!\mathfrak{C}_g$, one may interpret
+$\ell^1(\mathfrak{C})$ as a subspace of $\mathfrak{C}$:
+$$\label{interpretatix}
+\ell^1(\mathfrak{C})=\Big\{\Phi\in\mathfrak{C}\;\Big\vert\,\sum_{g\in\G}\p\! \widetilde{P}_g(\Phi)\!\p\,<\infty\Big\}\,.$$
+In fact it is a Banach $^*$-subalgebra with the algebraic structure
+borrowed from $\mathfrak{C}$ and its new norm. Its elements may be
+written as unconditionally convergent series
+$\Phi=\sum_{g\in\G}\widetilde{P}_g(\Phi)$ in the norm topology.
 
-Don't miss Table \@ref(tab:nice-tab).
+The next result, besides being interesting in itself, is basic for our
+approach.
 
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(pressure, 10), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
-```
+::: proposition
+[]{#isometrix label="isometrix"} Let
+$\mathfrak{C}=\widetilde{\bigoplus}_{g\in\normalfont{\G}}\mathfrak{C}_g$
+be a topologically graded $C^*$-algebra over a discrete group
+[$\normalfont{\G}$]{.roman}. There exists a $C^*$-algebra $\B$ and an
+isometric $^*$-morphism $$\label{guyana}
+T:\ell^1(\mathfrak{C})\hookrightarrow \ell^1(\normalfont{\G};\mathcal{B})\equiv\ell^1(\normalfont{\G})\otimes \B\,.$$
+:::
+
+::: proof
+*Proof.* Let $\pi:\mathfrak{C}\to\mathbb{B}(\h)$ be a faithful
+representation. For any $g\in\G$ we denote by $\pi_g$ the restriction of
+$\pi$ to the closed subspace $\mathfrak{C}_g$; it is a linear isometry.
+One has $$\label{primika}
+\pi_g(\Phi)\pi_h(\Psi)=\pi_{gh}(\Phi\Psi)\,,\quad\forall\,g,h\in\G\,,\ \Phi\in\mathfrak{C}_g\,,\ \Psi\in\mathfrak{C}_h\,,$$
+$$\label{secundika}
+\pi_g(\Phi^*)=\pi_{g^{-1}}(\Phi)^*,\quad\forall\,g\in\G\,,\ \Phi\in\mathfrak{C}_g\,.$$
+
+Then we set $$\label{tronc}
+\big[T(\Phi)\big](g):=\pi_g\big[\widetilde P_g(\Phi)\big]\,,\quad\Phi\in\ell^1(\mathfrak{C})\,,\ g\in\G\,.$$
+Clearly $T$ is a well-defined linear isometry from $\ell^1(\mathfrak C)$
+to $\ell^1\big(\G,\mathbb B(\h)\big)$ :
+$$\p\!T(\Phi)\!\p_{\ell^1(\G,\mathbb B(\h))}\,=\sum_{g\in\G}\p\!\pi_g\big[\widetilde P_g(\Phi)\big]\!\p_{\mathbb B(\h)}\,=\sum_{g\in\G}\p\!\widetilde P_g(\Phi)\!\p\,=\,\p\!\Phi\!\p_{\ell^1(\mathfrak C)}.$$
+To check that $T$ respects the algebraic operations, it is enough to
+work with elements of the algebraic direct sum. By taking
+$\Phi,\Psi\in\bigoplus_g\!\mathfrak{C}_g$, one can write
+$$\begin{aligned}
+\big[(T\Phi)\star(T\Psi)\big](g)&=\sum_{h\in \G}(T\Phi)(h)(T\Psi)(h^{-1}g) \\
+&=\sum_{h\in \G}\pi_h\left[P_h(\Phi)\right]\,\pi_{h^{-1}g}\big[P_{h^{-1}g}(\Psi)\big] \\
+&\overset{\eqref{primika}}{=}\sum_{h\in \G}\pi_g\big[P_h(\Phi)P_{h^{-1}g}(\Psi)\big]\\
+&=\pi_g\Big(\sum_{h\in \G}P_h(\Phi)P_{h^{-1}g}(\Psi)\Big)\\
+&\overset{\eqref{multiplix}}{=}\pi_g\big[P_g(\Phi\Psi)\big]=\big[T(\Phi\Psi)\big](g)\,, 
+\end{aligned}$$ showing that $T$ is an algebraic morphism. Finally we
+treat the involution: $$\begin{aligned}
+\left[T(\Phi)\right]^\star\!(g) & =\pi_{g^{-1}}\!\left[P_{g^{-1}}(\Phi)\right]^*\overset{\eqref{secundika}}{=} \pi_g\big[P_{g^{-1}}(\Phi)^*\big]\\
+& \overset{\eqref{multiplix}}{=} \pi_g[P_g(\Phi^*)]= \big[T(\Phi^*)\big](g)\,.
+\end{aligned}$$ ◻
+:::
+
+With Proposition [\[isometrix\]](#isometrix){reference-type="ref"
+reference="isometrix"} in hand, we prove now our main abstract result.
+Recall that a Banach $^*$-algebra is called *reduced* if its universal
+$C^*$-seminorm is in fact a norm. In this case, its enveloping
+$C^*$-algebra is simply its completion in this $C^*$-norm (no quotient
+is needed).
+
+::: theorem
+[]{#teoremix label="teoremix"} Let
+$\mathfrak C=\widetilde{\bigoplus}_{g\in\normalfont{\G}}\mathfrak C_g$
+be topologically graded over a rigidly symmetric discrete group
+$\normalfont{\G}$ .
+
+1.  $\ell^1(\mathfrak C)$ is a symmetric Banach $^*$-algebra.
+
+2.  $\ell^1(\mathfrak C)$ is an inverse closed subalgebra of
+    $\,\mathfrak C$ .
+
+3.  Let $\Pi:\mathfrak C\to \mathbb{B}(\h)$ be a faithful
+    representation. Then $\Pi\left[\ell^1(\mathfrak C)\right]$ is
+    inverse closed in $\mathbb{B}(\h)$ .
+:::
+
+::: proof
+*Proof.* (i) By [@Pa2 Th.11.4.2], a closed $^*$-algebra of a symmetric
+Banach $^*$-algebra is also symmetric. Proposition
+[\[isometrix\]](#isometrix){reference-type="ref" reference="isometrix"}
+and the fact that $\ell^1(\G;\mathcal B)$ was assumed symmetric proves
+the result.
+
+\(ii\) It is known [@Pa2 11.4] that a reduced Banach $^*$-algebra is
+symmetric if and only if it is inverse closed in its enveloping
+$C^*$-algebra. If we show that we are in such a case, we then apply (i).
+Our $\ell^1(\mathfrak C)$ is clearly reduced, being given as a
+$^*$-subalgebra of $\mathfrak C$ . Actually, we claim that $\mathfrak C$
+can be seen as (a copy of) the enveloping $C^*$-algebra of
+$\ell^1(\mathfrak C)$ . In [@SW Corol. 4.8] it is shown that a symmetric
+group (as our rigidly symmetric $\G$) is surely amenable. For such
+groups, one may identify $\mathfrak C$ with both the full and the
+reduced $C^*$-algebras of the Fell bundle associated to the topological
+grading [@Ex3 Prop. 4.2 ,Thm. 4.7] and then the assertion about
+enveloping follows [@FD2 VIII.17].
+
+\(iii\) Is a consequence of (ii), since any $C^*$-algebra is inverse
+closed in a larger $C^*$-algebra. ◻
+:::
+
+In the context of group actions on $C^*$-algebras one deals with
+convolution dominated kernels and operators [@FL; @FGL; @Gr; @GL2; @Ma].
+We briefly indicate an extension for the topologically graded case,
+leading to another form of a symmetric Banach $^*$-algebra at the level
+of kernels. Representations by integral operators and their inverse
+closedness properties are left to the reader.
+
+::: definition
+[]{#kimpembe label="kimpembe"} *A convolution dominated kernel* (or
+*matrix*) is a function
+$K:\normalfont{\G}\times\textsf{\G}\to \mathfrak{C}$ such that
+$K(g,h)\in\mathfrak{C}_{gh^{-1}}$ for every $g,h\in\normalfont{\G}$ and
+such that the norm $$\label{cambio}
+\p\!K\!\p_\mathscr{K}\,:=\inf\big\{\!\p\!\kappa\!\p_{\ell^1(\normalfont{\G})}\,\big\vert\,\p\!K(g,h)\!\p_\mathfrak{C}\,\le|\kappa(gh^{-1})|\,,\,\forall\,g,h\in\normalfont{\G}\big\}$$
+is finite. We denote by $\mathscr K_{\normalfont{\G}}(\mathfrak{C})$ the
+vector space of all these convolution dominated kernels. An element $K$
+of $\mathscr K_{\normalfont{\G}}(\mathfrak{C})$ is called *covariant*,
+and we write
+$K\in\mathscr{K}^{\textrm{ co}}_{\normalfont{\G}}(\mathfrak{C})$ , if
+$$\label{pusimic}
+K(gk,hk)=K(g,h)\,,\quad\forall\,g,h,k\in{\normalfont{\G}}\,.$$
+:::
+
+From the definition above, $K$ is covariant if and only if for all
+$g,h\in G$ we have $K(g, h)= k_0(gh^{-1})$ for some function
+$k_0:G\rightarrow \mathfrak{C}$ such that $k_0(k)\in \mathfrak{C}_k$ for
+all $g\in G$ and $\| k_0(\cdot ) \|_{\mathfrak C}\in \ell^1(G)$. Thus
+the isomorphism between $\mathscr K^{\textrm{ co}}_\G(\mathfrak C)$ and
+$\ell^1(\mathfrak C)$ is straightforward.
+
+It is straightforward to show that endowed with the norm
+$\p\!\cdot\!\p_\mathscr K$ , the multiplication $$\label{greta}
+(K\bu L)(g,h):=\sum_{k\in\G}K(g,k)L(k,h)$$ and the involution
+$K^\bu(g,h):=K(h,g)^*$, the space
+$\mathscr K_{\normalfont{\G}}(\mathfrak C)$ is a Banch $^*$-algebra.
+
+::: corollary
+[]{#climatic label="climatic"} The subspace
+$\mathscr K^{\textrm{ co}}_{\normalfont{\G}}(\mathfrak C)$ is a
+symmetric Banach $^*$-algebra.
+:::
+
+::: proof
+*Proof.* It is easy to check that
+$\mathscr K^{\textrm{ co}}_\G(\mathfrak C)$ is a closed $^*$-subalgebra
+of $\mathscr K_\G(\mathfrak C)$ . Let us define $$\label{london}
+\big[\Upsilon(\Phi)\big](g,h):=\widetilde P_{gh^{-1}}(\Phi)\,,\quad\forall\,g,h\in\G\,.$$
+Then $\Upsilon:\ell^1(\mathfrak C)\to\mathscr K_\G(\mathfrak C)$ is an
+isometric $^*$-morphism with range
+$\mathscr K^{\textrm{ co}}_\G(\mathfrak C)$ . For the algebraic
+relations use [\[multiplix\]](#multiplix){reference-type="eqref"
+reference="multiplix"} and
+[\[multiplex\]](#multiplex){reference-type="eqref"
+reference="multiplex"} (extended). On this range, the inverse reads
+$$\label{reads}
+\big[\Upsilon^{-1}(K)\big]_g:=K(g,\e)\,,\quad\forall\,g\in\G\,.$$ Since
+$\mathscr K^{\textrm{ co}}_\G(\mathfrak C)$ and $\ell^1(\mathfrak C)$
+are isomorphic, the result follows from Theorem
+[\[teoremix\]](#teoremix){reference-type="ref"
+reference="teoremix"}(i). ◻
+:::
+
+::: remark
+[]{#fratrix label="fratrix"} In [@Ra] it is shown how to deform Fell
+bundles by a cohomological twisting. We adapt this here to our problem.
+Let $\o:\normalfont{\G}\!\times\!\normalfont{\G}\to\T$ be a $2$-cocycle,
+bound to satisfy for every $g,h,k\in\normalfont{\G}$ the axioms
+$$\label{bundix}
+\o(g,h)\o(gh,k)=\o(h,k)\o(g,hk)\,,\quad\o(g,\e)=1=\o(\e,g)\,.$$ For a
+topologically graded $C^*$-algebra
+$\mathfrak C=\widetilde{\bigoplus}_{g\in\normalfont{\G}}\mathfrak C_g$ ,
+it is possible to construct a new one $\mathfrak C\{\o\}$ in the
+following way: On the (same) algebraic direct sum we modify the
+algebraic structure, setting for finite sums $\Phi:=\sum_g\!\Phi_g$ and
+$\Psi:=\sum_g\!\Psi_g$ $$\label{finitex}
+\Phi\cdot_\o\!\Psi:=\sum_{g,h}\o(g,h)\Phi_g\Psi_h\,,\quad\Phi^{*_\o}\!:=\sum_g\overline{\o(g,g^{-1})}\Phi_g\,.$$
+
+An argument using Fell bundles and the amenability of our discrete group
+certifies the existence of the topological graded $C^*$-algebra
+$\mathfrak C\{\o\}=\widetilde{\bigoplus}^\o_{g\in\normalfont{\G}}\mathfrak C_g$ .
+The norm is also different (on the common algebraic sum), having in view
+the way the universal norm (identical here with the reduced one, by
+amenability) is constructed in the setting of Fell bundles. *In the case
+where $\omega$ is not trivially equal to $1$, the Banach $^*$-algebra
+$\ell^1\big(\mathfrak C\{\o\}\big)$ is different from
+$\ell^1(\mathfrak C)$ and it is symmetric and inverse closed in
+$\mathfrak C\{\o\}$ .*
+:::
+
+## Topologically graded algebras from dual actions and partial crossed products {#cerculix}
+
+Given a $C^*$-algebra, it is often not obvious whether it has an
+interesting grading or not. In this subsection we are going to review
+some ways to solve this problem, following especially results of Exel,
+Quigg and Raeburn. This will lead to two reformulations of Theorem
+[\[theoremix\]](#theoremix){reference-type="ref" reference="theoremix"}
+that can be useful when studying examples and which will also provide
+the reader with a more extended picture. We will take advantage of the
+fact that our group $\G$ is discrete and amenable; this will allow for
+some simplifications.
+
+The most general statement is that in this setting, *topologically
+graded $C^*$-algebras over $\G$ are equivalent to coactions of $\,\G$* ,
+cf. [@Qu] and [@Ra App. A]. In this direction we only indicate the case
+of Abelian groups and the dual of an Abelian group is a group, making
+the constructions more transparent.
+
+So we fix for a while a discrete Abelian group $\G$ . Its Pontryagin
+dual $\widehat\G$ is a compact Abelian group with normalized Haar
+measure $d\chi$ . Let $\big(\mathfrak C,\alpha,\wG\,\big)$ be a (usual,
+full) action of $\wG$ on a $C^*$-algebra. For every $g\in\G$ let
+$$\label{spectrix}
+\mathfrak C_g:=\big\{\Phi\in\mathfrak C\,\big\vert\,\alpha_\chi(\Phi)=\chi(g)\Phi\,,\,\forall\,\chi\in\wG\big\}$$
+be the $g$'th spectral subspace of the action. It is easy to see that
+one gets a grading, as in
+[\[veverita\]](#veverita){reference-type="eqref" reference="veverita"}.
+We have now the concrete projections $$\label{projetrix}
+\widetilde P_g:\mathfrak C\to\mathfrak C_g\,,\quad \widetilde P_g(\Phi):=\int_{\wG}\,\overline{\chi(g)}\,\alpha_\chi(\Phi)\,d\chi\,,$$
+which are obviously contractive; then $\mathfrak C$ is a topological
+grading. We can reformulate Theorem
+[\[teoremix\]](#teoremix){reference-type="ref" reference="teoremix"} in
+this Abelian setting; the $\ell^1$-algebra will deserve a special
+notation, to recall the action $\alpha$ and the type of decay.
+
+::: theorem
+[]{#exelix label="exelix"} Let
+$\big(\mathfrak C,\alpha,\normalfont{\wG}\,\big)$ be a continuous action
+of a compact Abelian group $\normalfont{\wG}$ on a unital $C^*$-algebra.
+Denoting by $\normalfont{\G}$ the dual of $\,\normalfont{\wG}$ ,
+$$\label{peru}
+\ell^1(\mathfrak C)\equiv\bigoplus_{g\in\normalfont{\G}}^{1,\alpha}\mathfrak C_g=\Big\{\Phi\in\mathfrak C\;\Big\vert\,\sum_{g\in\normalfont{\G}}\p\! \widetilde P_g(\Phi)\!\p\,<\infty\Big\}$$
+is a reduced and symmetric Banach $^*$-algebra, which is inverse closed
+in $\mathfrak C$ .
+:::
+
+::: remark
+[]{#crucix label="crucix"} Using normal subgroups of $\normalfont{\G}$
+one can increase the family of symmetric subalgebras. If, as above,
+$\big(\mathfrak C,\alpha,\widehat{\normalfont{\G}}\,\big)$ is a
+continuous action of the dual of the Abelian discrete group
+$\normalfont{\G}$ and $\n$ is a normal subgroup, the dual
+$\widehat{\normalfont{\G}/\n}$ of the quotient is isomorphic to the
+closed subgroup $$\label{clarix}
+\textrm{ Ann}\big(\n\!\mid\!\wG\big):=\big\{\chi\in\wG\,\big\vert\,\chi|_{\n}=1\big\}\,.$$
+Thus from $\alpha$ we deduce a continuous action $\alpha^\n$ of
+$\widehat{\normalfont{\G}/\n}$ on $\mathfrak C$ , first by restricting
+$\alpha$ to $\textrm{ Ann}\big(\n\!\mid\!\wG\big)$ and then composing
+with the isomorphism. In this way we obtain the new symmetric Banach
+$^*$-algebra $$\label{perux}
+\ell^1\big(\mathfrak{C}^{\normalfont{\G}/\n}\big)\equiv\bigoplus_{\gamma\in\normalfont{\G}/\n}^{1,\alpha^{\n}}\mathfrak{C}_{\gamma}\,.
+%=\Big\{\Phi\in\mathfrak C\;\Big\vert\,\sum_{g\in\normalfont{\G}}\p\! \widehat P_g(\Phi)\!\p\,<\infty\Big\}$$
+Extreme cases are
+$\ell^1\big(\mathfrak C^{\normalfont{\G}/\{\e\}}\big)=\ell^1(\mathfrak C)$
+and
+$\ell^1\big(\mathfrak C^{\normalfont{\G}/\normalfont{\G}}\big)=\mathfrak C$ .
+:::
+
+Crossed products assigned to partial actions of (discrete) groups $\G$
+on (unital) $C^*$-algebras are among the most important examples of
+graded $C^*$-algebras, and they were our initial motivation. In [@Ex2
+Thm. 27.11] they are characterized among the larger class, while [@QR
+Thm. 4.1] gives a Landstad-type description of them in terms of the
+associated coaction. In many cases what we are actually given is the
+partial action; the grading comes afterwards. Now the discrete group
+$\G$ is no longer Abelian.
+
+::: definition
+[]{#bazika label="bazika"} A *partial action* of $\normalfont{\G}$ on
+the $C^*$-algebra $\A$ is a pair
+$\big(\{\A_g\}_{g\in \normalfont{\G}},\{\te_g\}_{g\in\normalfont{\G}}\}\big)$ ,
+where for each $g\in \normalfont{\G}$ , $\A_g$ is a closed two-sided
+ideal in $\A$ , $\te_g$ is a $^*$-isomorphism from $\A_{g^{-1}}$ onto
+$\A_g$ , satisfying the following conditions, for all
+$g,h\in\normalfont{\G}$ :
+
+1.  $\A_\e=\A$ and $\te_\e$ is the identity automorphism of $\A$ ,
+
+2.  $\te_g\!\left(\A_{g^{-1}}\!\cap \A_h\right)\subset\A_{gh}$ ,
+
+3.  $\te_g\big(\te_h(a)\big)=\te_{gh}(a)$ ,
+    $\forall\,a\in\A_{h^{-1}}\!\cap\A_{(gh)^{-1}}$ .
+:::
+
+We also denote by $(\A,\te,\G)$ the partial dynamical system. It follows
+easily that we have $\te_{g^{-1}}\!=\te_g^{-1}$. Our main object is the
+following vector space: $$\label{thetika}
+\ell^1_\te(\G;\A):= \left\{\Phi\in\ell^1(\textsf{G};\A)\mid\Phi(g)\in \A_g \,,\,\forall\,g\in \G\right\},$$
+which is obviously closed. For $\Phi,\Psi\in\ell^1_\te(\G;\A)$ we define
+the product $$\label{strugure}
+\left( \Phi\star_{\theta} \Psi\right)(g)  =\sum_{h\in \G} \theta_h\!\left[\theta_{h}^{-1}\big(\Phi(h)\big)\Psi\big(h^{-1}g\big)\right]$$
+and the involution
+$\Phi^{\star_\theta}(g) = \theta_g\!\left[\Phi\big(g^{-1}\big)\right]^*.$
+Then
+$\big(\ell^1_\te(\G;\A),\star_{\theta},^{\star_{\theta}}\!,\|\cdot\|_{\ell^1_\te(\G;\A)}\big)$
+is a Banach $^*$-algebra. We will refer to it as *the $\ell^1$-partial
+crossed product*. Its enveloping $C^*$-algebra is denoted by
+$\A\!\rtt_\te\!\G$ and called *the partial crossed product associated to
+$(\A,\te,\G)$* . We used the fancy symbol $\rtt$ instead of the more
+usual $\rtimes$ to stress that our crossed product is assigned to a
+*partial* action.
+
+We indicate the particularization of Theorem
+[\[teoremix\]](#teoremix){reference-type="ref" reference="teoremix"} to
+partial actions. Since $\G$ must be amenable, by [@Ex3] the full and the
+reduced partial crossed products are identical and possess a (faithful)
+positive contractive conditional expectation.
+
+::: theorem
+[]{#corolyx label="corolyx"} Let $(\A,\te,\normalfont{\G})$ be a partial
+$C^*$-dynamical system with rigidly symmetric discrete group
+$\normalfont{\G}$ and unital $C^*$-algebra $\A$ . Then
+$\ell^1_\te(\normalfont{\G};\A)$ is symmetric and inverse closed in
+$\A\rtt_\te\!\normalfont{\G}$ . If
+$\,\Pi:\A\rtt_{\te}\!\normalfont{\G}\to \mathbb{B}(\h)$ is a faithful
+representation, $\Pi\left[\ell^1_\te(\normalfont{\G};\A)\right]$ is
+inverse closed in $\mathbb{B}(\h)$ .
+:::
+
+::: proof
+*Proof.* The crossed product $\mathfrak C:=\A\!\rtt_\te\!\G$ is a
+topologically graded $C^*$-algebra [@Ex2], where $$\label{verita}
+\mathfrak C_g=\big\{\Phi\in\ell^1_\te(\textsf{ G};\A)\,\big\vert\,\textrm{ supp}(\Phi)\subset\{g\}\big\}\,,\quad\forall\,g\in\G\,.$$
+Its $\ell^1$-algebra is $$\label{veveriz}
+\ell^1(\mathfrak C)\equiv\ell^1\big(\A\!\rtt_\te\!\G\big)=\ell^1_\te(\textsf{G};\A)\,,$$
+reinterpreting $\rtt_\te$ as the partial crossed product between group
+$G$ and the $C^*$-algebra $A$. Thus we can apply Theorem
+[\[teoremix\]](#teoremix){reference-type="ref" reference="teoremix"}. ◻
+:::
+
+::: remark
+[]{#apucalaie label="apucalaie"} The result can also be obtained
+directly, by means specific to partial action. To prove the isometric
+linear embedding
+$\ell^1_\te(\textsf{ G};\A)\hookrightarrow\ell^1\big(\G;\mathbb B(\h))$
+one uses the map $\big[T(\Phi)\big](g):=\rho\big[\Phi(g)\big]u_g$ ,
+where $(\rho,u)$ is a covariant representation of $(\A,\te,\G)$ in the
+Hilbert space $\h$ , as in [@Ex2 Sect. 13]. Here $\rho$ should be a
+*faithful* representation of $\A$ and $u$ a *partial* representation of
+$\G$ , connected by an equivariance condition.
+:::
+
+## Inverse closedness modulo ideals. {#idealuri}
+
+::: definition
+[]{#idealix label="idealix"} Let $\mathfrak{K}$ be an ideal of the
+unital C$^*$-algebra $\mathfrak{C}$ . The $^*$-subalgebra $\mathfrak{B}$
+of $\mathfrak{C}$ is called *$\mathfrak{K}$-inverse closed* if
+$\mathfrak{B}/(\mathfrak{B}\cap\mathfrak{K})$ is inverse closed in
+$\mathfrak{C}/\mathfrak{K}$ .
+:::
+
+::: example
+[]{#fredholmix label="fredholmix"} If $\,\mathfrak{K}=\{0\}$ , the
+notion coincides with that introduced in Definition
+[\[symmetric\]](#symmetric){reference-type="ref" reference="symmetric"}.
+However the main motivating case is as follows: Let $\mathfrak C$ be a
+$C^*$-algebra of bounded operators in the Hilbert space $\h$ ,
+containing the ideal $\mathbb K(\h)$ of all the compact operators. We
+recall that $T\in\mathbb B(\h)$ is called *Fredholm* if its range is
+closed and its kernel and its cokernel are both finite-dimensional. By
+Atkinson's Theorem, this happens exactly if the image of $T$ in the
+Calkin algebra $\mathbb B(\h)/\mathbb K(\h)$ is invertible. A
+$^*$-subalgebra $\mathfrak B$ of $\mathbb B(\h)$ will be called
+*Fredholm inverse closed* if the situation in Definition
+[\[idealix\]](#idealix){reference-type="ref" reference="idealix"} holds
+with $\mathfrak K=\mathbb K(\h)$ . For $\mathfrak C$ we can take any
+$C^*$-algebra of $\mathbb B(\h)$ containing $\mathfrak B$ .
+:::
+
+::: definition
+[]{#buhonero label="buhonero"} Let
+$\mathfrak C=\widetilde{\bigoplus}_{g\in\normalfont{\G}}\mathfrak C_g$
+be a graded $C^*$-algebra over the discrete group $\G$ . The ideal
+$\mathfrak K$ of $\mathfrak C$ is *a graded ideal* if the ideal
+generated by $\mathfrak K\cap\mathfrak C_\e$ coincides with
+$\mathfrak K$ (or, equivalently, that
+$\bigoplus_{g\in\normalfont{\G}}\mathfrak K\cap\mathfrak C_g$ is dense
+in $\mathfrak K$).
+:::
+
+::: theorem
+[]{#ruye label="ruye"} Let
+$\mathfrak C=\widetilde{\bigoplus}_{g\in\normalfont{\G}}\mathfrak C_g$
+be a topologically graded $C^*$-algebra over the discrete rigidly
+symmetric group $\normalfont{\G}$ and $\mathfrak K$ a graded ideal. Then
+$\ell^1(\mathfrak C)$ is $\mathfrak K$-inverse closed in $\mathfrak C$ .
+:::
+
+::: proof
+*Proof.* One needs to show that
+$\ell^1(\mathfrak C)/\ell^1(\mathfrak C)\cap\mathfrak K$ is inverse
+closed in $\mathfrak C/\mathfrak K$ . Let us denote by
+$\kappa:\mathfrak C\to\mathfrak C/\mathfrak K$ the quotient map. By
+[@Ex2 Prop. 23.10] (or by [@Ex3 Prop. 3.11]), under the stated
+conditions upon the graded algebra and the ideal,
+$\mathfrak C/\mathfrak K$ is topologically graded by the subspaces
+$$\big\{(\mathfrak C/\mathfrak K)_g:=\kappa(\mathfrak C_g)\,\big\vert\,g\in\G\big\}\,.$$
+The corresponding linear contraction
+$\widetilde Q_g:\mathfrak C/\mathfrak K\to(\mathfrak C/\mathfrak K)_g$
+satisfies $$\label{traznau}
+\widetilde Q_g\circ\kappa=\kappa\circ\widetilde P_g\,,\quad\forall\,g\in\G\,.$$
+Using this and the form of the $\ell^1$-norms, one shows immediately
+that $\kappa$ sends $\ell^1(\mathfrak C)$ into
+$\ell^1(\mathfrak C/\mathfrak K)$ contractively. Its kernel is clearly
+$\ell^1(\mathfrak C)\cap\mathfrak K$ . Let us show its surjectivity,
+starting from
+$$\varphi:=\sum_{g\in\G}\varphi_g\equiv\sum_{g\in\G}\widetilde Q_g(\varphi)\in\ell^1(\mathfrak C/\mathfrak K)$$
+(unconditional convergence in $\mathfrak C/\mathfrak K$) . Let
+$\{\beta_g\!\mid\!g\in\G\}$ be a summable family of positive numbers.
+For each $g$, there is an element $\Phi_g\in\mathfrak C_g$ such that
+$\kappa(\Phi_g)=\varphi_g$ and
+$\p\!\Phi_g\!\p_\mathfrak C\,\le\,\p\!\varphi_g\!\p_{\mathfrak C/\mathfrak K}+\beta_g$ .
+Then $\Phi:=\sum_{g}\Phi_g\in\ell^1(\mathfrak C)$ and
+$\kappa(\Phi)=\varphi$ . So
+$\ell^1(\mathfrak C)/\ell^1(\mathfrak C)\cap\mathfrak K$ may be
+identified with $\ell^1(\mathfrak C/\mathfrak K)$ . We apply Theorem
+[\[teoremix\]](#teoremix){reference-type="ref" reference="teoremix"}
+(ii) to the topologically graded quotient algebra
+$\mathfrak C/\mathfrak K$ and finish the proof. ◻
+:::
+
+The particular case of partial actions is worth mentioning. Suppose that
+$(\mathcal{A},\theta,\G)$ is a partial dynamical system with discrete
+group $\G$ and that $\mathcal{K}$ is an ideal of $\mathcal{A}$ that is
+$\theta$-invariant:
+$$\theta_g\big(\A_{g^{-1}}\!\cap\mathcal{K}\big)\subset \mathcal{K}\,,\quad\forall\,g\in \G\,.$$
+We denote by the same letter $\theta$ the action of $\G$ by partial
+automorphisms of $\mathcal{K}$ defined by restrictions. One gets the
+C$^*$-partial dynamical system $(\mathcal{K},\theta,\G)$ . The partial
+crossed product $\mathcal{K}\rtt_{\theta}\G$ may be identified with an
+ideal of $\mathcal{A}\rtt_{\theta}\G$ . Under this identification,
+$\ell^1_{\theta}(\G;\mathcal{K})$ becomes an ideal of
+$\ell^1_{\theta}(\G;\mathcal{A})$ in the natural way: the
+$\ell^1$-function $\varphi:\G\rightarrow \mathcal{K}$ is taken to be
+$\mathcal{A}$-valued. One can use the exactness of the partial crossed
+product construction [@ELQ Sect. 3] to prove
+
+::: theorem
+[]{#theoremix label="theoremix"} Assume that the discrete group
+$\normalfont{\G}$ is rigidly symmetric. The Banach $^*$-algebra
+$\ell^1_{\theta}(\normalfont{\G};\mathcal{A})$ is
+$\mathcal{K}\!\rtt_{\theta}\!\normalfont{\G}$-inverse closed in the
+partial crossed product $\mathcal{A}\!\rtt_{\theta}\!\normalfont{\G}$
+for any $\theta$-invariant ideal $\mathcal{K}$ of $\mathcal{A}$ .
+:::
+
+Theorem [\[theoremix\]](#theoremix){reference-type="ref"
+reference="theoremix"} can also be obtained as a consequence of Theorem
+[\[ruye\]](#ruye){reference-type="ref" reference="ruye"}, since partial
+crossed products are topologically graded, and the ideal
+$\mathcal{K}\!\rtt_{\theta}\!\G$ is indeed graded under the stated
+assumptions.
+
+The situation in Exemple
+[\[fredholmix\]](#fredholmix){reference-type="ref"
+reference="fredholmix"} is the most interesting:
+
+::: corollary
+[]{#honduras label="honduras"} Let $(\A,\theta,\normalfont{\G})$ be a
+partial C$^*\!$-dynamical system with discrete rigidly symmetric group
+$\normalfont{\G}$ and $\K$ a $\theta$-invariant ideal in $\A$ . Let
+$\Pi\!:\!\A\rtt_{\theta}\!\normalfont{\G} \to \mathbb{B}(\mathcal{H})$
+be a faithful representation such that
+$\Pi\big(\K\rtt_{\theta}\!\normalfont{\G}\big)=\mathbb{K}(\mathcal{H})$ .
+Then the Banach $^*$-algebra $\Pi[\ell^1_{\theta}(\normalfont{\G};\A)]$
+is Fredholm inverse closed.
+:::
+
+## Other types of decay {#decay}
+
+::: definition
+[]{#sconx label="sconx"} A *weight* on the discrete group
+$\normalfont{\G}$ is a function $\nu: \normalfont{\G}\to [1,\infty)$
+satisfying everywhere $$\label{submultiplicative}
+ \nu(gh)\leq \nu(g)\nu(h)\,,\quad\nu(g^{-1})=\nu(g)\,, \quad \forall g,h\in\normalfont{\G}.$$
+Let $\mathfrak C$ be a topologically graded $C^*$-algebra. On
+$\,\bigoplus_{g\in\normalfont{\G}}\!\mathfrak C_g$ we can introduce the
+norm $$\label{normix}
+\p\!\Phi\!\p_{\ell^{1,\nu}(\mathfrak C)}\,:=\sum_{g\in\normalfont{\G}}\nu(g)\!\p\!P_g(\Phi)\!\p.$$
+The completion in this norm, denoted by $\ell^{1,\nu}(\mathfrak C)$ ,
+can be seen as a Banach $^*$-algebra with the algebraic structure
+inherited from $\ell^1(\mathfrak C)$ (or from $\mathfrak C$) .
+:::
+
+::: theorem
+[]{#oix label="oix"} Let $\normalfont{\G}$ be a rigidly symmetric
+discrete group and $\nu$ a weight. Assume that there exists a generating
+subset $V$ of $\,\normalfont{\G}$ containing the unit $\e$ such that
+
+1.  the following uGRS (uniform Gelfand-Raikov-Shilov) condition holds:
+    $$\label{limitConditionOfWeight}
+    \lim_{n\rightarrow \infty}\sup_{g_1,\dots,g_n \in V}\nu(g_1\cdots g_n)^{\frac{1}{n}}=1\,,$$
+
+2.  for some finite constant $C$ one has for any $n\in\mathbb{N}$
+    $$\label{limitt}
+    \sup_{g\in V^n\setminus V^{n-1}}\nu(g) \leq C\!\inf_{g\in V^n\setminus V^{n-1}}\nu(g)\,.$$
+
+Then $\ell^{1,\nu}(\mathfrak C)$ is a symmetric Banach $^*$-algebra for
+every topologically $\normalfont{\G}$-graded $C^*$-algebra
+$\mathfrak C$ .
+:::
+
+::: proof
+*Proof.* The problem of the symmetry of a weighted $\ell^1$-algebra as a
+$^*$-subalgebra of an unweighted one has been solved in [@FGL Th. 3] in
+a more particular context. We are going to check that the arguments can
+be adapted to the more general case. The main idea is proving that,
+given an element $\Phi\in \ell^{1,\nu}(\mathfrak C)$ , its spectral
+radius is the same as in $\ell^{1}(\mathfrak C)$ . Then one applies
+Hulanicki's Lemma.
+
+As $\nu(\cdot)\geq 1$ , we have
+$$\p\!\Phi\!\p_{\ell^{1}(\mathfrak C)}=\sum_{g\in\normalfont{\G}}\!\p\!P_g(\Phi)\!\p\leq\sum_{g\in\normalfont{\G}}\nu(g)\!\p\!P_g(\Phi)\!\p = \p\!\Phi\!\p_{\ell^{1,\nu}(\mathfrak C)}\,$$
+and using the spectral radius formula
+$$r_{\ell^{1}(\mathfrak{C})}(\Phi)\leq r_{\ell^{1,\nu}(\mathfrak{C})}(\Phi)\,,\quad\forall\,\Phi\in {\ell^{1,\nu}(\mathfrak{C})}\,.$$
+To prove the opposite inequality, pick $V$ a generating set for $\G$ and
+define on $\mathbb Z$ the function
+$$v(n):=\sup_{g\in V^{|n|}} \nu(g)\,.$$ Due to the uGRS condition, it is
+a weight and one has the obvious associated weighted space
+$\ell^{1,\nu}(\Z)$ . By induction, from the equation
+[\[normix\]](#normix){reference-type="eqref" reference="normix"} we get
+$$\p\!\Phi^n \!\p_{\ell^{1,\nu}(\mathfrak{C})}\,\leq \sum_{g_1\in\G}\cdots\sum_{g_n\in\G}\nu(g_1\dots g_n)\p\!P_{g_1}(\Phi) \!\p\cdots \!\p\!P_{g_n}(\Phi) \!\p.$$
+Since $\G=\bigsqcup_{m\in\mathbb N}(V^m\setminus V^{m-1})$ , where
+$V^0=\emptyset$ , we may split the sum accordingly. This yields
+$$\label{shocarix}
+\p\!\Phi^n \!\p_{\ell^{1,\nu}(\mathfrak{C})}\,\leq\!\sum_{m_1,\dots,m_n=1}^{\infty}\sum_{V^{m_1}\setminus V^{m_1-1}}\cdots\sum_{V^{m_n}\setminus V^{m_n-1}} \nu(g_1\dots g_n)\p P_{g_1}(\Phi) \!\p\cdots \!\p P_{g_n}(\Phi) \!\p.$$
+If $g_j\in V^{m_j}\setminus V^{m_j-1}$, then
+$g_1\cdots g_n \in V^{m_1+\cdots +m_n}$ and so the weight is majorized
+by
+$$\nu(g_1\cdots g_n)\leq \sup_{h\in V^{m_1+\cdots +m_n}} \nu(h) =v(m_1+\cdots m_n)\,.$$
+Set $b_m:=\sum_{g\in V^m\setminus V^{m-1}}\!\p P_g(\Phi) \!\p$ and
+$b=(b_m)_{m\in\mathbb N}$ . Then we have
+$\!\p\Phi \!\p_{\ell^1(\mathfrak C)}\,=\,\p b \!\p_{\ell^1(\mathbb N)}$ .
+Also the condition [\[limitt\]](#limitt){reference-type="eqref"
+reference="limitt"} implies immediately that
+$$C^{-1}\!\p b\!\p_{\ell^{1,v}(\mathbb Z)}\,\leq \,\p\Phi \!\p_{\ell^{1,\nu}(\mathfrak C)}\,\leq\,\p\,b \!\p_{\ell^{1,v}(\mathbb Z)}.$$
+Returning to [\[shocarix\]](#shocarix){reference-type="eqref"
+reference="shocarix"} we obtain
+$$\!\p \Phi^n \!\p_{\ell^{1,\nu}(\mathfrak{C})}\,\leq\!\sum_{m_1,\dots,m_n=1}^{\infty}\!v(m_1+\cdots +m_n)\,b_{m_1}\cdots b_{m_n}\!=\;\p b^n \!\p_{\ell^{1,v}(\mathbb Z)}\,<\infty\,.$$
+By its definition the weight $v$ on $\mathbb Z$ satisfies the
+GRS-condition, and $\ell^{1,v}(\mathbb Z)$ is symmetric by [@FGL0].
+Hence $$\begin{aligned}
+r_{\ell^{1,\nu}(\mathfrak{C})}(\Phi)&=\lim_{n\rightarrow\infty} \!\p \Phi^n \!\p_{\ell^{1,\nu}(\mathfrak{C})}^{1/n}\leq \lim_{n\rightarrow\infty} \!\p b^n \!\p_{\ell^{1,\nu}(\mathbb{Z})}^{1/n}\\
+&=r_{\ell^{1,\nu}(\mathbb{Z})}(b)=r_{\ell^{1}(\mathbb{Z})}(b)\\
+&\le\,\p b \!\p_{\ell^{1}(\mathbb{Z})}=\,\p \Phi \!\p_{\ell^{1}(\mathfrak{C})}.
+\end{aligned}$$ So for all $k\in\mathbb N$ we have
+$$r_{\ell^{1,\nu}(\mathfrak{C})}(\Phi)=r_{\ell^{1,\nu}(\mathfrak{C})}(\Phi^n)^{1/n}\leq\,\p \Phi^n \!\p_{\ell^{1}(\mathfrak{C})}^{1/n},$$
+and by letting $n\rightarrow\infty$ we obtain the required inequality
+$\,r_{\ell^{1,\nu}(\mathfrak{C})}(\Phi)\leq r_{\ell^{1}(\mathfrak{C})}(\Phi)$ . ◻
+:::
+
+::: remark
+[]{#labix label="labix"} There is a different way to prove Theorem
+[\[oix\]](#oix){reference-type="ref" reference="oix"}. We define *the
+Beurling algebra associated to the weight $\nu$ and to the $C^*$-algebra
+$\mathcal B$* as $$\label{sharpix}
+\ell^{1,\nu}(\normalfont{\G};\mathcal B):=\big\{\Psi\, \vert \,\nu\Psi\in \ell^{1}(\normalfont{\G};\mathcal B)\big\}\,,$$
+with norm
+$\p \cdot \!\p_{\ell^{1,\nu}(\normalfont{\G},\mathcal B)}\,:=\,\p\nu\,\cdot\,\!\p_{\ell^{1}(\normalfont{\G};\mathcal B)}$.
+By [@FGL], the assumptions on the weight imply that
+$\ell^{1,\nu}(\normalfont{\G};\mathcal B)$ is a symmetric Banach
+$^*$-algebra. One then shows as in Proposition
+[\[isometrix\]](#isometrix){reference-type="ref" reference="isometrix"}
+an isometric embedding
+$\ell^{1,\nu}(\mathfrak C)\hookrightarrow\ell^{1,\nu}(\normalfont{\G};\mathcal B)$ ,
+for some $C^*$-algebra $\mathcal B$ , and use this as in Theorem
+[\[teoremix\]](#teoremix){reference-type="ref" reference="teoremix"} to
+deduce the symmetry of $\ell^{1,\nu}(\mathfrak C)$ .
+:::
