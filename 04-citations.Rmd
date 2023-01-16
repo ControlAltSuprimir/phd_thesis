@@ -1,8 +1,8 @@
-# Symmetry in a groupoid setting 
+# Symmetry in a groupoid setting  {#fourth}
 
 ## Groupoids and groupoid actions
 
-::: defn
+::: {.definition}
 A *groupoid* is a small category in which every morphism is an
 isomorphism, i.e. is invertible.
 :::
@@ -10,7 +10,7 @@ isomorphism, i.e. is invertible.
 The reference for the following more detailed form of the definition is
 [@Kum].
 
-::: defn
+::: {.definition}
 A groupoid $\Xi$ is a set endowed with two maps
 $$\label{eq:groupoidOperations}
 \cdot:{\Xi}^{(2)}\rightarrow\Xi, \,\,\,\,\,\,\,\, ^*  : \Xi\rightarrow \Xi$$
@@ -30,42 +30,42 @@ These operations satisfy the following properties:
 4.  if $(\gamma,\gamma^*)\in\Xi^{(2)}$ and if
     $(\beta,\gamma)\in\Xi^{(2)}$ then $(\beta\gamma)\gamma^*=\beta$.
 
-If $\gamma\in\Xi$, $\s(\gamma)=\gamma^*\gamma$ and
-$\r(\gamma)=\gamma\gamma^*$ are the *domain* and *range* of $\gamma$
+If $\gamma\in\Xi$, $\textsf{s}(\gamma)=\gamma^*\gamma$ and
+$\textsf{r}(\gamma)=\gamma\gamma^*$ are the *domain* and *range* of $\gamma$
 respectively. The pair $(\gamma, \alpha)$ is composable if and only if
-$\s(\gamma)=\r(\alpha)$. We define $\Xi^{(0)}:=\s(\Xi)=\r(\Xi)$ as the
+$\textsf{s}(\gamma)=\textsf{r}(\alpha)$. We define $\Xi^{(0)}:=\textsf{s}(\Xi)=\textsf{r}(\Xi)$ as the
 *unit space* of $\Xi$.\
 Usually a groupoid is denoted as
-$$\Xi \stackrel{\s\text{,}\r}{\overrightarrow{\rightarrow}} \Xi^{(0)}.$$
+$$\Xi \stackrel{\textsf{s}\text{,}\textsf{r}}{\overrightarrow{\rightarrow}} \Xi^{(0)}.$$
 Other useful subset of the groupoid $\Xi$ is the *isotropy group* of a
 given $v\in\Xi^{(0)}$ which it is defined by
-$$\Xi_v^v:=\left\{\gamma\in\Xi|\,\, \s(\gamma)=\r(\gamma)=v\right\}.$$
+$$\Xi_v^v:=\left\{\gamma\in\Xi|\,\, \textsf{s}(\gamma)=\textsf{r}(\gamma)=v\right\}.$$
 The isotropy group of $v$ if often seen as $\Xi_v^v=\Xi_v\cap\Xi^v$
-where $\Xi_v:=\s^{-1}(\{v\})$ and $\Xi^v:=\r^{-1}(\{v\})$ and these are
-called the $\s$-fibre and $\r$-fibre respectively. One also uses the
+where $\Xi_v:=\textsf{s}^{-1}(\{v\})$ and $\Xi^v:=\textsf{r}^{-1}(\{v\})$ and these are
+called the $\textsf{s}$-fibre and $\textsf{r}$-fibre respectively. One also uses the
 *isotropic subgroupoid* of $\Xi$ written as
 $\text{Iso}(\Xi):=\cup_{v\in\Xi^{(0)}}\Xi_v^v$.
 :::
 
 ## Fell bundles
 
-::: defn
+::: {.definition}
 Let $X$ be a Hausdorff topological space. A *bundle* over $X$ is a pair
-$\<\mathscr{C},\pi\>$, where $\mathscr{C}$ is a Hausdorff topological
+$\big<\mathscr{C},\pi\big>$, where $\mathscr{C}$ is a Hausdorff topological
 space and $\pi:\mathscr{C}\to X$ is a continuous open surjection.
 :::
 
 The concept of Fell bundles over groups introduced here can be found in
 [@Ex2 Def. 16.1].
 
-::: defn
+::: {.definition}
 A *Fell Bundle* (also known as a *C$^*$-algebraic bundle*) over a group
-$\normalfont{\G}$ is a bundle $\mathscr{C}=\<\mathscr C,\pi\>$ over
-$\normalfont{\G}$, where we define $\mathfrak{C}_g:=\pi^{-1}(\{g\})$ as
+${\textsf{G}}$ is a bundle $\mathscr{C}=\big<\mathscr C,\pi\big>$ over
+${\textsf{G}}$, where we define $\mathfrak{C}_g:=\pi^{-1}(\{g\})$ as
 the *fibers*. In addition it is equipped with continuous multiplication
 and involution operations
 $$\cdot:\mathscr{C}\times\mathscr{C}\rightarrow\mathscr{C}, \,\,\,\,\,\,\,\, ^*  : \mathscr{C}\rightarrow \mathscr{C},$$
-satisfying the following properties for all $g,h\in\normalfont{\G}$ and
+satisfying the following properties for all $g,h\in{\textsf{G}}$ and
 all $b,c\in\mathscr{C}$
 
 1.  $\mathfrak{C}_g\cdot \mathfrak{C}_h \subset \mathfrak{C}_{gh}$,
@@ -79,7 +79,7 @@ all $b,c\in\mathscr{C}$
 
 5.  $(\mathfrak{C}_g)^*\subset \mathfrak{C}_{g^{-1}}$,
 
-6.  For each $g\in\normalfont{\G}$, $^*$ restricted to $\mathfrak{C}_g$
+6.  For each $g\in{\textsf{G}}$, $^*$ restricted to $\mathfrak{C}_g$
     is conjugate-linear from $\mathfrak{C}_g$ to
     $\mathfrak{C}_{g^{-1}}$,
 
@@ -91,31 +91,31 @@ all $b,c\in\mathscr{C}$
 
 10. $\Vert b^*b \Vert_{e}=\Vert b\Vert^2_{\pi(b)}$,
 
-11. $b^*b\geq 0$ in $\mathfrak{C}_\e$.
+11. $b^*b\geq 0$ in $\mathfrak{C}_\textsf{e}$.
 
 We will write the Fell bundle in the form
-$\mathscr{C}:=(\mathfrak{C}_g)_{g\in\normalfont{\G}}$. It is important
-to note that $\mathfrak{C}_\e$ is a C$^*$-algebra with the restricted
+$\mathscr{C}:=(\mathfrak{C}_g)_{g\in{\textsf{G}}}$. It is important
+to note that $\mathfrak{C}_\textsf{e}$ is a C$^*$-algebra with the restricted
 operations, it is often refered as the unit fiber algebra [@Ex2 p. 124].
 :::
 
-Consider the Fell Bundle $\mathscr{C}=\<\mathscr C,\pi\>$ over the
-locally compact Hausdorff group $\normalfont{\G}$. On the space
-$$\Ce_c(\G,\mathscr{C}):=\left\{ \varphi:\G\to\mathscr{C}\,\, \text{ continuous };\,\, \varphi(g)\in \mathfrak{C}_g\,\,\forall g\in\G \,\, \textrm{ s.t. supp}(\varphi) \textrm{ is compact} \right\},$$
+Consider the Fell Bundle $\mathscr{C}=\big<\mathscr C,\pi\big>$ over the
+locally compact Hausdorff group ${\textsf{G}}$. On the space
+$$\textsf{C}_c(\textsf{G},\mathscr{C}):=\left\{ \varphi:\textsf{G}\to\mathscr{C}\,\, \text{ continuous };\,\, \varphi(g)\in \mathfrak{C}_g\,\,\forall g\in\textsf{G} \,\, \textrm{ s.t. supp}(\varphi) \textrm{ is compact} \right\},$$
 one defines the convolution product
-$$\varphi\star\psi(g):= \int_\G \varphi(gh^{-1}) \psi(h)dh.$$ Then we
-define $L^1(\G,\mathscr{C})$ as a Banach $^*$-algebra by completing
-$\Ce_c(\G,\mathscr{C})$ with respect to the norm
-$$\Vert \varphi \Vert_{L^1(\G,\mathscr{C})}:=\sum_{g\in\G}\Vert\varphi(g)\Vert_{\mathfrak{C}_g}\,\, \textrm{ for }\,\, \varphi\in \Ce_c(\G,\mathscr{C}).$$
+$$\varphi\star\psi(g):= \int_\textsf{G} \varphi(gh^{-1}) \psi(h)dh.$$ Then we
+define $L^1(\textsf{G},\mathscr{C})$ as a Banach $^*$-algebra by completing
+$\textsf{C}_c(\textsf{G},\mathscr{C})$ with respect to the norm
+$$\Vert \varphi \Vert_{L^1(\textsf{G},\mathscr{C})}:=\sum_{g\in\textsf{G}}\Vert\varphi(g)\Vert_{\mathfrak{C}_g}\,\, \textrm{ for }\,\, \varphi\in \textsf{C}_c(\textsf{G},\mathscr{C}).$$
 
 ## Fell bundles over groupoids
 
 We introduce the concept of Fell bundles over groupoids which can be
 found in [@Kum; @MW; @Yam].
 
-::: defn
+::: {.definition}
 A *Fell Bundle* (also known as a *C$^*$-algebraic bundle*) over a
-discrete groupoid $\Xi$ is a bundle $\mathscr{C}=\<\mathscr C,\pi\>$
+discrete groupoid $\Xi$ is a bundle $\mathscr{C}=\big<\mathscr C,\pi\big>$
 over $\Xi$, where we define
 $\mathfrak{C}_{\gamma}:=\pi^{-1}(\{\gamma\})$ as the *fibers* and we set
 $$\mathscr{C}^{(2)}:=\left\{(c_1,c_2)\in\mathscr{C}\times\mathscr{C};\,\,(\pi(c_1),\pi(c_2))\in\Xi^{(2)}\right\}.$$
@@ -166,7 +166,7 @@ We will continue to write the Fell bundle in the form
 $\mathscr{C}:=(\mathfrak{C}_g)_{g\in\Xi}$.
 :::
 
-::: remark
+::: {.conjecture}
 Note that if $\gamma\in\Xi^{(0)}$ then
 $\mathfrak{C}_\gamma:=\pi^{-1}(\{\gamma\})$ is a C$^*$-algebra (with
 norm, multiplication and involution induced from the bundle).
@@ -175,10 +175,10 @@ norm, multiplication and involution induced from the bundle).
 ## Rigidly symmetric and hypersymmetric groupoids
 
 Let $\Xi$ be a discrete groupoid, with unit spce $\Xi^{(0)}\!=:\!U$ ,
-domain and range maps $\s$ and $\r$  respectively. The set of composable
+domain and range maps $\textsf{s}$ and $\textsf{r}$  respectively. The set of composable
 pairs is $\Xi^{(2)}\!:=\{(x,y)\!\mid\!\textrm{ r}(y)=\textrm{ d}(x)\}$ .
 
-::: defn
+::: {.definition}
 Let $\Gamma:\mathfrak{B}\rightarrow \textrm{End}(\mathcal{E})$ be a
 representation of the Banach $^*$-algebra $\mathfrak{B}$ in the Banach
 space $\mathcal{E}$. The representation is called *preunitary* if there
@@ -192,7 +192,7 @@ $$V\Gamma(\phi)=\Pi(\phi)V,\,\,\forall \phi\in\mathfrak{B}.$$
 Our interest in this notion lies in the next characterization, taken
 from [@Lp]:
 
-::: theorem
+::: {.theorem}
 The Banach $^*$-algebra $\mathfrak{B}$ is symmetric if and only if all
 its non-trivial algebraically irreducible representations are
 preunitary.
@@ -203,30 +203,35 @@ algebra* $\ell^{\infty,1}(\Xi\!\mid\!\mathscr C)$ adapted to this
 structure [@MW Ch. 1], which in our discrete case is formed by the
 sections $\Phi:\Xi\to\mathfrak C$ (thus satisfying
 $\Phi(x)\in\mathfrak C_x$ for every $x\in\Xi$) such that *the Hahn-type
-norm* $$\label{parts}
-\p\!\Phi\p_{\infty,1}\,:=\max\Big\{\sup_{u\in U}\sum_{\textrm{ r}(x)=u}\!\p\!\Phi(x)\!\p_{\mathfrak C_x}\,,\,\sup_{u\in U}\sum_{\textrm{ d}(x)=u}\!\p\!\Phi(x)\!\p_{\mathfrak C_x}\!\Big\}$$
+norm* 
+\begin{equation}
+\,\big\Vert\,\!\Phi\,\big\Vert\,_{\infty,1}\,:=\max\Big\{\sup_{u\in U}\sum_{\textrm{ r}(x)=u}\!\,\big\Vert\,\!\Phi(x)\!\,\big\Vert\,_{\mathfrak C_x}\,,\,\sup_{u\in U}\sum_{\textrm{ d}(x)=u}\!\,\big\Vert\,\!\Phi(x)\!\,\big\Vert\,_{\mathfrak C_x}\!\Big\} (\#eq:parts)
+\end{equation}
 is finite. It is a Banach $^*$-algebra under the multiplication
-$$\label{tiplication}
-(\Phi\star \Psi)(x):=\sum_{yz=x}\Phi(y)\bullet\Psi\big(z)$$ and the
-involution $$\label{tion}
-\Phi^\star(x):=\Phi\big(x^{-1}\big)^\bu.$$ The space
-$C_\textrm{ c}(\Xi\!\mid\!\mathscr C)$ of finitely-supported sections
+\begin{equation}
+(\Phi\star \Psi)(x):=\sum_{yz=x}\Phi(y)\bullet\Psi\big(z) (\#eq:tiplication)
+\end{equation}
+and the involution 
+\begin{equation}
+\Phi^\star(x):=\Phi\big(x^{-1}\big)^\bullet. (\#eq:tion)
+\end{equation}
+The space $C_\textrm{ c}(\Xi\!\mid\!\mathscr C)$ of finitely-supported sections
 forms a dense $^*$-algebra of the Hahn algebra. The complexity of the
 multiplication, largely responsable for the generality of the emerging
 algebras, comes both from the complexity of the 'inner' Fell
-multiplication $\bu$ and from the groupoid-type convolution inherent to
+multiplication $\bullet$ and from the groupoid-type convolution inherent to
 the formula.
 
 We need some special Fell bundles associated to Hilbert bundles
-$\mathscr H\!:=\bigsqcup_{u\in U}\h_u$ over the unit space; here the
+$\mathscr H\!:=\bigsqcup_{u\in U}\mathcal{H}_u$ over the unit space; here the
 fact that $\Xi$ is discrete will be crucial. For $u,v\in U$ we set
-$\mathbb B(\h_u,\h_v)\equiv\mathbb B(u,v)$ for the Banach space of all
-bounded linear operators $A:\h_u\to\h_v$ . Taking advantage of the norm,
+$\mathbb B(\mathcal{H}_u,\mathcal{H}_v)\equiv\mathbb B(u,v)$ for the Banach space of all
+bounded linear operators $A:\mathcal{H}_u\to\mathcal{H}_v$ . Taking advantage of the norm,
 the multiplication $$\begin{aligned}
-    \mathbb B(\h_w,\h_v)\!\times\!\mathbb B(\h_u,\h_w)&\to\mathbb B(\h_u,\h_v)\\
+    \mathbb B(\mathcal{H}_w,\mathcal{H}_v)\!\times\!\mathbb B(\mathcal{H}_u,\mathcal{H}_w)&\to\mathbb B(\mathcal{H}_u,\mathcal{H}_v)\\
     (A,B) &\mapsto A\circ B
 \end{aligned}$$ and the involution $$\begin{aligned}
-    \mathbb B(\h_u,\h_v)&\to\mathbb B(\h_v,\h_u)\\
+    \mathbb B(\mathcal{H}_u,\mathcal{H}_v)&\to\mathbb B(\mathcal{H}_v,\mathcal{H}_u)\\
     A&\mapsto A^*,
 \end{aligned}$$ one constructs the Fell bundle
 $$\mathbb B^\mathscr H\!:=\!\!\bigsqcup_{(u,v)\in U\times U}\!\mathbb B(u,v)\to U\!\!\times\!U$$
@@ -235,23 +240,22 @@ over the pair groupoid.
 Actually we are interested in the Fell Bundle $$\begin{aligned}
     \mathscr B^\mathscr H\!&:=\!\bigsqcup_{x\in\Xi}\mathfrak B_x\overset{p}{\to}\Xi\,,
 \end{aligned}$$ with fibres
-$\mathfrak{B}_x:=\mathbb{B}\big(\s(x),\r(x)\big)$ and the structure
+$\mathfrak{B}_x:=\mathbb{B}\big(\textsf{s}(x),\textsf{r}(x)\big)$ and the structure
 $$(A_x,B_y)\in \left(\mathscr{\mathscr B^\mathscr H}\right)^{(2)} \quad \quad \text{ if and only if }\quad \quad s(x)=r(y),$$
 where we can see
 $A_x\cdot B_y\in \mathfrak{B}_{xy}=\mathbb{B}(s(y),r(x))$. The Fell
 Bundle $\mathscr B^\mathscr H$ is called the pull-back Fell bundle of
 $\mathbb B^\mathscr H$ through the groupoid morphism
-$(\s,\r):\Xi\to U\!\times\!U$ which it is also denoted by
-$(\s,\r)^*(\mathbb B^\mathscr H)$ (see [@Kum Rem. 2.6]).
+$(\textsf{s},\textsf{r}):\Xi\to U\!\times\!U$ which it is also denoted by
+$(\textsf{s},\textsf{r})^*(\mathbb B^\mathscr H)$ (see [@Kum Rem. 2.6]).
 
-::: defn
-[]{#groupsymmetric label="groupsymmetric"}
+::: {.definition #groupsymmetric}
 
 1.  The discrete groupoid $\Xi$ is called *symmetric* if the convolution
     Banach $^*$-algebra $\ell^{\infty,1}(\Xi)$ is symmetric.
 
 2.  The discrete groupoid $\Xi$ is called *rigidly symmetric* if, given
-    any Hilbert bundle $\mathscr H\!=\bigsqcup_{x\in X}\h_x$ over its
+    any Hilbert bundle $\mathscr H\!=\bigsqcup_{x\in X}\mathcal{H}_x$ over its
     unit space, the Banach $^*$-algebra
     $\ell^{\infty,1}\big(\Xi\,\big\vert\,\mathscr B^\mathscr H\big)$ is
     symmetric.
@@ -263,17 +267,16 @@ $(\s,\r)^*(\mathbb B^\mathscr H)$ (see [@Kum Rem. 2.6]).
 :::
 
 It is clear that rigid symmetry implies symmetry; just take the constant
-field $\h_u\!:=\mathbb C$ for every $u$ . As said in the Introduction,
+field $\mathcal{H}_u\!:=\mathbb C$ for every $u$ . As said in the Introduction,
 even for discrete groups it is still unknown if the two notions
 coincide.
 
-::: theorem
-[]{#principala label="principala"} For a discrete groupoid, rigid
+::: {.theorem #principala} For a discrete groupoid, rigid
 symmetry and hypersymmetry coincide.
 :::
 
 ::: proof
-*Proof.* The fact that hypersymmetry implies rigid symmetry is obvious,
+The fact that hypersymmetry implies rigid symmetry is obvious,
 since $\mathscr B^\mathscr H$ is a particular type of discrete groupoid
 Fell bundle. So we need to show the converse implication.
 
@@ -288,20 +291,20 @@ case. But just a hint: the counting measure on $U$ is invariant with
 respect to the Haar system composed of counting measures on the fibers
 of the discrete groupoid. So one is given an arbitrary Fell bundle
 $\mathscr C=\bigsqcup_{x\in\Xi}\mathfrak C _x\overset{q}{\to}\Xi$ . Let
-$$\pi:\mathscr C\to\mathscr B^\mathscr H\!=\bigsqcup_{x\in\Xi}\mathbb B\big(\h_{\textrm{ s}(x)},\h_{\textrm{ r}(x)}\big)$$
-be a representation, where $\mathscr H=\bigsqcup_{u\in U}\h _u$ is a
+$$\pi:\mathscr C\to\mathscr B^\mathscr H\!=\bigsqcup_{x\in\Xi}\mathbb B\big(\mathcal{H}_{\textrm{ s}(x)},\mathcal{H}_{\textrm{ r}(x)}\big)$$
+be a representation, where $\mathscr H=\bigsqcup_{u\in U}\mathcal{H} _u$ is a
 Hilbert bundle over $U$ . In our context this just means that $\pi$ is a
 morphism of Fell bundles. Its integrated form
-$\Pi:\ell^{\infty,1}(\Xi\!\mid\!\mathscr C)\to\mathbb B\Big(\bigoplus_{u\in U}\h_u\big)$
-is defined by $$\label{surpr}
-\big[\Pi(\Phi)h\big](u):=\!\sum_{\textrm{ r}(x)=u}\!\pi\big[\Phi(x)\big]h\big[\textrm{ s}(x)\big]\,,\quad\forall\,h\in\bigoplus_{u\in U}\h_u\,.$$
+$\Pi:\ell^{\infty,1}(\Xi\!\mid\!\mathscr C)\to\mathbb B\Big(\bigoplus_{u\in U}\mathcal{H}_u\big)$
+is defined by 
+\begin{equation}
+\big[\Pi(\Phi)h\big](u):=\!\sum_{\textrm{ r}(x)=u}\!\pi\big[\Phi(x)\big]h\big[\textrm{ s}(x)\big]\,,\quad\forall\,h\in\bigoplus_{u\in U}\mathcal{H}_u\,. (\#eq:surpr)
+\end{equation}
 We embed $\mathfrak C_v$ into
 $C_\textrm{ c}(\Xi\!\mid\!\mathscr C)\subset\ell^{\infty,1}(\Xi\!\mid\!\mathscr C)$
 setting for each $a\in\mathfrak C_v$
-$$(\te_v a)(x):=a\ \ \textrm{ if}\ \ x=v\,,\quad(\te_v a)(x):=0_{\mathfrak C_x}\ \ \textrm{ if}\ \ x\ne v\,$$
-and we get from [\[surpr\]](#surpr){reference-type="eqref"
-reference="surpr"}
-$$\big[\Pi(\te_v a)h\big](u)=\pi(a)h(v)\ \ \textrm{ if}\ \ u=v\,,\quad\big[\Pi(\te_v a)h\big](u)=0_{\h_u}\ \ \textrm{ if}\ \ u\ne v\,.$$
+$$(\theta_v a)(x):=a\ \ \textrm{ if}\ \ x=v\,,\quad(\theta_v a)(x):=0_{\mathfrak C_x}\ \ \textrm{ if}\ \ x\ne v\,$$
+and we get from (\@ref(eq:surpr)) $$\big[\Pi(\theta_v a)h\big](u)=\pi(a)h(v)\ \ \textrm{ if}\ \ u=v\,,\quad\big[\Pi(\theta_v a)h\big](u)=0_{\mathcal{H}_u}\ \ \textrm{ if}\ \ u\ne v\,.$$
 It follows immediately that if $\Pi$ is injective, then the restriction
 of $\pi$ to $\mathfrak C_v$ is also injective, i. e. isometric. Actually
 $\Pi$ extends to the full $C^*$-algebra $C^*(\Xi\!\mid\!\mathscr C)$ of
@@ -312,25 +315,26 @@ $\pi$ is isometric on the $C^*$-algebras corresponding to the units. But
 then, by a standard argument, the isometry also propagates on all the
 Banach spaces of the Fell bundle: if $b\in\mathfrak C_x$ the axioms
 allow us to write
-$$\p\!\pi(b)\!\p_{\mathfrak B_x}^2=\,\p\!\pi(b)^*\pi(b)\!\p_{\mathfrak B_{\textrm{ s}(x)}}=\,\p\!\pi\big(b^\bu\bu b\big)\!\p_{\mathfrak B_{\textrm{ s}(x)}}=\,\p\!b^\bu\bu b\!\p_{\mathfrak C_{\textrm{ s}(x)}}
-=\,\p\!b\!\p_{\mathfrak C_x}^2.$$
+$$\,\big\Vert\,\!\pi(b)\!\,\big\Vert\,_{\mathfrak B_x}^2=\,\,\big\Vert\,\!\pi(b)^*\pi(b)\!\,\big\Vert\,_{\mathfrak B_{\textrm{ s}(x)}}=\,\,\big\Vert\,\!\pi\big(b^\bullet\bullet b\big)\!\,\big\Vert\,_{\mathfrak B_{\textrm{ s}(x)}}=\,\,\big\Vert\,\!b^\bullet\bullet b\!\,\big\Vert\,_{\mathfrak C_{\textrm{ s}(x)}}
+=\,\,\big\Vert\,\!b\!\,\big\Vert\,_{\mathfrak C_x}^2.$$
 
 Now define
 $$\Upsilon_\pi\!:\ell^{\infty,1}(\Xi\!\mid\!\mathscr C)\to\ell^{\infty,1}\big(\Xi\,\big\vert\,\mathscr B^\mathscr H\big)\,,\quad\big(\Upsilon_\pi(\Phi)\big)(x)\!:=\pi\big(\Phi(x)\big)\,.$$
 It is a well-defined linear isometry: we compute for the range part of
-the norm [\[parts\]](#parts){reference-type="eqref" reference="parts"}
-(using more detailed notations); the same is true for the source part.
-$$\begin{aligned}
-\p\!\Upsilon_\pi(\Phi)\!\p^{\textrm{ r}}_{\ell^{\infty,1}(\Xi\,\vert\,\mathscr B^\mathscr H)}\,&=\sup_u\!\sum_{\textrm{ r}(x)=u}\!\p\!\pi\big(\Phi(x)\big)\!\p_{\mathfrak B_x}\\
-&=\sup_u\!\sum_{\textrm{ r}(x)=u}\!\p\!\Phi(x)\!\p_{\mathfrak C_x}=\,\p\!\Phi\!\p^{\textrm{ r}}_{\ell^{\infty,1}(\Xi\mid\mathscr C)}.
-\end{aligned}$$ It is also an involutive morphism. For the
-multiplication, for instance, we have: $$\begin{aligned}
+the norm (\@ref(eq:parts)) (using more detailed notations); the same is true for the source part.
+\begin{aligned}
+\,\big\Vert\,\!\Upsilon_\pi(\Phi)\!\,\big\Vert\,^{\textrm{ r}}_{\ell^{\infty,1}(\Xi\,\vert\,\mathscr B^\mathscr H)}\,&=\sup_u\!\sum_{\textrm{ r}(x)=u}\!\,\big\Vert\,\!\pi\big(\Phi(x)\big)\!\,\big\Vert\,_{\mathfrak B_x}\\
+&=\sup_u\!\sum_{\textrm{ r}(x)=u}\!\,\big\Vert\,\!\Phi(x)\!\,\big\Vert\,_{\mathfrak C_x}=\,\,\big\Vert\,\!\Phi\!\,\big\Vert\,^{\textrm{ r}}_{\ell^{\infty,1}(\Xi\mid\mathscr C)}.
+\end{aligned}
+It is also an involutive morphism. For the
+multiplication, for instance, we have: 
+\begin{aligned}
 \big[\Upsilon_\pi(\Phi)\star\Upsilon_\pi(\Psi)\big](\Xi)&=\sum_{yz=x}\big[\Upsilon_\pi(\Phi)\big](y)\big[\Upsilon_\pi(\Psi)\big](z)\\
 &=\sum_{yz=x}\pi[\Phi(y)]\pi[\Psi(z)]\\
-&=\pi\Big(\sum_{yz=x}\Phi(y)\bu\Psi(z)\Big)\\
+&=\pi\Big(\sum_{yz=x}\Phi(y)\bullet\Psi(z)\Big)\\
 &=\big[\pi(\Phi\star\Psi)\big](x)\\
 &=\big[\Upsilon_\pi(\Phi\star\Psi)\big](x)\,.
-\end{aligned}$$
+\end{aligned}
 
 Thus we proved that $\ell^{\infty,1}(\Xi\!\mid\!\mathscr C)$ can be
 embedded as a closed $^*$-algebra of the symmetric Banach $^*$-algebra
@@ -338,19 +342,17 @@ $\ell^{\infty,1}\big(\Xi\,\big\vert\,\mathscr B^\mathscr H\big)$ , so it
 is also symmetric, by [@Pa2 Th.11.4.2]. The proof is finished. ◻
 :::
 
-::: example
-[]{#purgrupal label="purgrupal"} If $\Xi\equiv\textsf{ H}$ is a discrete
-group with unit $\e$ , one recovers the first part of Theorem
-[\[teoremix\]](#teoremix){reference-type="ref" reference="teoremix"}
-(the second one may be found in [@JM]). In this case, since $U=\{\e\}$ ,
+::: {.example #purgrupal} 
+If $\Xi\equiv\textsf{ H}$ is a discrete group with unit $\textsf{e}$, one recovers the first part of Theorem (\@ref(thm:teoremix))
+(the second one may be found in [@JM]). In this case, since $U=\{\textsf{e}\}$ ,
 the $\ell^{\infty,1}$-algebras reduce to the usual $\ell^1$-algebras
 associated to Fell bundles with discrete groups [@FD2]. The Hilbert
-bundle reduces to a single Hilbert space $\h_{\e}=:\h$ , the Fell bundle
-$\mathscr B^\mathscr H$ is only composed of $\mathbb B(\h)$  and then
+bundle reduces to a single Hilbert space $\mathcal{H}_{\textsf{e}}=:\mathcal{H}$ , the Fell bundle
+$\mathscr B^\mathscr H$ is only composed of $\mathbb B(\mathcal{H})$  and then
 $\ell^{\infty,1}\big(\textsf{H}\,\big\vert\,\mathscr B^\mathscr H\big)$
-becomes $\ell^1\big(\textsf{H},\mathbb B(\h)\big)$ , which is isomorphic
+becomes $\ell^1\big(\textsf{H},\mathbb B(\mathcal{H})\big)$ , which is isomorphic
 to the projective tensor product
-$\ell^1(\textsf{H})\!\otimes\!\mathbb B(\h)$ . We recover in the case
+$\ell^1(\textsf{H})\!\otimes\!\mathbb B(\mathcal{H})$ . We recover in the case
 the classical notion of rigidly symmetric group; see [@Po]. This
 explains a posteriori our terminology.
 :::

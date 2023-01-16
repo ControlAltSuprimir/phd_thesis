@@ -9,16 +9,16 @@ generality in such a way to have certain natural faithful Hilbert space
 representations. In this way, transparent results on inverse closedness
 will be available.
 
-So let $(X,\Theta,\G)$ be a *partial action* of the group $\G$ (assumed
+So let $(X,\Theta,\textsf{G})$ be a *partial action* of the group $\textsf{G}$ (assumed
 here to be countable) on the compact Hausdorff space $X$. In more
 detail, the partial action is denoted by
-$\big\{\Theta_g:X_{g^{-1}}\!\to X_g\,\big\vert\, g\in\G\big\}$ , where
+$\big\{\Theta_g:X_{g^{-1}}\!\to X_g\,\big\vert\, g\in\textsf{G}\big\}$ , where
 each $X_g$ is an open subset of $X$ and $\Theta_g$ is a homeomorphism
 with domain $X_{g^{-1}}$ and image $X_g$ . One requires
 
--   $X_\e=X$ and $\Theta_\e=\textrm{id}_X$ ,
+-   $X_\textsf{e}=X$ and $\Theta_\textsf{e}=\textrm{id}_X$ ,
 
--   for every $g,h\in\G$ , the homeomorphism $\Theta_{gh}$ extends
+-   for every $g,h\in\textsf{G}$ , the homeomorphism $\Theta_{gh}$ extends
     $\Theta_{g}\circ\Theta_{h}$.
 
 Observe that the composition $\Theta_g\circ\Theta_h$ is meant to refer
@@ -35,26 +35,24 @@ $\tau_g|_{X_{g^{-1}}}=\Theta_g$ [@Ex2 Ch. 3]. But this restriction of
 the global action might fail in the case the total space $\tilde X$ is
 not Hausdorff ([@Ex2 Prop. 5.6] and [@Ab Th. 4.44]).
 
-We obtain from $(X,\Theta,\G)$ a partial $C^*$-dynamical system
-$\big(C(X),\te,\G\big)$ , where the ideals are $$\label{santodomingo}
+We obtain from $(X,\Theta,\textsf{G})$ a partial $C^*$-dynamical system
+$\big(C(X),\theta,\textsf{G}\big)$ , where the ideals are $$\label{santodomingo}
 \mathcal A_g\!:=C\big(X_{g}\big)\equiv\big\{a\in C(X)\,\big\vert\,a(x)=0\,,\,\forall\,x\notin X_{g}\big\}$$
 and the isomorphisms are $$\label{panama}
-\te_g:C\big(X_{g^{-1}}\big)\to C\big(X_{g}\big)\,,\quad\te_g(a):=a\circ\Theta_{g^{-1}}\,.$$
+\theta_g:C\big(X_{g^{-1}}\big)\to C\big(X_{g}\big)\,,\quad\theta_g(a):=a\circ\Theta_{g^{-1}}\,.$$
 Therefore, one can construct the Banach $^*$-algebra
-$\ell^1_\te\big(\G;C(X)\big)$ and its enveloping partial crossed product
-$C(X)\!\rtt_\te\!\G$ . We deduce from Theorem
-[\[teoremix\]](#teoremix){reference-type="ref" reference="teoremix"}
+$\ell^1_\theta\big(\textsf{G};C(X)\big)$ and its enveloping partial crossed product
+$C(X)\!\rightthreetimes_\theta\!\textsf{G}$ . We deduce from Theorem (\@ref(thm:teoremix))
 
-::: proposition
-[]{#corolix label="corolix"} If $\,\normalfont{\G}$ is rigidly
-symmetric, $\ell^1_\te\big(\normalfont{\G},C(X)\big)$ is reduced,
+::: {.proposition #corolix} 
+If $\,{\textsf{G}}$ is rigidly symmetric, $\ell^1_\theta\big({\textsf{G}},C(X)\big)$ is reduced,
 symmetric and inverse closed in the partial crossed product.
 :::
 
 Assume now that under the partial action there is an open dense orbit
 $Y$ with trivial isotropy. Thus, for some (and then any) $y\in Y$ one
 has $$\label{guadelupa}
-\G(y):=\big\{g\in\G\,\big\vert\,y\in X_{g^{-1}}\,,\Theta_g(y)=y\big\}=\{\e\}\,.$$
+\textsf{G}(y):=\big\{g\in\textsf{G}\,\big\vert\,y\in X_{g^{-1}}\,,\Theta_g(y)=y\big\}=\{\textsf{e}\}\,.$$
 Then $X$ will be a compactification of the discrete orbit $Y$ and for
 any $y\in Y$ the orbit map $g\to\Theta_g(y)$ will be a homeomorphism on
 its image.
@@ -62,186 +60,167 @@ its image.
 In the Hilbert space $\ell^2\big(Y\big)$ we introduce the representation
 by multiplication operators $$\label{mexic}
 \pi:C(X)\to\mathbb B\big[\ell^2(Y)\big]\,,\quad\big[\pi(a)\xi\big](y):=a(y)\xi(y)\,.$$
-For any $h\in\G\,,\,y\in Y$ and $\xi\in\ell^2(Y)$ one defines
+For any $h\in\textsf{G}\,,\,y\in Y$ and $\xi\in\ell^2(Y)$ one defines
 $$\label{partilix}
 \big[u_h(\xi)\big](y):=
 \begin{cases}
 \xi\big(\Theta_{h^{-1}}(y)\big) &\textrm{if}\ \;y\in X_h\,,\\
 0\, &\textrm{if}\ \;y\notin X_h\,.
 \end{cases}$$ Then $\big(\pi,u,\ell^2(Y)\big)$ *is a covariant
-representation of* $\big(C(X),\te,\G\big)$ and *the integrated form
+representation of* $\big(C(X),\theta,\textsf{G}\big)$ and *the integrated form
 representation*
-$$\Pi\equiv\pi\!\rtt u\!:C(X)\!\rtt_\te\!\G\to\mathbb B\big[\ell^2(Y)\big]\,,$$
-which acts on $\ell^1_\te\big(\G;C(X)\big)$ as
-$\Pi(\Phi)=\sum_{h\in\G}\pi\big[\Phi(h)\big]u_h$ and which satisfies
-$$\label{lemikainnen}
-\Pi\big(a\otimes\delta_h\big)=\pi(a)u_h\,,\quad\forall\,h\in\G\,,\,a\in C(X_h)\,.$$
+$$\Pi\equiv\pi\!\rightthreetimes u\!:C(X)\!\rightthreetimes_\theta\!\textsf{G}\to\mathbb B\big[\ell^2(Y)\big]\,,$$
+which acts on $\ell^1_\theta\big(\textsf{G};C(X)\big)$ as
+$\Pi(\Phi)=\sum_{h\in\textsf{G}}\pi\big[\Phi(h)\big]u_h$ and which satisfies
+\begin{equation}
+\Pi\big(a\otimes\delta_h\big)=\pi(a)u_h\,,\quad\forall\,h\in\textsf{G}\,,\,a\in C(X_h)\,.(\#eq:lemikainnen)
+\end{equation}
 To express it explicitly, we need some notations. For $y,z\in Y$ we set
 $g_{yz}$ for the unique element of the group such that
 $\Theta_{g_{yz}}(y)=z$ ; we use the fact that $Y$ is an orbit with
-trivial isotropy. Note the relations $$\label{dominicana}
-g_{yz}^{-1}=g_{zy}\,,\quad g_{zy}=g_{xy}g_{zx}\,,\quad\forall\,x,y,z\in Y.$$
-A direct computation, relying on
-[\[dominicana\]](#dominicana){reference-type="eqref"
-reference="dominicana"}, shows that on $\ell^1_\te\big(\G;C(X)\big)$ the
-representation $\Pi$ reads $$\label{flochax}
-\big[\Pi(\Phi)\xi\big](y)=\sum_{z\in Y}\Phi\big(g_{zy},y\big)\xi(z)\,,$$
+trivial isotropy. Note the relations 
+\begin{equation}
+g_{yz}^{-1}=g_{zy}\,,\quad g_{zy}=g_{xy}g_{zx}\,,\quad\forall\,x,y,z\in Y. (\#eq:dominicana)
+\end{equation}
+A direct computation, relying on (\@ref(eq:dominicana)), shows that on $\ell^1_\theta\big(\textsf{G};C(X)\big)$ the
+representation $\Pi$ reads 
+\begin{equation}
+\big[\Pi(\Phi)\xi\big](y)=\sum_{z\in Y}\Phi\big(g_{zy},y\big)\xi(z)\,, (\#eq:flochax)
+\end{equation}
 where we set $\big[\Phi(k)\big](y)=:\Phi(k,y)$ .
 
-::: theorem
-[]{#pohjola label="pohjola"} Suppose that $\normalfont{\G}$ is countable
-and rigidly symmetric and that $Y$ is a open dense orbit of the space
+::: {.theorem #pohjola} 
+Suppose that ${\textsf{G}}$ is countable and rigidly symmetric and that $Y$ is a open dense orbit of the space
 $X$, with trivial isotropy. Let
-$\Phi\in\ell^1_\te\big(\normalfont{\G};C(X)\big)$ .
+$\Phi\in\ell^1_\theta\big({\textsf{G}};C(X)\big)$ .
 
-1.  If the operator $\,\Pi(\Phi)$ is invertible, there exists
-    $\Psi\in\ell^1_\te\big(\normalfont{\G};C(X)\big)$ such that
-    $\Pi(\Phi)^{-1}\!=\Pi(\Psi)$ .
+  (i).  If the operator $\,\Pi(\Phi)$ is invertible, there exists $\Psi\in\ell^1_\theta\big({\textsf{G}};C(X)\big)$ such that $\Pi(\Phi)^{-1}\!=\Pi(\Psi)$ .
 
-2.  If $\,\Pi(\Phi)$ is Fredholm, at least one of its inverses $T$
+  (ii).  If $\,\Pi(\Phi)$ is Fredholm, at least one of its inverses $T$
     modulo $\mathbb K\big[\ell^2(Y)\big]$ belongs to
-    $\Pi[\ell^1_{\theta}\big(\normalfont{\G};C(X)\big)]$ .
+    $\Pi[\ell^1_{\theta}\big({\textsf{G}};C(X)\big)]$ .
 :::
 
 ::: proof
-*Proof.* (i) Having in view Proposition
-[\[corolix\]](#corolix){reference-type="ref" reference="corolix"}, we
-only need to check that the representation $\Pi$ is faithful; see also
-Theorem [\[teoremix\]](#teoremix){reference-type="ref"
-reference="teoremix"}(iv). The universal and the reduced partial crossed
-products here are the same, cf. Remark
-[\[lantors\]](#lantors){reference-type="ref" reference="lantors"}. Note
-that the restriction of $\Pi$ to $C(X)$ coincides with $\pi$ (set $h=\e$
-in [\[lemikainnen\]](#lemikainnen){reference-type="eqref"
-reference="lemikainnen"}). By [@ELQ Th. 2.6], injectivity of $\Pi$ would
-follow if we prove that $\pi$ is injective and the action is
-topologically free. The injectivity of $\pi$ is obvious: $\pi(a)=0$
-means that the restriction of $a$ to $Y$ is null, which implies that $a$
-is null, since the orbit $Y$ was supposed dense. Topological freeness
-(cf. [@ELQ Def. 2.1.]) is clear, since $Y$ is dense: having trivial
-isotropy, it is disjoint from any set of the form
-$$F_g:=\big\{x\in X_{g^{-1}}\,\big\vert\,\Theta_g(x)=x\big\}\,,\quad g\ne\e\,,$$
+(i). Having in view Proposition (\@ref(prp:corolix)), we only need to check that the representation $\Pi$ is faithful; see also Theorem (\@ref(thm:teoremix))(iv). The universal and the reduced partial crossed products here are the same, cf. Remark (\@ref(cnj:lantors)). Note that the restriction of $\Pi$ to $C(X)$ coincides with $\pi$ (set $h=\textsf{e}$ in (\@ref(eq:lemikainnen)). By [@ELQ Th. 2.6], injectivity of $\Pi$ would
+follow if we prove that $\pi$ is injective and the action is topologically free. The injectivity of $\pi$ is obvious: $\pi(a)=0$ means that the restriction of $a$ to $Y$ is null, which implies that $a$ is null, since the orbit $Y$ was supposed dense. Topological freeness (cf. [@ELQ Def. 2.1.]) is clear, since $Y$ is dense: having trivial isotropy, it is disjoint from any set of the form
+$$F_g:=\big\{x\in X_{g^{-1}}\,\big\vert\,\Theta_g(x)=x\big\}\,,\quad g\ne\textsf{e}\,,$$
 so this one must have empty interior.
 
-\(ii\) Since $Y$ is discrete, the elements of $C_0(Y)$ are transformed
-by the representation $\pi$ into compact multiplication operators in
-$\ell^2(Y)$ . The $\te$-invariant ideal $C_0(Y)$ gives rise to the ideal
-$C_0(Y)\!\rightthreetimes_\te\!\G$ of the partial crossed product
-$C(X)\!\rtt_\te\!\G$ and one has
-$\Pi\big[C_0(Y)\!\rtt_\te\!\G\big]=\mathbb K\big[\ell^2(Y)\big]$ .
-Therefore one can apply Corollary
-[\[honduras\]](#honduras){reference-type="ref" reference="honduras"} and
-conclude that
-$\Pi[\ell^1_{\theta}\big(\G;C(X)\big)]\subset\mathbb B\big[\ell^2(Y)\big]$
-is Fredholm inverse closed. Then the assertion follows easily from
-Atkinson's Theorem; see also Example
-[\[fredholmix\]](#fredholmix){reference-type="ref"
-reference="fredholmix"}. ◻
+(ii). Since $Y$ is discrete, the elements of $C_0(Y)$ are transformed by the representation $\pi$ into compact multiplication operators in $\ell^2(Y)$ . The $\theta$-invariant ideal $C_0(Y)$ gives rise to the ideal
+$C_0(Y)\!\rightthreetimes_\theta\!\textsf{G}$ of the partial crossed product $C(X)\!\rightthreetimes_\theta\!\textsf{G}$ and one has $\Pi\big[C_0(Y)\!\rightthreetimes_\theta\!\textsf{G}\big]=\mathbb K\big[\ell^2(Y)\big]$ .
+Therefore one can apply Corollary (\@ref(cor:honduras)) and conclude that
+$\Pi[\ell^1_{\theta}\big(\textsf{G};C(X)\big)]\subset\mathbb B\big[\ell^2(Y)\big]$
+is Fredholm inverse closed. Then the assertion follows easily from Atkinson's Theorem; see also Example (\@ref(exm:fredholmix)).
 :::
 
 ## Toeplitz-Bunce-Deddens operators {#dedenix}
 
-In the Hilbert space $\ell^2(\N)$ , with canonical orthonormal base
-$\{\delta_n\}_{n\in\N}$ , each function $a\in\ell^\infty(\N)$ defines a
+In the Hilbert space $\ell^2(\mathbb{N})$ , with canonical orthonormal base
+$\{\delta_n\}_{n\in\mathbb{N}}$ , each function $a\in\ell^\infty(\mathbb{N})$ defines a
 bounded multiplication operator $\textsf{M}_a$ . Let us denote by
 $\textsf{S}$ the right shift uniquely determined by
-$\textsf{S}\,\delta_n\!:=\delta_{n+1}$ for every $n\in\N$ . For
-$q\in\N$ , we say that $a\in\ell^\infty(\N)$ is $q$-periodic if
-$a(n+q)=a(n)\,,\,\forall\,n\in\N$ . We denote by $\ell^\infty(\N;q)$ the
+$\textsf{S}\,\delta_n\!:=\delta_{n+1}$ for every $n\in\mathbb{N}$ . For
+$q\in\mathbb{N}$ , we say that $a\in\ell^\infty(\mathbb{N})$ is $q$-periodic if
+$a(n+q)=a(n)\,,\,\forall\,n\in\mathbb{N}$ . We denote by $\ell^\infty(\mathbb{N};q)$ the
 $C^*$-subalgebra of all $q$-periodic functions. The starting point in
 constructing a Toeplitz-Bunce-Deddens algebra is an infinite family
-$\mathbf q:=\{q_i\!\mid\!i\in\N\}$ of strictly increasing positive
+$\mathbf q:=\{q_i\!\mid\!i\in\mathbb{N}\}$ of strictly increasing positive
 integers such that each $q_i$ divides $q_{i+1}$ , i.e. $q_{i+1}=r_i q_i$
 with $r_i\ge 2$ .
 
-::: defn
-[]{#buncix label="buncix"} *The Toeplitz-Bunce-Deddens algebra
-$\mathfrak D(\mathbf q)$ associated to the multi-integer $\mathbf q$* is
-the $C^*$-algebras of operators in $\ell^2(\N)$ generated by the family
-$$\label{generatrix}
-\Big\{\textsf{ S}_a:=\textsf{ S}\textsf{ M}_a\,\Big\vert\,a\in\bigcup_{i\in\N}\ell^\infty(\N;q_i)\Big\}\,.$$
+::: {.definition #buncix} 
+*The Toeplitz-Bunce-Deddens algebra $\mathfrak D(\mathbf q)$ associated to the multi-integer $\mathbf q$* is
+the $C^*$-algebras of operators in $\ell^2(\mathbb{N})$ generated by the family
+\begin{equation}
+\Big\{\textsf{ S}_a:=\textsf{ S}\textsf{ M}_a\,\Big\vert\,a\in\bigcup_{i\in\mathbb{N}}\ell^\infty(\mathbb{N};q_i)\Big\}\,. (\#eq:generatrix)
+\end{equation}
 :::
 
-::: proposition
-[]{#propotrix label="propotrix"} The Toeplitz-Bunce-Deddens algebra is
-topologically graded over $\Z$ . Its $\ell^1$-Banach $^*$-algebra
+::: {.proposition #propotrix} 
+The Toeplitz-Bunce-Deddens algebra is topologically graded over $\mathbb{Z}$ . Its $\ell^1$-Banach $^*$-algebra
 $\ell^1\big[\mathfrak D(\mathbf q)\big]$ is reduced, symmetric and
 inverse closed in $\mathfrak D(\mathbf q)$ and in
-$\mathbb B\big[\ell^2(\N)\big]$ (an explicit description is included in
+$\mathbb B\big[\ell^2(\mathbb{N})\big]$ (an explicit description is included in
 the proof).
 :::
 
 ::: proof
-*Proof.* By [@Exs1], a canonical action $\alpha$ of the torus
-$\mathbb T=\widehat\Z$ on $\mathfrak D(\mathbf q)$ is defined as
+By [@Exs1], a canonical action $\alpha$ of the torus
+$\mathbb{T}=\widehat{\mathbb{Z}}$ on $\mathfrak D(\mathbf q)$ is defined as
 follows: For every $z\in\mathbb T$ the unitary multiplication operator
-determined by $U_z\delta_n:=z^n\delta_n$ ($n\in\N$) defines on
-$\mathbb B\big[\ell^2(\N)\big]$ the inner automorphism
-$T\to U_z TU_z^*$. Because of $$\label{costarica}
-\alpha_z(S_a)=U_z S_aU_z^*=zS_a\,,\quad\forall\,a\in\ell^\infty(\N)\,,$$
-$\big(\mathfrak D(\mathbf q),\alpha,\T\big)$ is indeed a (full)
-continuous action. We also write $\ell^\infty(\N;\mathbf q)$ for the
-(unital, Abelian) $C^*$-subalgebra of $\ell^\infty(\N)$ generated by
-$\bigcup_{i\in\N}\ell^\infty(\N;q_i)$ . The spectral subspace
+determined by $U_z\delta_n:=z^n\delta_n$ ($n\in\mathbb{N}$) defines on
+$\mathbb B\big[\ell^2(\mathbb{N})\big]$ the inner automorphism
+$T\to U_z TU_z^*$. Because of 
+\begin{equation}
+\alpha_z(S_a)=U_z S_aU_z^*=zS_a\,,\quad\forall\,a\in\ell^\infty(\mathbb{N})\,, (eq:costarica)
+\end{equation}
+$\big(\mathfrak D(\mathbf q),\alpha,\mathbb{T}\big)$ is indeed a (full)
+continuous action. We also write $\ell^\infty(\mathbb{N};\mathbf q)$ for the
+(unital, Abelian) $C^*$-subalgebra of $\ell^\infty(\mathbb{N})$ generated by
+$\bigcup_{i\in\mathbb{N}}\ell^\infty(\mathbb{N};q_i)$ . The spectral subspace
 $\mathfrak D(\mathbf q)_k$ is generated by operators of the ordered form
-$$\label{paracetamol}
-S_{a_1}\dots S_{a_n}S^*_{b_1}\dots S^*_{b_m}\,,\quad a_1,\dots,a_n,b_1,\dots,b_m\in\ell^\infty(\N;\mathbf q)\,,\ n-m=k\,.$$
+\begin{equation}
+S_{a_1}\dots S_{a_n}S^*_{b_1}\dots S^*_{b_m}\,,\quad a_1,\dots,a_n,b_1,\dots,b_m\in\ell^\infty(\mathbb{N};\mathbf q)\,,\ n-m=k\,. (\#eq:paracetamol)
+\end{equation}
 This follows easily from the relations $S^*_a S_b=M_{\overline ab}$ and
 $M_a S_b=S_{\tilde ab}$ , where $\tilde a_n:=a_{n-1}$ if $n\ge 1$ .
 Since $\tilde a_0$ does not appear in the definition of the weighted
 shift operator, it can be fixed such that $\tilde a$ is periodic. Other
 forms of the elements in $\mathfrak D(\mathbf q)_k$ could involve the
 final projection $Q:=SS^*$. These having been settled, the assertions
-concerning the $\ell^1$-Banach algebra follow from Theorem
-[\[exelix\]](#exelix){reference-type="ref" reference="exelix"}. ◻
+concerning the $\ell^1$-Banach algebra follow from Theorem (\@ref(thm:exelix)).
 :::
 
-::: remark
-[]{#toeplix label="toeplix"} In [@Exs1] one gets the isomorphism
-$$\label{triplix}
-\mathfrak D(\mathbf q)\overset{\sim}{\longrightarrow}\big[c_0(\N)\oplus\ell^\infty(\N;\mathbf q)\big]\!\rtt_\te\Z\cong C\big[\N(\mathbf q)\big]\!\rtt_\te\Z\,.$$
+::: {.conjecture #toeplix} 
+In [@Exs1] one gets the isomorphism
+\begin{equation}
+\mathfrak D(\mathbf q)\overset{\sim}{\longrightarrow}\big[c_0(\mathbb{N})\oplus\ell^\infty(\mathbb{N};\mathbf q)\big]\!\rightthreetimes_\theta\mathbb{Z}\cong C\big[\mathbb{N}(\mathbf q)\big]\!\rightthreetimes_\theta\mathbb{Z}\,. (\#eq:triplix)
+\end{equation}
 We refer to [@Exs1] for the Gelfand spectrum
-$\N(\mathbf q)=\N\sqcup\Si(\mathbf q)$ of the Abelian $\alpha$-fixed
+$\mathbb{N}(\mathbf q)=\mathbb{N}\sqcup\Sigma(\mathbf q)$ of the Abelian $\alpha$-fixed
 point $C^*$-algebra
-$$\mathfrak D(\mathbf q)_0\!:=c_0(\N)\oplus\ell^\infty(\N;\mathbf q)$$
-(a compactification of the discrete set $\N$ by a Cantor set
-$\Si(\mathbf q)$) and for the interesting explicit form of the partial
-action $\te$ in the Gelfand realization (induced by a partial
-homeomorphism of $\N(\mathbf q)$).
+$$\mathfrak D(\mathbf q)_0\!:=c_0(\mathbb{N})\oplus\ell^\infty(\mathbb{N};\mathbf q)$$
+(a compactification of the discrete set $\mathbb{N}$ by a Cantor set
+$\Sigma(\mathbf q)$) and for the interesting explicit form of the partial
+action $\theta$ in the Gelfand realization (induced by a partial
+homeomorphism of $\mathbb{N}(\mathbf q)$).
 :::
 
 We may also state that
-*$\ell^1\big[\mathfrak D(\mathbf q)\big]=\bigoplus_{k\in\Z}^{1,\alpha}\mathfrak D(\mathbf q)_k$
+*$\ell^1\big[\mathfrak D(\mathbf q)\big]=\bigoplus_{k\in\mathbb{Z}}^{1,\alpha}\mathfrak D(\mathbf q)_k$
 is Fredholm inverse closed in*
-$\mathfrak D(\mathbf q)\subset\mathbb B\big[\ell^2(\N)\big]$ . This
-follows from Corollary [\[honduras\]](#honduras){reference-type="ref"
-reference="honduras"}, where $\K=c_0(\N)$ and $\Pi$ is the inverse of
-the isomorphism appearing in
-[\[triplix\]](#triplix){reference-type="eqref" reference="triplix"},
+$\mathfrak D(\mathbf q)\subset\mathbb B\big[\ell^2(\mathbb{N})\big]$ . This
+follows from Corollary (\@ref(cor:honduras)), where $\mathbb{K}=c_0(\mathbb{N})$ and $\Pi$ is the inverse of
+the isomorphism appearing in (\@ref(eq:triplix)),
 since
-$\Pi\big[c_0(\N)\!\rtt_\te\!\Z\big]=\mathbb K\big[\ell^2(\N)\big]$ . One
-calls the quotient $$\label{triflix}
-\mathfrak D(\mathbf q)/\mathbb K\big[\ell^2(\N)\big]\cong\ell^\infty(\N;\mathbf q)\!\rtimes_\te\Z\cong C\big[\Si(\mathbf q)\big]\!\rtimes_\te\Z$$
-*the Bunce-Deddens algebra*. The action \"at infinity\" of $\Z$ on the
-Cantor set $\Si(\mathbf q)$ is induced by an odometer map. It is a
+$\Pi\big[c_0(\mathbb{N})\!\rightthreetimes_\theta\!\mathbb{Z}\big]=\mathbb K\big[\ell^2(\mathbb{N})\big]$ . One
+calls the quotient 
+\begin{equation}
+\mathfrak D(\mathbf q)/\mathbb K\big[\ell^2(\mathbb{N})\big]\cong\ell^\infty(\mathbb{N};\mathbf q)\!\rtimes_\theta\mathbb{Z}\cong C\big[\Sigma(\mathbf q)\big]\!\rtimes_\theta\mathbb{Z} (\#eq:triflix)
+\end{equation}
+*the Bunce-Deddens algebra*. The action \"at infinity\" of $\mathbb{Z}$ on the
+Cantor set $\Sigma(\mathbf q)$ is induced by an odometer map. It is a
 global action, so this quotient can be dealt with by usual crossed
 products.
 
 ## UHF algebras {#afelliz}
 
-*An UHF-algebra* is the inductive limit $$\label{limindiz}
-\mathfrak C:=\underset{m\in\N}{\textrm{ lim\,ind}\,\mathbf M^{p_m}}$$ of
+*An UHF-algebra* is the inductive limit 
+$$\label{limindiz}
+\mathfrak C:=\underset{m\in\mathbb{N}}{\textrm{lim} \,\textrm{ind}\,\mathbf M^{p_m}}
+$$ 
+of
 a sequence of full matricial $C^*$-algebras, with unital and injective
 connecting morphisms, where each $p_m$ divides $p_{m+1}$. In [@Exs2]
 Exel treated general approximately finite algebras. He defined on
 $\mathfrak C$ a regular and semi-saturated $\mathbb T$-action and then
 he applied his theory from [@Exs] to get an isomorphism between
-$\mathfrak C$ and a partial crossed product $\A\rtt_\te\Z$ , where $\A$
+$\mathfrak C$ and a partial crossed product $\mathcal{A}\rightthreetimes_\theta\mathbb{Z}$ , where $\mathcal{A}$
 is an Abelian almost finite $AF$-algebra. To simplify, we decided to
 treat only UHF algebras; the general case is similar, but it would
 involve more complicated notations. To state a result on symmetric
-subalgebras, we make use of Theorem
-[\[exelix\]](#exelix){reference-type="ref" reference="exelix"}, only
+subalgebras, we make use of Theorem (\@ref(thm:exelix)), only
 invoking the circle action and its spectral subspaces; the partial
 crossed product will not be mentioned.
 
@@ -253,14 +232,13 @@ covariant with respect to the actions $\big\{\alpha^{p_m}\big\}$. The
 inductive limit comes with the canonical monomorphisms
 $\big\{\nu^{m}\!:\mathbf M^{p_m}\!\to\mathfrak C\big\}$ and
 $\bigcup_m\nu^{(m)}\!\big(\mathbf M^{p_m}\big)$ is dense in
-$\mathfrak C$ . For every $z\in\mathbb T\,,m\in\N$ and
+$\mathfrak C$ . For every $z\in\mathbb T\,,m\in\mathbb{N}$ and
 $\Phi\in\mathbf M^{p_m}$ we set $$\label{tetaniz}
 \alpha_z\big[\nu^{m}(\Phi)\big]:=\nu^{m}\big[\alpha^{p_m}_z(\Phi)\big]\,.$$
 It is shown in [@Exs2 Sect. 2] that $\alpha$ extends to an action on
 $\mathfrak C$ (which is semi-saturated and regular).
 
-To make Theorem [\[exelix\]](#exelix){reference-type="ref"
-reference="exelix"} concrete, one needs the spectral subspaces. For each
+To make Theorem (\@ref(thm:exelix)) concrete, one needs the spectral subspaces. For each
 $|k|\le p$ , let us denote by $\mathbf M^p_k$ the vector subspace of
 $p\!\times\!p$-matrices with non-empty entries only on the $k'$th
 diagonal ($c_{ij}=0$ if $i-j\ne k$). If $|k|>p$ , we set simply
@@ -271,24 +249,23 @@ that the spectral subspaces of the action $\alpha$ are the closures in
 $\mathfrak C$ of the unions over $m$ of the images through $\nu^{m}$ of
 the subspaces $\mathbf M^{p_m}_k$.
 
-::: theorem
-[]{#cioflix label="cioflix"} The Banach $^*$-algebra $$\label{perru}
-\ell^1(\mathfrak C)=\bigoplus^{1,\alpha}_{k\in\N}\overline{\bigcup_{m\in\Z}\nu^{m}\big(\mathbf M^{p_m}_k\big)}$$
+::: {.theorem #cioflix} 
+The Banach $^*$-algebra $$\label{perru}
+\ell^1(\mathfrak C)=\bigoplus^{1,\alpha}_{k\in\mathbb{N}}\overline{\bigcup_{m\in\mathbb{Z}}\nu^{m}\big(\mathbf M^{p_m}_k\big)}$$
 is reduced, symmetric and inverse closed in $\mathfrak C$ .
 :::
 
-::: remark
-[]{#takesix label="takesix"} In [@Ta] Takesaki (see also [@FD2 VIII.17])
+::: {.conjecture #takesix} 
+In [@Ta] Takesaki (see also [@FD2 VIII.17])
 provided an approach to UHF algebras which would lead to a different
 grading, and consequently also to a symmetric $\ell^1$-type Banach
 $^*$-algebra, this time over the infinite restricted product
-$\G:=\prod^\prime_{m\in\N}\G_m$ with the discrete topology, where each
-$\G_m$ is a cyclic group of a certain order $q_m$ . Actually, the UHF
+$\textsf{G}:=\prod^\prime_{m\in\mathbb{N}}\textsf{G}_m$ with the discrete topology, where each
+$\textsf{G}_m$ is a cyclic group of a certain order $q_m$ . Actually, the UHF
 algebra $\mathfrak C$ is isomorphic to an infinite tensor product
 $\otimes_m\mathbf M^{q_m}$, where $q_m:=p_{m+1}/p_m$ . In its turn, this
 one is shown to be isomorphic to the full crossed product
-$C(\widehat\G\,)\!\rtimes\G$ . The dual $\widehat\G$ can be identified
-with the product group $\prod_{m\in\N}\G_m$ .
+$C(\widehat{\textsf{G}}\,)\!\rtimes\textsf{G}$ . The dual $\widehat{\textsf{G}}$ can be identified with the product group $\prod_{m\in\mathbb{N}}\textsf{G}_m$ .
 :::
 
 ## CAR algebras {#afellix}
@@ -296,49 +273,49 @@ with the product group $\prod_{m\in\N}\G_m$ .
 Let $\big(\mathcal R,(\cdot|\cdot)\big)$ be an infinitely dimensional
 separable Hilbert space and $a:\mathcal R\to\mathbb B(\mathcal H)$ *a
 representation of the canonical anticommutation relations* in the
-Hilbert space $\h$ , generating the unital $C^*$-algebra
+Hilbert space $\mathcal{H}$ , generating the unital $C^*$-algebra
 $\textrm{ CCR}(\mathcal R)\subset\mathbb B(\mathcal H)$ . Thus $a$ is
 lineal and for every $r,s\in\mathcal R$ one has $$\label{anticom}
 a(r)a(s)+a(s)a(r)=0\,,\quad a^*(r)a(s)+a^*(s)a(r)=(r|s)\,.$$ It is known
 that $\textrm{ CCR}(\mathcal R)$ is isomorphic to the UHF algebra
-$\mathbf M(2^\infty):=\underset{m\in\N}{\textrm{ lim\,ind}\,\mathbf M^{2^m}}$
+$\mathbf M(2^\infty):=\underset{m\in\mathbb{N}}{\textrm{ lim\,ind}\,\mathbf M^{2^m}}$
 as well as with the infinite tensor product
-$\bigotimes_{m\in\N}\mathbf M^2$.
+$\bigotimes_{m\in\mathbb{N}}\mathbf M^2$.
 
-Let also $V:\wG\to\mathbb B(\mathcal R)$ be a strongly continuous
-unitary representation of the compact Abelian group $\wG$ . Associated
+Let also $V:\widehat{\textsf{G}}\to\mathbb B(\mathcal R)$ be a strongly continuous
+unitary representation of the compact Abelian group $\widehat{\textsf{G}}$ . Associated
 to $V$ there is a continuous action
-$\upsilon:\wG\to\textrm{ Aut}\big[\textrm{ CCR}(\mathcal R)\big]$ ,
+$\upsilon:\widehat{\textsf{G}}\to\textrm{ Aut}\big[\textrm{ CCR}(\mathcal R)\big]$ ,
 uniquely defined on generators by $$\label{creatrix}
-\upsilon_\chi\big[a(r)\big]=a\big[V_\chi(r)\big]\,,\quad\forall\,r\in\mathcal R\,,\,\chi\in\wG\,.$$
+\upsilon_\chi\big[a(r)\big]=a\big[V_\chi(r)\big]\,,\quad\forall\,r\in\mathcal R\,,\,\chi\in\widehat{\textsf{G}}\,.$$
 
-We denote by $\G$ the dual of $\wG$ ; it is a discrete Abelian group. We
+We denote by $\textsf{G}$ the dual of $\widehat{\textsf{G}}$ ; it is a discrete Abelian group. We
 already have the grading $$\label{carnatix}
-\textrm{ CCR}(\mathcal R)=\widetilde\bigoplus_{g\in\G}\textrm{ CCR}(\mathcal R)^{\upsilon}_g$$
+\textrm{ CCR}(\mathcal R)=\widetilde\bigoplus_{g\in\textsf{G}}\textrm{ CCR}(\mathcal R)^{\upsilon}_g$$
 in terms of spectral subspaces of the action $\upsilon$ . The next
-corollary follows directly from Theorem
-[\[teoremix\]](#teoremix){reference-type="ref" reference="teoremix"}.
-Note the generality: any representation $\big(\wG,V\big)$ provides a
+corollary follows directly from Theorem (\@ref(thm:teoremix)).
+Note the generality: any representation $\big(\widehat{\textsf{G}},V\big)$ provides a
 result.
 
-::: corollary
-[]{#spermioni label="spermioni"} The corresponding $\ell^1$-algebra
-$$\label{sperioni}
-\ell^1\big(\textrm{CCR}(\mathcal R)\big)=\bigoplus_{g\in\normalfont{\G}}^{1,\upsilon}\textrm{ CCR}(\mathcal R)^{\upsilon}_g$$
+::: {.corollary #spermioni} 
+The corresponding $\ell^1$-algebra
+\begin{equation}
+\ell^1\big(\textrm{CCR}(\mathcal R)\big)=\bigoplus_{g\in{\textsf{G}}}^{1,\upsilon}\textrm{ CCR}(\mathcal R)^{\upsilon}_g (\#eq:sperioni)
+\end{equation}
 is symmetric and inverse closed in $\textrm{ CCR}(\mathcal R)$ and in
-$\mathbb B(\mathcal H)$ .
+$\mathbb B(\mathcal H)$.
 :::
 
 It is clear that $a(r)\in\textrm{ CCR}(\mathcal R)^{\upsilon}_g$ if and
 only if $r\in\mathcal R^V_g$, meaning by definition that
-$V_\chi(r)=\chi(g)r$ for all $\chi\in\wG$ . Similarly,
+$V_\chi(r)=\chi(g)r$ for all $\chi\in\widehat{\textsf{G}}$ . Similarly,
 $a^*(r)\in\textrm{ CCR}(\mathcal R)^{\upsilon}_g$ if and only if
 $r\in\mathcal R^V_{g^{-1}}$ .
 
-::: example
-[]{#sfarnak label="sfarnak"} If $V:\T\to\mathbb B(\mathcal R)$ is given
+::: {.example #sfarnak} 
+If $V:\mathbb{T}\to\mathbb B(\mathcal R)$ is given
 by $V_\tau(r):=e^{2\pi i\tau}r$ and the group duality is implemented by
-$\tau(k):=e^{2\pi ik\tau}$ ($k\in\Z$) , then
+$\tau(k):=e^{2\pi ik\tau}$ ($k\in\mathbb{Z}$) , then
 $\mathcal R^V_1=\mathcal R$ , while $\mathcal R^V_k=\{0\}$ for any
 $k\ne 1$ . Thus $a(r)\in\textrm{ CCR}(\mathcal R)^{\upsilon}_1$ and
 $a^*(r)\in\textrm{ CCR}(\mathcal R)^{\upsilon}_{-1}$ , from which it
@@ -349,76 +326,68 @@ a^*(r_1)\dots a^*(r_n)a(s_1)\dots a(s_m)\in\textrm{ CCR}(\mathcal R)^{\upsilon}_
 ## Wiener-Hopf algebras associated to quasi-lattice ordered groups {#quasilatix}
 
 One can treat this subject by using partial crossed products, as in
-Subsection [\[cerculix\]](#cerculix){reference-type="ref"
-reference="cerculix"}, due to results from [@QR; @ELQ; @Ex2]. We found
+Subsection \@ref(cerculix), due to results from [@QR; @ELQ; @Ex2]. We found
 it easier for our purposes to use the initial article [@Ni], combined
-with Theorem [\[teoremix\]](#teoremix){reference-type="ref"
-reference="teoremix"}.
+with Theorem (\@ref(thm:teoremix)).
 
-We fix a sub-monoid $\pe$ of a discrete amenable group $\G$ such that
-$\pe\cap\pe^{-1}=\{\e\}$ . One defines a left-invariant order relation
-in $\G$ by $g\leq h$ iff $g^{-1}h\in \pe$. The ordered group $(\G,\pe)$
-is *quasi-lattice ordered* if any $g\in\pe\pe^{-1}$ has a least upper
-bound in $\pe$. Many examples may be found at [@Ni pag.23].
+We fix a sub-monoid $\textsf{P}$ of a discrete amenable group $\textsf{G}$ such that
+$\textsf{P}\cap\textsf{P}^{-1}=\{\textsf{e}\}$ . One defines a left-invariant order relation
+in $\textsf{G}$ by $g\leq h$ iff $g^{-1}h\in \textsf{P}$. The ordered group $(\textsf{G},\textsf{P})$
+is *quasi-lattice ordered* if any $g\in\textsf{P}\textsf{P}^{-1}$ has a least upper
+bound in $\textsf{P}$. Many examples may be found at [@Ni pag.23].
 
-Consider the Hilbert space $\ell^2(\pe)$ with its usual orthonormal
-basis $\{e_q\}_{q\in\pe}$. For $p\in\pe$, consider the bounded linear
-operator $W_p\in \mathbb{B}(\ell^2(\pe))$ defined by
-$$W_p(e_q)=e_{pq}\,,\quad\forall\,q\in\pe.$$ We refer to $W$ as the
-*regular semigroup of isometries* of $\pe$. The $C^*$-algebra of
-operators on $\ell^2(\pe)$ generated by the range of $W$ is called the
-*Wiener-Hopf algebra of $\,\pe$* is denoted by $\mathfrak{W}(\pe)$ .
+Consider the Hilbert space $\ell^2(\textsf{P})$ with its usual orthonormal
+basis $\{e_q\}_{q\in\textsf{P}}$. For $p\in\textsf{P}$, consider the bounded linear
+operator $W_p\in \mathbb{B}(\ell^2(\textsf{P}))$ defined by
+$$W_p(e_q)=e_{pq}\,,\quad\forall\,q\in\textsf{P}.$$ We refer to $W$ as the
+*regular semigroup of isometries* of $\textsf{P}$. The $C^*$-algebra of
+operators on $\ell^2(\textsf{P})$ generated by the range of $W$ is called the
+*Wiener-Hopf algebra of $\,\textsf{P}$* is denoted by $\mathfrak{W}(\textsf{P})$ .
 
-For every $g\in\pe\pe^{-1}$ we define the closed subspace
-$$\mathfrak{W}(\pe)_g:=\overline{\textrm{span}}\,\big\{W_p W_q^*\,\big\vert\,pq^{-1}\!=g\big\}$$
-and set $\mathfrak{W}(\pe)_g=\{0\}$ if $g\notin \pe\pe^{-1}$. A
-characterization of the Abelian $C^*$-subalgebra $\mathfrak{W}(\pe)_\e$
+For every $g\in\textsf{P}\textsf{P}^{-1}$ we define the closed subspace
+$$\mathfrak{W}(\textsf{P})_g:=\overline{\textrm{span}}\,\big\{W_p W_q^*\,\big\vert\,pq^{-1}\!=g\big\}$$
+and set $\mathfrak{W}(\textsf{P})_g=\{0\}$ if $g\notin \textsf{P}\textsf{P}^{-1}$. A
+characterization of the Abelian $C^*$-subalgebra $\mathfrak{W}(\textsf{P})_\textsf{e}$
 is
-$$\mathfrak{W}(\pe)_\e =\left\{T\in\mathfrak{W}(\pe)\!\mid\! T \textrm{ has a diagonal matrix relatively to the canonical basis of }\ell^2(\pe)\right\}.$$
+$$\mathfrak{W}(\textsf{P})_\textsf{e} =\left\{T\in\mathfrak{W}(\textsf{P})\!\mid\! T \textrm{ has a diagonal matrix relatively to the canonical basis of }\ell^2(\textsf{P})\right\}.$$
 In Section 3 of Nica's paper [@Ni] it is shown that that *the collection
-$\big\{\mathfrak{W}(\pe)_g\,\big\vert\,g\in\G\big\}$ provides a
+$\big\{\mathfrak{W}(\textsf{P})_g\,\big\vert\,g\in\textsf{G}\big\}$ provides a
 topologically graded structure of the Wiener-Hopf algebra*. We can apply
-now Theorem [\[teoremix\]](#teoremix){reference-type="ref"
-reference="teoremix"} and get
+now Theorem (\@ref(thm:teoremix)) and get
 
-::: corollary
-[]{#mimishor label="mimishor"} The Banach $^*$-algebra
-$\ell^1\Big( \widehat{\bigoplus}_{g\in\normalfont{\G}}\,\mathfrak{W}(\normalfont{\pe})_g \Big)$
+::: {.corollary #mimishor} 
+The Banach $^*$-algebra
+$\ell^1\Big( \widehat{\bigoplus}_{g\in{\textsf{G}}}\,\mathfrak{W}({\textsf{P}})_g \Big)$
 is symmetric and inverse closed in
-$\mathbb B\big[\ell^2(\normalfont{\pe})\big]$ .
+$\mathbb B\big[\ell^2({\textsf{P}})\big]$ .
 :::
 
-::: remark
-[]{#spresfarsit label="spresfarsit"} Suppose that $\normalfont{\pe}$ is
-finitely generated (a slightly more general assumption is possible).
-Then
-$\ell^1\Big( \widehat{\bigoplus}_{g\in\normalfont{\G}}\,\mathfrak{W}(\normalfont{\pe})_g \Big)$
+::: {.conjecture #spresfarsit} 
+Suppose that ${\textsf{P}}$ is finitely generated (a slightly more general assumption is possible).
+Then $\ell^1\Big( \widehat{\bigoplus}_{g\in{\textsf{G}}}\,\mathfrak{W}({\textsf{P}})_g \Big)$
 *is also Fredholm inverse closed*. We only sketch a proof. As in
 [@QR; @ELQ; @Ex2], one has an isomorphism
-$\mathfrak W(\normalfont{\pe})\cong\mathfrak W(\normalfont{\pe})_\e\rtt_\te\normalfont{\G}$
-for a certain partial action $\te$ of $\normalfont{\G}$ on the diagonal
+$\mathfrak W({\textsf{P}})\cong\mathfrak W({\textsf{P}})_\textsf{e}\rightthreetimes_\theta{\textsf{G}}$
+for a certain partial action $\theta$ of ${\textsf{G}}$ on the diagonal
 Abelian algebra. This one is induced from a (Bernoulli-type) partial
-topological action $\Theta$ on its Gelfand spectrum $\Omega_\e$ , which
-is a compactification of the monoid $\normalfont{\pe}$. This
-compactification is regular ($\normalfont{\pe}$ is an *open* dense
-orbit) under the stated hypothesis on $\normalfont{\pe}$. It is shown in
+topological action $\Theta$ on its Gelfand spectrum $\Omega_\textsf{e}$ , which
+is a compactification of the monoid ${\textsf{P}}$. This
+compactification is regular (${\textsf{P}}$ is an *open* dense
+orbit) under the stated hypothesis on ${\textsf{P}}$. It is shown in
 [@Ni 6.3] that this regularity is equivalent with the fact that the
 ideal of all compact operators, identified with
-$C(\normalfont{\pe})\rtt_\te\normalfont{\G}$ , is contained in
-$\mathfrak W(\normalfont{\pe})\,.$ Then the result follows easily from
-our Corollary [\[honduras\]](#honduras){reference-type="ref"
-reference="honduras"}.
+$C({\textsf{P}})\rightthreetimes_\theta{\textsf{G}}$ , is contained in
+$\mathfrak W({\textsf{P}})\,.$ Then the result follows easily from
+our Corollary (\@ref(cor:honduras)).
 :::
 
 ## Higher rank graph algebras {#oroflix}
 
-In this subsection we are going to use constructions from [@KP] and
-[@Ra].
+In this subsection we are going to use constructions from [@KP] and [@Ra].
 
-::: defn
-[]{#hix label="hix"} *A $\textrm{ k}$-graph* ( *higher rank graph*) is a
-countable category $\Lambda$ endowed with a functor
-$\textrm{l}:\Lambda\to\N^\textrm{ k}$ ( *the degree functor*) satisfying
+::: {.definition #hix} 
+*A $\textrm{ k}$-graph* ( *higher rank graph*) is a countable category $\Lambda$ endowed with a functor
+$\textrm{l}:\Lambda\to\mathbb{N}^\textrm{ k}$ ( *the degree functor*) satisfying
 the *factorization property*: For every $\lambda\in\Lambda$ such that
 $\textrm{ l}(\lambda)=\mathfrak m+\mathfrak n$ , there exist unique
 elements $\mu,\nu\in\Lambda$ such that $\textrm{l}(\mu)=\mathfrak m$ ,
@@ -426,31 +395,29 @@ $\textrm{l}(\nu)=\mathfrak n$ and $\lambda=\mu\nu$ .
 :::
 
 If $\textrm{ k}=1$ , one identifies a $1$-graph with the path category
-$E^*\!:=\bigsqcup_{n\in\N}E^n$ of a directed graph
+$E^*\!:=\bigsqcup_{n\in\mathbb{N}}E^n$ of a directed graph
 $\big(s,r:E^1\to E^0\big)$ and $\textrm{ l}(\lambda)$ is the usual
 length of a path $\lambda:=e_1\dots e_{\textrm{ l}(\lambda)}$ .
 Accordingly, for the $\textrm{ k}$-graph
-$\big(\textrm{ l}:\Lambda\to\N^\textrm{ k}\big)$ , one denotes by
-$\d,\r:\Lambda\to\Lambda^0\equiv\textrm{ Obj}(\Lambda)$ the source and
+$\big(\textrm{ l}:\Lambda\to\mathbb{N}^\textrm{ k}\big)$ , one denotes by
+$\textsf{s},\textsf{r}:\Lambda\to\Lambda^0\equiv\textrm{ Obj}(\Lambda)$ the source and
 the range map in the category. One has the decomposition
-$$\Lambda=\bigsqcup_{\mathfrak n\in\N^\textrm{ k}}\Lambda^{\mathfrak n}\equiv\bigsqcup_{\mathfrak n\in\N^\textrm{ k}}\textrm{ l}^{-1}(\mathfrak n)\,.$$
+$$\Lambda=\bigsqcup_{\mathfrak n\in\mathbb{N}^\textrm{ k}}\Lambda^{\mathfrak n}\equiv\bigsqcup_{\mathfrak n\in\mathbb{N}^\textrm{ k}}\textrm{ l}^{-1}(\mathfrak n)\,.$$
 For elements from the object set $\Lambda^0$ (called *vertices*) one
 prefers notations as $v,w$ . We also set set
 $\Lambda^{\mathfrak n}(v):=\Lambda^{\mathfrak n}\cap\textrm{ r}^{-1}(v)$
-(\"paths\" of \"length\" $\mathfrak n\in\N^\textrm{ k}$ ending in
+(\"paths\" of \"length\" $\mathfrak n\in\mathbb{N}^\textrm{ k}$ ending in
 $v\in\Lambda^0$ ).
 
-::: defn
-[]{#admisibilix label="admisibilix"} One says that the
-$\textrm{ k}$-graph is *admissible* if every $\Lambda^{\mathfrak n}(v)$
+::: {.definition #admisibilix} 
+One says that the $\textrm{ k}$-graph is *admissible* if every $\Lambda^{\mathfrak n}(v)$
 is finite (raw-finite $\textrm{ k}$-graph) and non-void (no sources) and
 $\Lambda^0$ is finite (insuring that the $C^*$-algebra below is unital,
 with unit $\sum_{v\in\Lambda^0}\textsf{ S}_v$).
 :::
 
-::: defn
-[]{#cstarix label="cstarix"} Let
-$\Lambda\overset{\textrm{ l}}{\longrightarrow}\N^\textrm{ k}$ be an
+::: {.definition #cstarix} 
+Let $\Lambda\overset{\textrm{ l}}{\longrightarrow}\mathbb{N}^\textrm{ k}$ be an
 admissible $\textrm{ k}$-graph. *A Cuntz-Krieger $\Lambda$-family* is a
 set $\{\textsf{ T}_\lambda\!\mid\!\lambda\in\Lambda\}$ of partial
 isometries in a $C^*$-algebra $\mathfrak D$ such that
@@ -465,7 +432,7 @@ isometries in a $C^*$-algebra $\mathfrak D$ such that
     for every $\lambda\in\Lambda$ ,
 
 4.  $\textsf{ T}_v=\sum_{\lambda\in\Lambda^{\mathfrak n}(v)}\textsf{ T}_\lambda\textsf{ T}^*_\lambda$
-    for every $v\in\Lambda^0$ and $\mathfrak n\in\N^\textrm{ k}$.
+    for every $v\in\Lambda^0$ and $\mathfrak n\in\mathbb{N}^\textrm{ k}$.
 
 We define $C^*(\Lambda,\textrm{ l})\equiv\mathfrak C(\Lambda)$ to be the
 universal $C^*$-algebra generated by a Cuntz-Krieger $\Lambda$-family
@@ -479,35 +446,31 @@ $\lambda$ .
 :::
 
 We identify now families of symmetric Banach $^*$-algebras, starting
-with functors $\textsf{ F}:\Lambda\to\G$ , where $\G$ is supposed to be
-a discrete Abelian group. One particular case is $\G=\N^\textrm{ k}$ and
+with functors $\textsf{ F}:\Lambda\to\textsf{G}$ , where $\textsf{G}$ is supposed to be
+a discrete Abelian group. One particular case is $\textsf{G}=\mathbb{N}^\textrm{ k}$ and
 $\textsf{ F}=\textrm{ l}$ , but many others are possible. For every
-$g\in\G$ one sets $$\label{bebex}
+$g\in\textsf{G}$ one sets $$\label{bebex}
 \mathfrak{C}(\Lambda)_g:=\overline{\textrm{ span}}\big\{\textsf{ S}_\lambda\textsf{ S}^*_{\mu}\,{\big\vert\,\textsf{ F}}(\lambda)\textsf{ F}(\mu)^{-1}=g\big\}\,.$$
 It turns out that these are spectral subspaces of a dual action
-$\alpha^\textsf{ F}:\wG\to\textrm{ Aut}\big[\mathfrak C(\Lambda)\big]$ ,
+$\alpha^\textsf{ F}:\widehat{\textsf{G}}\to\textrm{ Aut}\big[\mathfrak C(\Lambda)\big]$ ,
 uniquely determined (use the universal property of
 $\mathfrak C(\Lambda)$) by
-$$\alpha^\textsf{ F}_\chi(\textsf{ S}_\lambda)=\chi\big[\textsf{ F}(\lambda)\big]\textsf{ S}_\lambda\,,\quad\forall\,\lambda\in\Lambda\,,\,\chi\in\wG\,.$$
+$$\alpha^\textsf{ F}_\chi(\textsf{ S}_\lambda)=\chi\big[\textsf{ F}(\lambda)\big]\textsf{ S}_\lambda\,,\quad\forall\,\lambda\in\Lambda\,,\,\chi\in\widehat{\textsf{G}}\,.$$
 
-Applying Theorem [\[exelix\]](#exelix){reference-type="ref"
-reference="exelix"} one gets
+Applying Theorem (\@ref(thm:exelix)) one gets
 
-::: corollary
-[]{#ix label="ix"} Let
-$\Lambda\overset{\textrm{ l}}{\longrightarrow}\N^\textrm{ k}$ be an
-admissible $\textrm{ k}$-graph and $\textsf{ F}:\Lambda\to\G$ a functor
+::: {.corollary #ix} 
+Let $\Lambda\overset{\textrm{ l}}{\longrightarrow}\mathbb{N}^\textrm{ k}$ be an
+admissible $\textrm{ k}$-graph and $\textsf{ F}:\Lambda\to\textsf{G}$ a functor
 with values in an Abelian discrete group. Then
-$$\ell^1\big(\mathfrak C(\Lambda)\big):=\bigoplus_{g\in\G}^{1,\alpha^{\textsf{F}}}\,\overline{\textrm{ span}}\big\{\textsf{ S}_\lambda\textsf{ S}^*_\mu\,{\big\vert\,\textsf{F}}(\lambda)\textsf{ F}(\mu)^{-1}=g\big\}$$
+$$\ell^1\big(\mathfrak C(\Lambda)\big):=\bigoplus_{g\in\textsf{G}}^{1,\alpha^{\textsf{F}}}\,\overline{\textrm{ span}}\big\{\textsf{ S}_\lambda\textsf{ S}^*_\mu\,{\big\vert\,\textsf{F}}(\lambda)\textsf{ F}(\mu)^{-1}=g\big\}$$
 is a reduced and symmetric Banach $^*$-algebra, which is inverse closed
 in $\mathfrak C(\Lambda)$ .
 :::
 
-::: defn
-[]{#aperiodix label="aperiodix"} On $\N^\textsf{ k}$ one considers the
-order
-$\mathfrak m\le\mathfrak n\,\Leftrightarrow\,\mathfrak m_i\le\mathfrak n_i\,,\forall\,i$ .
-Let $\Lambda\overset{\textrm{ l}}{\longrightarrow}\N^\textrm{ k}$ be an
+::: {.definition #aperiodix} 
+On $\mathbb{N}^\textsf{ k}$ one considers the order $\mathfrak m\le\mathfrak n\,\Leftrightarrow\,\mathfrak m_i\le\mathfrak n_i\,,\forall\,i$ .
+Let $\Lambda\overset{\textrm{ l}}{\longrightarrow}\mathbb{N}^\textrm{ k}$ be an
 admissible $\textrm{ k}$-graph.
 
 1.  We say that $\rho$ is *a minimal common extension* of
@@ -527,40 +490,37 @@ case, for instance, $\textrm{ MCE}(\mu,\nu)$ is either void, or a
 singleton (one of the two elements) and aperiodicity boils down to
 condition (L).
 
-::: proposition
-[]{#perdrix label="perdrix"} Let
-$\Lambda\overset{\textrm{ l}}{\longrightarrow}\N^\textrm{ k}$ be an
+::: {.proposition #perdrix} 
+Let $\Lambda\overset{\textrm{ l}}{\longrightarrow}\mathbb{N}^\textrm{ k}$ be an
 admissible and aperiodic $\textrm{ k}$-graph and
-$\textsf{ F}:\Lambda\to\normalfont{\G}$ a functor with values in an
+$\textsf{ F}:\Lambda\to{\textsf{G}}$ a functor with values in an
 Abelian discrete group. Let
 $\{\textsf{ T}_\lambda\!\mid\!\lambda\in\Lambda\}$ be a Cuntz-Krieger
-$\Lambda$-family of partial isometries in the Hilbert space $\h$ such
+$\Lambda$-family of partial isometries in the Hilbert space $\mathcal{H}$ such
 that $\textsf{ T}_v\ne 0$ for every $v\in\Lambda^0$. Then (the quite
 obvious action $\beta^\textsf{ F}$ is explained in the proof)
-$$\label{fujimori}
-\bigoplus_{g\in\normalfont{\G}}^{1,\beta^{\textsf{ F}}}\,\overline{\textrm{ span}}\big\{\textsf{ T}_\lambda\textsf{ T}^*_{\mu}\,{\big\vert\,\textsf{ F}}(\lambda)\textsf{ F}(\mu)^{-1}\!=g\big\}$$
-is inverse closed in $\mathbb B(\h)$ .
+\begin{equation}
+\bigoplus_{g\in{\textsf{G}}}^{1,\beta^{\textsf{ F}}}\,\overline{\textrm{ span}}\big\{\textsf{ T}_\lambda\textsf{ T}^*_{\mu}\,{\big\vert\,\textsf{ F}}(\lambda)\textsf{ F}(\mu)^{-1}\!=g\big\} (\#eq:fujimori)
+\end{equation}
+is inverse closed in $\mathbb B(\mathcal{H})$ .
 :::
 
 ::: proof
-*Proof.* Under the stated assumptions, \"the Cuntz-Krieger unicity
+Under the stated assumptions, \"the Cuntz-Krieger unicity
 theorem\" (see [@KP; @Si] for example) states that the unique
-representation $\pi_\textsf{ T}:\mathfrak C(\Lambda)\to\mathbb B(\h)$
+representation $\pi_\textsf{ T}:\mathfrak C(\Lambda)\to\mathbb B(\mathcal{H})$
 satisfying
 $$\pi_{\textsf{T}}(\textsf{ S}_{\lambda})=\textsf{ T}_{\lambda}\,,\quad\forall\lambda\in\Lambda$$
 (provided by the universal property) is injective. We denote by
 $\mathfrak C(\textsf{ T})$ its range, so that $\mathfrak C(\Lambda)$ and
-$\mathfrak C(\textsf{ T})$ are isomorphic. Theorem
-[\[teoremix\]](#teoremix){reference-type="ref" reference="teoremix"}
-states then that
+$\mathfrak C(\textsf{ T})$ are isomorphic. Theorem (\@ref(thm:teoremix)) states then that
 $\pi_\textsf{ T}\Big[\ell^1\big(\mathfrak C(\Lambda)\big)\Big]$ is
-inverse closed in $\mathfrak C(\textsf{ T})$ and in $\mathbb B(\h)$ .
+inverse closed in $\mathfrak C(\textsf{ T})$ and in $\mathbb B(\mathcal{H})$ .
 There is an action
-$\beta^\textsf{ F}\!:\wG\to\textrm{ Aut}\big[\mathfrak C(\textsf{ T})\big]$
+$\beta^\textsf{ F}\!:\widehat{\textsf{G}}\to\textrm{ Aut}\big[\mathfrak C(\textsf{ T})\big]$
 such that
-$$\beta^\textsf{ F}_\chi(\textsf{ T}_\lambda)=\chi[\textsf{ F}(\lambda)]\textsf{ T}_\lambda\,,\quad\forall\,\chi\in\wG\,,\,\lambda\in\Lambda$$
+$$\beta^\textsf{ F}_\chi(\textsf{ T}_\lambda)=\chi[\textsf{ F}(\lambda)]\textsf{ T}_\lambda\,,\quad\forall\,\chi\in\widehat{\textsf{G}}\,,\,\lambda\in\Lambda$$
 and $\pi_T$ intertwines the two actions. It follows that
 $\pi_\textsf{ T}\Big[\ell^1\big(\mathfrak C(\Lambda)\big)\Big]$
-coincides with [\[fujimori\]](#fujimori){reference-type="eqref"
-reference="fujimori"}. ◻
+coincides with (\@ref(eq:fujimori)).
 :::
